@@ -1,0 +1,32 @@
+paths:
+  report_dir: reports/exp1_3_visual_evidence_retrieval
+  schema_csv: data/educational_mm/schema_samples/ai2d_schema_sample.csv
+  image_cache_dir: data/ai2d/raw/images
+  image_manifest: reports/exp1_3_visual_evidence_retrieval/ai2d_image_manifest.csv
+  wrong_image_candidates: reports/exp1_2_hard_negative_retrieval/wrong_image_candidates.csv
+
+dataset:
+  name: ai2d
+  hf_dataset: lmms-lab/ai2d-no-mask
+  split: test
+  max_scan: 1000
+
+retrieval:
+  query_columns:
+    - question
+    - choices
+    - topic
+    - skill
+  top_k:
+    - 1
+    - 5
+    - 10
+  batch_size: 16
+
+models:
+  - name: openai/clip-vit-base-patch32
+    alias: clip_vit_b32
+    enabled: true
+  - name: google/siglip-base-patch16-224
+    alias: siglip_b16_224
+    enabled: true

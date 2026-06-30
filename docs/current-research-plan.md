@@ -1,6 +1,6 @@
 # 当前研究主线
 
-最后更新：2026-06-30
+最后更新：2026-07-01
 
 ## 题目方向
 
@@ -131,10 +131,14 @@
 - 三数据集统一 schema 样例；
 - TQA / CK12 和 AI2D 的 HF 流式样例接入。
 - RC1 文本证据对齐检索 baseline。
+- RC1 same-topic / same-skill hard negative 评测。
+- AI2D wrong-image 候选表。
+- AI2D 本地图像缓存与 CLIP / SigLIP 图像证据检索 baseline。
+- RC1 结果审计与消融，确认当前仍属于 baseline / evaluation audit。
 
 尚未完成：
 
-- RC1 hard negative 与图像/diagram 证据检索；
+- RC1 evidence alignment scorer 训练；
 - RC2 的 text/image/wrong-image 鲁棒推理实验；
 - RC3 证据约束解释评测集。
 
@@ -142,7 +146,7 @@
 
 优先级：
 
-1. 加入 same-topic、same-skill 和 wrong-image hard negative。
-2. 为 AI2D 实现 CLIP / SigLIP 图像证据检索 baseline。
-3. 用 wrong-image 和 drop-image 构造 RC2 主实验。
-4. 从 ScienceQA/TQA/AI2D 中抽 100 条构建 RC3 解释评测样本。
+1. 将 RC1 主实验切换为 no-solution evidence 和 diagram-level 图像评测。
+2. 构造固定负样本数的 RC1 训练集和评测集。
+3. 训练 evidence alignment scorer。
+4. 再用 wrong-image 和 drop-image 构造 RC2 主实验。

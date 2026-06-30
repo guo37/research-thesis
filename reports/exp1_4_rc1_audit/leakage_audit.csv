@@ -1,0 +1,9 @@
+dataset,evidence_variant,n_rows,unique_evidence,duplicate_groups,max_duplicate_group,correct_option_in_evidence_rate,any_option_in_evidence_rate
+scienceqa,full,198,190,7,3,0.7323232323232324,0.7575757575757576
+scienceqa,no_solution,169,128,28,6,0.21301775147928995,0.23076923076923078
+scienceqa,hint_lecture,169,128,28,6,0.21301775147928995,0.23076923076923078
+scienceqa,solution_only,185,177,7,3,0.7783783783783784,0.7945945945945946
+tqa_ck12,full,200,9,8,38,0.02,0.0
+tqa_ck12,no_solution,200,9,8,38,0.02,0.0
+tqa_ck12,hint_lecture,0,0,0,0,0.0,0.0
+tqa_ck12,solution_only,0,0,0,0,0.0,0.0

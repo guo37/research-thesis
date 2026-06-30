@@ -1,0 +1,11 @@
+pandas>=2.0
+numpy>=1.24
+datasets>=2.18
+pyarrow>=14.0
+Pillow>=10.0
+PyYAML>=6.0
+torch>=2.2
+transformers>=4.40
+sentencepiece>=0.2
+protobuf>=4.25
+tqdm>=4.66

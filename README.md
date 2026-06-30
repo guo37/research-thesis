@@ -4,13 +4,16 @@
 
 > 面向教育图文问答的模态证据对齐检索与鲁棒推理方法研究
 
-当前项目状态主要围绕 ScienceQA 的 Exp0/Exp0.1/Exp0.2 和 Exp1.0：
+当前项目状态主要围绕 ScienceQA 的 Exp0/Exp0.1/Exp0.2 和 Exp1.x：
 
 - Exp0：诊断图像可用性是否受教育元数据结构性影响。
 - Exp0.1：构建缺失类型标注候选集，用于人工标注。
 - Exp0.2：构建 `structural_absence` vs `accidental_missing` 门控 pilot。
 - Exp1.0：建立教育图文证据统一 schema，当前已生成 ScienceQA、TQA / CK12 和 AI2D 样例。
 - Exp1.1：实现 RC1 文本证据对齐检索 baseline。
+- Exp1.2：实现 RC1 hard negative 评测，并生成 AI2D wrong-image 候选表。
+- Exp1.3：缓存 AI2D 图像并实现 CLIP / SigLIP 图像证据检索 baseline。
+- Exp1.4：审计 RC1 泄漏、候选池和重复图像问题，确认后续需要训练 evidence alignment scorer。
 
 开始新的研究工作前，先查看 [docs/research-dashboard.md](docs/research-dashboard.md) 和 [docs/current-research-plan.md](docs/current-research-plan.md)。
 

@@ -1,0 +1,55 @@
+paths:
+  report_dir: reports/exp1_4_rc1_audit
+  input_samples:
+    - data/educational_mm/schema_samples/scienceqa_schema_sample.csv
+    - data/educational_mm/schema_samples/tqa_ck12_schema_sample.csv
+    - data/educational_mm/schema_samples/ai2d_schema_sample.csv
+  ai2d_image_manifest: reports/exp1_3_visual_evidence_retrieval/ai2d_image_manifest.csv
+  ai2d_image_rankings: reports/exp1_3_visual_evidence_retrieval/image_rankings.csv
+  ai2d_wrong_image_eval: reports/exp1_3_visual_evidence_retrieval/wrong_image_eval.csv
+
+text_audit:
+  datasets:
+    - scienceqa
+    - tqa_ck12
+  query_variants:
+    - question_only
+    - question_choices
+    - question_choices_topic_skill
+  evidence_variants:
+    - full
+    - no_solution
+    - hint_lecture
+    - solution_only
+  min_evidence_chars: 5
+  top_k:
+    - 1
+    - 5
+    - 10
+
+hard_negative_audit:
+  datasets:
+    - scienceqa
+    - tqa_ck12
+  strategies:
+    - random
+    - same_subject
+    - same_topic
+    - same_skill
+  fixed_negatives:
+    - 1
+    - 2
+  query_variant: question_choices_topic_skill
+  evidence_variant: full
+  random_seed: 42
+
+models:
+  tfidf:
+    ngram_range:
+      - 1
+      - 2
+    min_df: 1
+    max_features: 20000
+  bm25:
+    k1: 1.5
+    b: 0.75

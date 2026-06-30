@@ -1,6 +1,6 @@
 # 研究总控台
 
-最后更新：2026-06-30
+最后更新：2026-07-01
 
 这是毕业论文研究工作空间的工作入口。打开实验文件、论文草稿或组会记录前，先从这里开始。
 
@@ -23,8 +23,8 @@
 | 工作流 | 状态 | 下一步 |
 | --- | --- | --- |
 | 统一数据 schema | ScienceQA / TQA / AI2D 样例已完成 | 作为后续实验统一输入 |
-| RC1 证据对齐检索 | 文本 baseline 已完成 | 加入 hard negative 与图像/diagram 检索 |
-| RC2 模态必要性判断 | ScienceQA pilot 已完成 | 升级为 text/image/wrong-image 鲁棒推理实验 |
+| RC1 证据对齐检索 | baseline、hard negative、AI2D 图像检索和 Exp1.4 审计已完成 | 先切换 no-solution / diagram-level clean 评测，再训练 evidence alignment scorer |
+| RC2 模态必要性判断 | ScienceQA pilot 已完成 | 等 RC1 clean scorer 稳定后升级为 text/image/wrong-image 鲁棒推理实验 |
 | RC3 证据约束解释 | 计划中 | 在 RC1/RC2 输入稳定后构建 100 条解释评测集 |
 | 文献综述 | 进行中 | 围绕教育图文问答、证据检索、模态鲁棒性、忠实解释扩展 |
 | 组会汇报 | 需要规范化 | 使用两周组会节奏和 PPT 模板 |
@@ -35,6 +35,7 @@
 - [实验登记表](experiment-registry.md)
 - [论文路线图](paper-roadmap.md)
 - [当前研究主线](current-research-plan.md)
+- [结果输出前审查协议](result-review-protocol.md)
 - [组会周期](meeting-cycle.md)
 - [研究空间地图](research-space-map.md)
 - [多设备同步](multi-device-sync.md)
@@ -44,8 +45,9 @@
 1. Run `scripts/sync_start.ps1` or `scripts/sync_start.sh`.
 2. 查看 [任务看板](task-board.md)。
 3. 一次只处理一个活动任务。
-4. 记录实验命令、输出和结果解读。
-5. 切换设备前运行 `scripts/sync_finish.ps1` 或 `scripts/sync_finish.sh`。
+4. 按 [结果输出前审查协议](result-review-protocol.md) 复查指标来源。
+5. 记录实验命令、输出、结果解读和迭代动作。
+6. 切换设备前运行 `scripts/sync_finish.ps1` 或 `scripts/sync_finish.sh`。
 
 ## 证据规则
 

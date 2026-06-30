@@ -1,0 +1,9 @@
+model,strategy,pairs,same_diagram_pairs,confusion_rate_all_pairs,confusion_rate_nonduplicate_pairs,nonduplicate_pairs
+clip_vit_b32,lexical_wrong_image,1000,259,0.442,0.24696356275303644,741
+clip_vit_b32,random_wrong_image,1000,17,0.086,0.07019328585961343,983
+clip_vit_b32,same_skill_wrong_image,1000,259,0.442,0.24696356275303644,741
+clip_vit_b32,same_topic_wrong_image,1000,259,0.442,0.24696356275303644,741
+siglip_b16_224,lexical_wrong_image,1000,259,0.499,0.32388663967611336,741
+siglip_b16_224,random_wrong_image,1000,17,0.223,0.20956256358087488,983
+siglip_b16_224,same_skill_wrong_image,1000,259,0.499,0.32388663967611336,741
+siglip_b16_224,same_topic_wrong_image,1000,259,0.499,0.32388663967611336,741
