@@ -1,0 +1,8 @@
+pandas>=2.0
+numpy>=1.24
+scipy>=1.10
+scikit-learn>=1.4
+datasets>=2.18
+pyarrow>=14.0
+tqdm>=4.66
+PyYAML>=6.0

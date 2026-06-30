@@ -1,0 +1,20 @@
+dataset:
+  # If local files exist, pass --input-dir or --input-file and these HF settings are ignored.
+  hf_name: derek-thomas/ScienceQA
+  hf_config: null
+  cache_dir: data/scienceqa/cache
+
+paths:
+  processed_dir: data/scienceqa/processed
+  report_dir: reports/exp0_dataset_diagnosis
+
+diagnosis:
+  min_topic_count: 20
+  min_skill_count: 20
+  random_seed: 42
+  test_size_when_no_split: 0.2
+  validation_size_when_no_split: 0.1
+
+models:
+  max_categories: 500
+  text_length_bins: 10

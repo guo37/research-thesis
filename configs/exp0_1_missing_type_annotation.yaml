@@ -1,0 +1,22 @@
+paths:
+  resources_csv: data/scienceqa/processed/resources.csv
+  topic_stats_csv: reports/exp0_dataset_diagnosis/missingness_by_topic.csv
+  skill_stats_csv: reports/exp0_dataset_diagnosis/missingness_by_skill.csv
+  output_dir: data/scienceqa/annotation
+  report_dir: reports/exp0_1_missing_type_annotation
+
+sampling:
+  random_seed: 42
+  total_candidates: 450
+  structural_absence_candidates: 150
+  accidental_missing_candidates: 150
+  ambiguous_missing_candidates: 100
+  observed_reference_candidates: 50
+  batch_size: 75
+
+thresholds:
+  min_group_count: 20
+  high_missing_rate: 0.90
+  low_missing_rate: 0.20
+  ambiguous_low: 0.35
+  ambiguous_high: 0.65

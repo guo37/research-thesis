@@ -1,0 +1,17 @@
+﻿resource_id,split,has_image,image_ref,subject,topic,skill,grade,text_length,image_status_initial,missing_type,missing_type_note
+r000000,train,1,images/q001.png,natural science,weather and climate,read a thermometer,grade2,133,observed,,Exp0 only records has_image; structural_absence requires later annotation.
+r000001,train,0,,natural science,forces and motion,identify gravity,grade3,127,missing_untyped,,Exp0 only records has_image; structural_absence requires later annotation.
+r000002,train,1,images/q003.png,natural science,animals,classify vertebrates,grade3,109,observed,,Exp0 only records has_image; structural_absence requires later annotation.
+r000003,train,0,,language science,punctuation,use exclamation marks,grade2,157,missing_untyped,,Exp0 only records has_image; structural_absence requires later annotation.
+r000004,train,1,images/q005.png,natural science,matter,identify magnetic materials,grade4,105,observed,,Exp0 only records has_image; structural_absence requires later annotation.
+r000005,train,0,,language science,parts of speech,identify verbs,grade2,102,missing_untyped,,Exp0 only records has_image; structural_absence requires later annotation.
+r000006,train,1,images/q007.png,natural science,simple machines,identify pulleys,grade4,111,observed,,Exp0 only records has_image; structural_absence requires later annotation.
+r000007,train,0,,language science,parts of speech,identify nouns,grade2,104,missing_untyped,,Exp0 only records has_image; structural_absence requires later annotation.
+r000008,validation,1,images/q009.png,natural science,water cycle,identify evaporation,grade4,128,observed,,Exp0 only records has_image; structural_absence requires later annotation.
+r000009,validation,0,,language science,spelling,spell common words,grade2,113,missing_untyped,,Exp0 only records has_image; structural_absence requires later annotation.
+r000010,validation,1,images/q011.png,natural science,plants,identify plant parts,grade3,111,observed,,Exp0 only records has_image; structural_absence requires later annotation.
+r000011,validation,0,,language science,antonyms,identify antonyms,grade2,125,missing_untyped,,Exp0 only records has_image; structural_absence requires later annotation.
+r000012,test,1,images/q013.png,natural science,light,identify shadows,grade3,114,observed,,Exp0 only records has_image; structural_absence requires later annotation.
+r000013,test,0,,language science,contractions,form contractions,grade2,110,missing_untyped,,Exp0 only records has_image; structural_absence requires later annotation.
+r000014,test,1,images/q015.png,natural science,matter,predict sinking and floating,grade4,95,observed,,Exp0 only records has_image; structural_absence requires later annotation.
+r000015,test,0,,language science,parts of speech,identify adjectives,grade2,107,missing_untyped,,Exp0 only records has_image; structural_absence requires later annotation.

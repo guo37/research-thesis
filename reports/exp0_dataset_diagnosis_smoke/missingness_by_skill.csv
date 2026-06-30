@@ -1,0 +1,17 @@
+﻿skill,n,has_image_count,has_image_rate,missing_count,missing_rate
+form contractions,1,0,0.0,1,1.0
+identify adjectives,1,0,0.0,1,1.0
+identify antonyms,1,0,0.0,1,1.0
+identify gravity,1,0,0.0,1,1.0
+identify nouns,1,0,0.0,1,1.0
+identify verbs,1,0,0.0,1,1.0
+spell common words,1,0,0.0,1,1.0
+use exclamation marks,1,0,0.0,1,1.0
+classify vertebrates,1,1,1.0,0,0.0
+identify evaporation,1,1,1.0,0,0.0
+identify magnetic materials,1,1,1.0,0,0.0
+identify plant parts,1,1,1.0,0,0.0
+identify pulleys,1,1,1.0,0,0.0
+identify shadows,1,1,1.0,0,0.0
+predict sinking and floating,1,1,1.0,0,0.0
+read a thermometer,1,1,1.0,0,0.0
