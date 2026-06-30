@@ -9,7 +9,7 @@
 - Exp0：诊断图像可用性是否受教育元数据结构性影响。
 - Exp0.1：构建缺失类型标注候选集，用于人工标注。
 - Exp0.2：构建 `structural_absence` vs `accidental_missing` 门控 pilot。
-- Exp1.0：建立教育图文证据统一 schema，当前已生成 ScienceQA 样例。
+- Exp1.0：建立教育图文证据统一 schema，当前已生成 ScienceQA、TQA / CK12 和 AI2D 样例。
 
 开始新的研究工作前，先查看 [docs/research-dashboard.md](docs/research-dashboard.md) 和 [docs/current-research-plan.md](docs/current-research-plan.md)。
 

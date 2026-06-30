@@ -114,8 +114,8 @@
 | 数据集 | 角色 | 使用方式 | 当前状态 |
 | --- | --- | --- | --- |
 | ScienceQA | 起步数据集和 pilot | 科学题目、图像、lecture、solution、topic、skill | 本地已处理 |
-| TQA / CK12 | 教材图文问答验证 | 教材文本、图示、问题、答案 | 待接入 |
-| AI2D | 科学图示推理验证 | diagram、问题、答案、图示结构 | 待接入 |
+| TQA / CK12 | 教材图文问答验证 | 教材文本、图示、问题、答案 | 已生成 HF 流式 schema 样例 |
+| AI2D | 科学图示推理验证 | diagram、问题、答案、图示结构 | 已生成 HF 流式 schema 样例 |
 
 ## 当前结论
 
@@ -128,12 +128,12 @@
 - 缺图类型候选标注；
 - `structural_absence` vs `accidental_missing` 门控；
 - 全量缺图样本伪标签排序清单。
+- 三数据集统一 schema 样例；
+- TQA / CK12 和 AI2D 的 HF 流式样例接入。
 
 尚未完成：
 
-- 三数据集统一 schema；
 - RC1 证据对齐检索基线；
-- TQA / AI2D 接入；
 - RC2 的 text/image/wrong-image 鲁棒推理实验；
 - RC3 证据约束解释评测集。
 
@@ -141,9 +141,7 @@
 
 优先级：
 
-1. 建立三数据集统一 schema，先用 ScienceQA 生成可运行样例。
-2. 接入 TQA 和 AI2D，各抽取一份 schema sample。
-3. 在 ScienceQA 上实现 RC1 最小检索基线。
-4. 用 wrong-image 和 drop-image 构造 RC2 主实验。
-5. 从 ScienceQA/TQA/AI2D 中抽 100 条构建 RC3 解释评测样本。
-
+1. 在三数据集统一 schema 上实现 RC1 最小文本证据检索基线。
+2. 加入 same-topic、same-skill 和 wrong-image hard negative。
+3. 用 wrong-image 和 drop-image 构造 RC2 主实验。
+4. 从 ScienceQA/TQA/AI2D 中抽 100 条构建 RC3 解释评测样本。

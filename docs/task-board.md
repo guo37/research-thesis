@@ -10,18 +10,18 @@
 - [x] 归档旧“教育资源检索可信多模态知识推理”路线文档。
 - [x] 删除 Exp0 smoke 旧报告，保留正式 Exp0/Exp0.1/Exp0.2 证据链。
 - [x] 完成 Exp1.0：ScienceQA 统一 schema 样例。
-- [ ] 接入 TQA / CK12，并抽取 100-200 条统一 schema 样例。
-- [ ] 接入 AI2D，并抽取 100-200 条统一 schema 样例。
+- [x] 接入 TQA / CK12，并抽取 200 条统一 schema 样例。
+- [x] 接入 AI2D，并抽取 200 条统一 schema 样例。
 - [ ] 定义并实现 RC1 教育图文证据对齐检索基线。
 - [ ] 设计 RC2 的 text-only / text+image / wrong-image / drop-image 实验。
 - [ ] 定义 RC3 的 100 条证据约束解释评测集 schema。
 
 ## 下一步
 
-- [ ] 优先接入 TQA / CK12；如果原始数据下载或格式受阻，先记录阻塞原因并转向 AI2D。
-- [ ] 接入 AI2D 后，比较三个数据集的字段覆盖率和模态分布。
-- [ ] 在 ScienceQA schema 上实现 BM25 / TF-IDF 文本证据检索 baseline。
+- [ ] 在三数据集 schema 上实现 BM25 / TF-IDF 文本证据检索 baseline。
+- [ ] 设计 RC1 hard negative：same-topic、same-skill、wrong-image。
 - [ ] 扩展到 Sentence-BERT 和 CLIP 图文检索 baseline。
+- [ ] 记录 TQA 官方完整包接入方案，用于后续补齐原始 diagram 文件。
 - [ ] 将文献综述按新主线重排为：教育图文问答、证据检索、模态鲁棒性、忠实解释。
 
 ## 后续

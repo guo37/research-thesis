@@ -9,10 +9,19 @@ datasets:
     random_seed: 42
   tqa:
     raw_dir: data/tqa/raw
-    status: pending_local_data
+    hf_dataset: notefill/ck12-tqa-instruction
+    sample_size: 200
+    max_scan: 8000
+    random_seed: 42
+    status: hf_streaming
   ai2d:
     raw_dir: data/ai2d/raw
-    status: pending_local_data
+    hf_dataset: lmms-lab/ai2d-no-mask
+    split: test
+    sample_size: 200
+    max_scan: 1000
+    random_seed: 42
+    status: hf_streaming
 
 schema:
   columns:

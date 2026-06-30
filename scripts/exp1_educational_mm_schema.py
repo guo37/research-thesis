@@ -6,6 +6,7 @@
 from __future__ import annotations
 
 import argparse
+import ast
 import json
 from dataclasses import dataclass
 from pathlib import Path
@@ -30,8 +31,23 @@ DEFAULT_CONFIG: dict[str, Any] = {
             "sample_size": 200,
             "random_seed": 42,
         },
-        "tqa": {"raw_dir": "data/tqa/raw", "status": "pending_local_data"},
-        "ai2d": {"raw_dir": "data/ai2d/raw", "status": "pending_local_data"},
+        "tqa": {
+            "raw_dir": "data/tqa/raw",
+            "hf_dataset": "notefill/ck12-tqa-instruction",
+            "sample_size": 200,
+            "max_scan": 8000,
+            "random_seed": 42,
+            "status": "hf_streaming",
+        },
+        "ai2d": {
+            "raw_dir": "data/ai2d/raw",
+            "hf_dataset": "lmms-lab/ai2d-no-mask",
+            "split": "test",
+            "sample_size": 200,
+            "max_scan": 1000,
+            "random_seed": 42,
+            "status": "hf_streaming",
+        },
     },
     "schema": {
         "columns": [
@@ -65,7 +81,16 @@ class Config:
     scienceqa_sample_size: int
     scienceqa_random_seed: int
     tqa_raw_dir: Path
+    tqa_hf_dataset: str
+    tqa_sample_size: int
+    tqa_max_scan: int
+    tqa_random_seed: int
     ai2d_raw_dir: Path
+    ai2d_hf_dataset: str
+    ai2d_split: str
+    ai2d_sample_size: int
+    ai2d_max_scan: int
+    ai2d_random_seed: int
     schema_columns: list[str]
 
 
@@ -87,14 +112,25 @@ def load_config(path: str | None) -> Config:
         with open(path, "r", encoding="utf-8") as f:
             raw = deep_update(DEFAULT_CONFIG, yaml.safe_load(f) or {})
     scienceqa = raw["datasets"]["scienceqa"]
+    tqa = raw["datasets"]["tqa"]
+    ai2d = raw["datasets"]["ai2d"]
     return Config(
         report_dir=Path(raw["paths"]["report_dir"]),
         sample_dir=Path(raw["paths"]["sample_dir"]),
         scienceqa_resources_csv=Path(scienceqa["resources_csv"]),
         scienceqa_sample_size=int(scienceqa["sample_size"]),
         scienceqa_random_seed=int(scienceqa["random_seed"]),
-        tqa_raw_dir=Path(raw["datasets"]["tqa"]["raw_dir"]),
-        ai2d_raw_dir=Path(raw["datasets"]["ai2d"]["raw_dir"]),
+        tqa_raw_dir=Path(tqa["raw_dir"]),
+        tqa_hf_dataset=str(tqa.get("hf_dataset", "")),
+        tqa_sample_size=int(tqa.get("sample_size", 200)),
+        tqa_max_scan=int(tqa.get("max_scan", 8000)),
+        tqa_random_seed=int(tqa.get("random_seed", 42)),
+        ai2d_raw_dir=Path(ai2d["raw_dir"]),
+        ai2d_hf_dataset=str(ai2d.get("hf_dataset", "")),
+        ai2d_split=str(ai2d.get("split", "test")),
+        ai2d_sample_size=int(ai2d.get("sample_size", 200)),
+        ai2d_max_scan=int(ai2d.get("max_scan", 1000)),
+        ai2d_random_seed=int(ai2d.get("random_seed", 42)),
         schema_columns=list(raw["schema"]["columns"]),
     )
 
@@ -110,6 +146,65 @@ def parse_choices(value: Any) -> str:
     except json.JSONDecodeError:
         pass
     return text
+
+
+def parse_list_like(value: Any) -> list[str]:
+    if isinstance(value, list):
+        return [str(item) for item in value]
+    if pd.isna(value):
+        return []
+    text = str(value)
+    try:
+        parsed = ast.literal_eval(text)
+        if isinstance(parsed, list):
+            return [str(item) for item in parsed]
+    except (SyntaxError, ValueError):
+        pass
+    try:
+        parsed = json.loads(text)
+        if isinstance(parsed, list):
+            return [str(item) for item in parsed]
+    except json.JSONDecodeError:
+        pass
+    return [text] if text else []
+
+
+def format_choices(options: list[str], labels: list[str] | None = None) -> str:
+    if not options:
+        return ""
+    if labels and len(labels) == len(options):
+        return " | ".join(f"{label}) {option}" for label, option in zip(labels, options))
+    return " | ".join(str(option) for option in options)
+
+
+def format_answer(answer: Any, options: list[str], labels: list[str] | None = None) -> str:
+    text = "" if pd.isna(answer) else str(answer).strip()
+    if not text:
+        return ""
+    if labels and text in labels:
+        idx = labels.index(text)
+        if idx < len(options):
+            return f"{text}: {options[idx]}"
+    if text.isdigit() and options:
+        idx = int(text)
+        if 0 <= idx < len(options):
+            return f"{idx}: {options[idx]}"
+    return text
+
+
+def split_question_from_input(value: Any) -> str:
+    text = "" if pd.isna(value) else str(value).strip()
+    marker = "\n\nOptions:"
+    if marker in text:
+        return text.split(marker, 1)[0].strip()
+    return text
+
+
+def as_bool(value: Any) -> bool:
+    if isinstance(value, bool):
+        return value
+    text = "" if pd.isna(value) else str(value).strip().lower()
+    return text in {"1", "true", "yes", "y"}
 
 
 def join_context(row: pd.Series) -> str:
@@ -159,6 +254,102 @@ def build_scienceqa_schema(cfg: Config) -> pd.DataFrame:
     return out[cfg.schema_columns]
 
 
+def load_hf_stream(dataset: str, split: str):
+    try:
+        from datasets import load_dataset
+    except ImportError as exc:  # pragma: no cover
+        raise RuntimeError("datasets is required for Hugging Face streaming sources.") from exc
+    return load_dataset(dataset, split=split, streaming=True)
+
+
+def build_tqa_row(item: dict[str, Any], split: str, index: int, cfg: Config) -> dict[str, Any]:
+    options = parse_list_like(item.get("options", ""))
+    labels = parse_list_like(item.get("option_labels", ""))
+    has_image = as_bool(item.get("has_diagram", False))
+    image_path = "" if str(item.get("image_path", "")).lower() == "none" else str(item.get("image_path", "")).strip()
+    lesson = str(item.get("lesson_name", "")).strip()
+    instruction = str(item.get("instruction", "")).strip()
+    text_context = "\n".join(part for part in [f"lesson: {lesson}" if lesson else "", instruction] if part)
+    return {
+        "dataset": "tqa_ck12",
+        "sample_id": str(item.get("id", f"tqa_{split}_{index:06d}")),
+        "original_id": str(item.get("id", f"tqa_{split}_{index:06d}")),
+        "split": split,
+        "question": split_question_from_input(item.get("input", "")),
+        "choices": format_choices(options, labels),
+        "answer": format_answer(item.get("output", ""), options, labels),
+        "text_context": text_context,
+        "image_ref": f"hf://{cfg.tqa_hf_dataset}/{split}/{image_path}" if image_path else "",
+        "has_image": int(has_image),
+        "subject": "science",
+        "topic": lesson,
+        "skill": str(item.get("question_subtype", "") or item.get("question_type", "")).strip(),
+        "evidence_type": evidence_type(int(has_image), text_context),
+        "modality_case": modality_case(int(has_image)),
+        "answer_format": "multiple_choice",
+        "source_task": "ck12_textbook_qa",
+    }
+
+
+def build_tqa_schema_sample(cfg: Config) -> pd.DataFrame:
+    rows: list[dict[str, Any]] = []
+    target_image = cfg.tqa_sample_size // 2
+    target_no_image = cfg.tqa_sample_size - target_image
+    image_count = 0
+    no_image_count = 0
+    scanned = 0
+    for split in ["train", "validation", "test"]:
+        stream = load_hf_stream(cfg.tqa_hf_dataset, split)
+        for item in stream:
+            scanned += 1
+            row = build_tqa_row(item, split, scanned, cfg)
+            if row["has_image"] and image_count < target_image:
+                rows.append(row)
+                image_count += 1
+            elif not row["has_image"] and no_image_count < target_no_image:
+                rows.append(row)
+                no_image_count += 1
+            if len(rows) >= cfg.tqa_sample_size or scanned >= cfg.tqa_max_scan:
+                break
+        if len(rows) >= cfg.tqa_sample_size or scanned >= cfg.tqa_max_scan:
+            break
+    return pd.DataFrame(rows, columns=cfg.schema_columns)
+
+
+def build_ai2d_row(item: dict[str, Any], split: str, index: int, cfg: Config) -> dict[str, Any]:
+    options = parse_list_like(item.get("options", ""))
+    sample_id = f"ai2d_{split}_{index:06d}"
+    return {
+        "dataset": "ai2d",
+        "sample_id": sample_id,
+        "original_id": sample_id,
+        "split": split,
+        "question": str(item.get("question", "")).strip(),
+        "choices": format_choices(options),
+        "answer": format_answer(item.get("answer", ""), options),
+        "text_context": "",
+        "image_ref": f"hf://{cfg.ai2d_hf_dataset}/{split}/{index:06d}",
+        "has_image": 1,
+        "subject": "science",
+        "topic": "diagram",
+        "skill": "diagram_question_answering",
+        "evidence_type": "image_only_context",
+        "modality_case": "question_with_image",
+        "answer_format": "multiple_choice",
+        "source_task": "diagram_qa",
+    }
+
+
+def build_ai2d_schema_sample(cfg: Config) -> pd.DataFrame:
+    rows: list[dict[str, Any]] = []
+    stream = load_hf_stream(cfg.ai2d_hf_dataset, cfg.ai2d_split)
+    for index, item in enumerate(stream, start=1):
+        rows.append(build_ai2d_row(item, cfg.ai2d_split, index, cfg))
+        if len(rows) >= cfg.ai2d_sample_size or index >= cfg.ai2d_max_scan:
+            break
+    return pd.DataFrame(rows, columns=cfg.schema_columns)
+
+
 def sample_schema(data: pd.DataFrame, sample_size: int, random_seed: int) -> pd.DataFrame:
     if len(data) <= sample_size:
         return data.copy()
@@ -204,34 +395,53 @@ def coverage_rows(data: pd.DataFrame) -> pd.DataFrame:
     return pd.DataFrame(rows)
 
 
-def write_summary(cfg: Config, scienceqa: pd.DataFrame, sample_path: Path) -> None:
+def dataset_summary_row(name: str, data: pd.DataFrame, status: str, next_action: str) -> dict[str, Any]:
+    if data.empty:
+        return {
+            "dataset": name,
+            "local_status": status,
+            "sample_count": 0,
+            "has_image_count": 0,
+            "text_context_coverage": 0.0,
+            "next_action": next_action,
+        }
+    return {
+        "dataset": name,
+        "local_status": status,
+        "sample_count": len(data),
+        "has_image_count": int(data["has_image"].sum()),
+        "text_context_coverage": round(float((data["text_context"].astype(str).str.len() > 0).mean()), 4),
+        "next_action": next_action,
+    }
+
+
+def combined_coverage_rows(datasets: dict[str, pd.DataFrame], columns: list[str]) -> pd.DataFrame:
+    rows = []
+    for column in columns:
+        row: dict[str, Any] = {"column": column}
+        for name, data in datasets.items():
+            if data.empty or column not in data.columns:
+                row[name] = 0.0
+                continue
+            non_empty = data[column].notna() & (data[column].astype(str).str.len() > 0)
+            row[name] = round(float(non_empty.mean()), 4)
+        rows.append(row)
+    return pd.DataFrame(rows)
+
+
+def write_summary(
+    cfg: Config,
+    scienceqa: pd.DataFrame,
+    tqa: pd.DataFrame,
+    ai2d: pd.DataFrame,
+    sample_paths: dict[str, Path],
+) -> None:
     cfg.report_dir.mkdir(parents=True, exist_ok=True)
     dataset_rows = pd.DataFrame(
         [
-            {
-                "dataset": "ScienceQA",
-                "local_status": "已接入",
-                "sample_count": len(scienceqa),
-                "has_image_count": int(scienceqa["has_image"].sum()),
-                "text_context_coverage": round(float((scienceqa["text_context"].str.len() > 0).mean()), 4),
-                "next_action": "作为统一 schema 和 RC1/RC2 pilot 数据",
-            },
-            {
-                "dataset": "TQA / CK12",
-                "local_status": "待接入",
-                "sample_count": "",
-                "has_image_count": "",
-                "text_context_coverage": "",
-                "next_action": f"把原始文件放入 {cfg.tqa_raw_dir} 后编写 adapter",
-            },
-            {
-                "dataset": "AI2D",
-                "local_status": "待接入",
-                "sample_count": "",
-                "has_image_count": "",
-                "text_context_coverage": "",
-                "next_action": f"把原始文件放入 {cfg.ai2d_raw_dir} 后编写 adapter",
-            },
+            dataset_summary_row("ScienceQA", scienceqa, "已接入本地处理表", "作为统一 schema 和 RC1/RC2 pilot 数据"),
+            dataset_summary_row("TQA / CK12", tqa, f"HF 流式样例：{cfg.tqa_hf_dataset}", "后续可下载官方完整包补齐原图路径"),
+            dataset_summary_row("AI2D", ai2d, f"HF 流式样例：{cfg.ai2d_hf_dataset}", "作为 diagram QA 证据对齐和 wrong-image 实验数据"),
         ]
     )
     mapping_rows = pd.DataFrame(
@@ -239,7 +449,7 @@ def write_summary(cfg: Config, scienceqa: pd.DataFrame, sample_path: Path) -> No
             {"schema_column": "question", "ScienceQA": "question", "TQA": "question", "AI2D": "question"},
             {"schema_column": "choices", "ScienceQA": "choices_json", "TQA": "answer choices", "AI2D": "answer choices"},
             {"schema_column": "answer", "ScienceQA": "answer", "TQA": "answer", "AI2D": "correct answer"},
-            {"schema_column": "text_context", "ScienceQA": "hint + lecture + solution", "TQA": "textbook paragraph", "AI2D": "diagram metadata / optional text"},
+            {"schema_column": "text_context", "ScienceQA": "hint + lecture + solution", "TQA": "lesson + instruction; official package can add textbook paragraph", "AI2D": "diagram metadata / optional text"},
             {"schema_column": "image_ref", "ScienceQA": "image_ref", "TQA": "figure / diagram path", "AI2D": "diagram image path"},
             {"schema_column": "topic", "ScienceQA": "topic", "TQA": "chapter / lesson", "AI2D": "diagram topic if available"},
             {"schema_column": "skill", "ScienceQA": "skill", "TQA": "learning objective if available", "AI2D": "question category if available"},
@@ -264,18 +474,20 @@ def write_summary(cfg: Config, scienceqa: pd.DataFrame, sample_path: Path) -> No
         "",
         df_to_markdown(mapping_rows),
         "",
-        "## ScienceQA 字段覆盖率",
+        "## 字段覆盖率",
         "",
-        df_to_markdown(coverage_rows(scienceqa)),
+        df_to_markdown(combined_coverage_rows({"ScienceQA": scienceqa, "TQA_CK12": tqa, "AI2D": ai2d}, cfg.schema_columns)),
         "",
         "## 输出",
         "",
-        f"- ScienceQA schema sample：`{sample_path}`",
+        f"- ScienceQA schema sample：`{sample_paths['scienceqa']}`",
+        f"- TQA / CK12 schema sample：`{sample_paths['tqa']}`",
+        f"- AI2D schema sample：`{sample_paths['ai2d']}`",
         "",
         "## 下一步",
         "",
-        "1. 接入 TQA / CK12，本地抽取 100-200 条样本映射到同一 schema。",
-        "2. 接入 AI2D，本地抽取 100-200 条 diagram QA 样本映射到同一 schema。",
+        "1. 检查 TQA / CK12 样例中的 `has_image=1` 覆盖情况；如果不足，下载官方完整 TQA 包补齐 diagram 图像路径。",
+        "2. 用 AI2D 构造 wrong-image hard negative，作为 RC1 和 RC2 的第一批鲁棒性实验。",
         "3. 基于统一 schema 实现 RC1 的 BM25 / Sentence-BERT / CLIP 检索基线。",
         "",
     ]
@@ -290,12 +502,24 @@ def main() -> None:
 
     cfg.sample_dir.mkdir(parents=True, exist_ok=True)
     scienceqa = build_scienceqa_schema(cfg)
-    sample = sample_schema(scienceqa, cfg.scienceqa_sample_size, cfg.scienceqa_random_seed)
-    sample_path = cfg.sample_dir / "scienceqa_schema_sample.csv"
-    sample.to_csv(sample_path, index=False, encoding="utf-8-sig")
-    write_summary(cfg, scienceqa, sample_path)
+    scienceqa_sample = sample_schema(scienceqa, cfg.scienceqa_sample_size, cfg.scienceqa_random_seed)
+    tqa_sample = build_tqa_schema_sample(cfg)
+    ai2d_sample = build_ai2d_schema_sample(cfg)
+
+    sample_paths = {
+        "scienceqa": cfg.sample_dir / "scienceqa_schema_sample.csv",
+        "tqa": cfg.sample_dir / "tqa_ck12_schema_sample.csv",
+        "ai2d": cfg.sample_dir / "ai2d_schema_sample.csv",
+    }
+    scienceqa_sample.to_csv(sample_paths["scienceqa"], index=False, encoding="utf-8-sig")
+    tqa_sample.to_csv(sample_paths["tqa"], index=False, encoding="utf-8-sig")
+    ai2d_sample.to_csv(sample_paths["ai2d"], index=False, encoding="utf-8-sig")
+
+    write_summary(cfg, scienceqa, tqa_sample, ai2d_sample, sample_paths)
     print(f"ScienceQA rows: {len(scienceqa)}")
-    print(f"Sample: {sample_path}")
+    print(f"ScienceQA sample: {sample_paths['scienceqa']}")
+    print(f"TQA sample: {sample_paths['tqa']} rows={len(tqa_sample)}")
+    print(f"AI2D sample: {sample_paths['ai2d']} rows={len(ai2d_sample)}")
     print(f"Report: {cfg.report_dir / 'schema_summary.md'}")
 
 

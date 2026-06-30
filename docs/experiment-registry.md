@@ -11,7 +11,7 @@
 | Exp0 | ScienceQA 数据集诊断 | RC2 | 已完成 | [configs/exp0_scienceqa.yaml](../configs/exp0_scienceqa.yaml) | [reports/exp0_dataset_diagnosis](../reports/exp0_dataset_diagnosis) | [RESULT_INTERPRETATION.md](../reports/exp0_dataset_diagnosis/RESULT_INTERPRETATION.md) |
 | Exp0.1 | 缺失类型标注结果 | RC2 | 标签分析已完成 | [configs/exp0_1_missing_type_annotation.yaml](../configs/exp0_1_missing_type_annotation.yaml) | [data/scienceqa/annotation](../data/scienceqa/annotation), [reports/exp0_1_missing_type_annotation](../reports/exp0_1_missing_type_annotation) | [human_label_analysis.md](../reports/exp0_1_missing_type_annotation/human_label_analysis.md) |
 | Exp0.2 | 选择性补全门控基线 | RC2 | 分组压力测试与全量预测已完成 | [configs/exp0_2_selective_completion_gate.yaml](../configs/exp0_2_selective_completion_gate.yaml) | [reports/exp0_2_selective_completion_gate](../reports/exp0_2_selective_completion_gate) | [run_summary.md](../reports/exp0_2_selective_completion_gate/run_summary.md) |
-| Exp1.0 | 教育多模态证据统一 schema | RC1/RC2/RC3 基础 | ScienceQA 样例已完成，TQA/AI2D 待接入 | [configs/exp1_educational_mm_schema.yaml](../configs/exp1_educational_mm_schema.yaml) | [data/educational_mm/schema_samples](../data/educational_mm/schema_samples), [reports/exp1_educational_mm_schema](../reports/exp1_educational_mm_schema) | [schema_summary.md](../reports/exp1_educational_mm_schema/schema_summary.md) |
+| Exp1.0 | 教育多模态证据统一 schema | RC1/RC2/RC3 基础 | 三数据集样例已完成 | [configs/exp1_educational_mm_schema.yaml](../configs/exp1_educational_mm_schema.yaml) | [data/educational_mm/schema_samples](../data/educational_mm/schema_samples), [reports/exp1_educational_mm_schema](../reports/exp1_educational_mm_schema) | [schema_summary.md](../reports/exp1_educational_mm_schema/schema_summary.md) |
 | Exp1 | 教育图文证据对齐检索 | RC1 | 计划中 | 待定 | 待定 | 待定 |
 | Exp2 | 模态必要性判断与鲁棒推理 | RC2 | ScienceQA pilot 已完成，主实验计划中 | 待定 | 待定 | 待定 |
 | Exp3 | 证据约束的可解释教育推理 | RC3 | 计划中 | 待定 | 待定 | 待定 |
@@ -58,18 +58,19 @@ Exp0 工作性结论：
 
 ## Exp1.0 当前结论
 
-已建立新的教育图文证据统一 schema，并先用 ScienceQA 生成 200 条样例。
+已建立新的教育图文证据统一 schema，并分别生成 ScienceQA、TQA / CK12 和 AI2D 的 200 条样例。
 
 当前状态：
 
 - ScienceQA 可映射到统一 schema，共 21,208 条。
-- `text_context` 覆盖率为 99.30%。
-- `image_ref` / `has_image` 可用于构造 text-only、text+image、drop-image 和 wrong-image 实验。
-- TQA / CK12 与 AI2D 暂未接入本地数据，下一步需要分别编写 adapter。
+- ScienceQA 样例：有图 100 条、无图 100 条。
+- TQA / CK12 样例：通过 `notefill/ck12-tqa-instruction` 流式抽取，有图 100 条、无图 100 条。
+- AI2D 样例：通过 `lmms-lab/ai2d-no-mask` 流式抽取 200 条 diagram QA 样本。
+- TQA / CK12 当前使用公开 instruction 版，完整原图版仍可后续通过官方 1.6GB 包补齐。
 
 工作性结论：
 
-> 新主线应先以统一 schema 为入口推进。ScienceQA 负责打通流程，TQA / CK12 和 AI2D 用于验证方法是否能迁移到教材图文问答和科学图示问答。
+> 新主线已具备三数据集统一输入。下一步应进入 RC1：在统一 schema 上实现教育图文证据对齐检索 baseline。
 
 ## 必需的运行记录模板
 

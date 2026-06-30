@@ -22,8 +22,8 @@
 
 | 工作流 | 状态 | 下一步 |
 | --- | --- | --- |
-| 统一数据 schema | ScienceQA 样例已完成 | 接入 TQA / CK12，再接入 AI2D |
-| RC1 证据对齐检索 | 计划中 | 定义 BM25/SBERT/CLIP 与 hard negative 基线 |
+| 统一数据 schema | ScienceQA / TQA / AI2D 样例已完成 | 作为后续实验统一输入 |
+| RC1 证据对齐检索 | 计划中 | 实现 BM25/TF-IDF 文本证据检索 baseline |
 | RC2 模态必要性判断 | ScienceQA pilot 已完成 | 升级为 text/image/wrong-image 鲁棒推理实验 |
 | RC3 证据约束解释 | 计划中 | 在 RC1/RC2 输入稳定后构建 100 条解释评测集 |
 | 文献综述 | 进行中 | 围绕教育图文问答、证据检索、模态鲁棒性、忠实解释扩展 |
