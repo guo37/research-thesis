@@ -12,7 +12,8 @@
 | Exp0.1 | 缺失类型标注结果 | RC2 | 标签分析已完成 | [configs/exp0_1_missing_type_annotation.yaml](../configs/exp0_1_missing_type_annotation.yaml) | [data/scienceqa/annotation](../data/scienceqa/annotation), [reports/exp0_1_missing_type_annotation](../reports/exp0_1_missing_type_annotation) | [human_label_analysis.md](../reports/exp0_1_missing_type_annotation/human_label_analysis.md) |
 | Exp0.2 | 选择性补全门控基线 | RC2 | 分组压力测试与全量预测已完成 | [configs/exp0_2_selective_completion_gate.yaml](../configs/exp0_2_selective_completion_gate.yaml) | [reports/exp0_2_selective_completion_gate](../reports/exp0_2_selective_completion_gate) | [run_summary.md](../reports/exp0_2_selective_completion_gate/run_summary.md) |
 | Exp1.0 | 教育多模态证据统一 schema | RC1/RC2/RC3 基础 | 三数据集样例已完成 | [configs/exp1_educational_mm_schema.yaml](../configs/exp1_educational_mm_schema.yaml) | [data/educational_mm/schema_samples](../data/educational_mm/schema_samples), [reports/exp1_educational_mm_schema](../reports/exp1_educational_mm_schema) | [schema_summary.md](../reports/exp1_educational_mm_schema/schema_summary.md) |
-| Exp1 | 教育图文证据对齐检索 | RC1 | 计划中 | 待定 | 待定 | 待定 |
+| Exp1.1 | 文本证据对齐检索 baseline | RC1 | 已完成 | [configs/exp1_1_text_evidence_retrieval.yaml](../configs/exp1_1_text_evidence_retrieval.yaml) | [reports/exp1_1_text_evidence_retrieval](../reports/exp1_1_text_evidence_retrieval) | [run_summary.md](../reports/exp1_1_text_evidence_retrieval/run_summary.md) |
+| Exp1.2 | hard negative 与图像证据检索 | RC1 | 计划中 | 待定 | 待定 | 待定 |
 | Exp2 | 模态必要性判断与鲁棒推理 | RC2 | ScienceQA pilot 已完成，主实验计划中 | 待定 | 待定 | 待定 |
 | Exp3 | 证据约束的可解释教育推理 | RC3 | 计划中 | 待定 | 待定 | 待定 |
 
@@ -71,6 +72,20 @@ Exp0 工作性结论：
 工作性结论：
 
 > 新主线已具备三数据集统一输入。下一步应进入 RC1：在统一 schema 上实现教育图文证据对齐检索 baseline。
+
+## Exp1.1 当前结论
+
+已完成 RC1 的最小文本证据检索 baseline。
+
+主要结果：
+
+- ScienceQA：TF-IDF Recall@1 = 0.8939，MRR = 0.9364；BM25 Recall@1 = 0.8737，MRR = 0.9282。
+- TQA / CK12：BM25 Recall@1 = 0.8400，MRR = 0.9167，但样例中唯一文本证据只有 9 条，说明公开 instruction 版上下文粒度过粗。
+- AI2D：当前 schema 没有 `text_context`，已在文本证据检索实验中跳过。
+
+工作性结论：
+
+> RC1 的文本证据检索流程已打通。下一步不能只继续提高 TF-IDF/BM25 指标，而应加入 same-topic / same-skill hard negative，并为 AI2D 实现图像/diagram 证据检索。
 
 ## 必需的运行记录模板
 

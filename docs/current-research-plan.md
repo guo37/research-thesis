@@ -130,10 +130,11 @@
 - 全量缺图样本伪标签排序清单。
 - 三数据集统一 schema 样例；
 - TQA / CK12 和 AI2D 的 HF 流式样例接入。
+- RC1 文本证据对齐检索 baseline。
 
 尚未完成：
 
-- RC1 证据对齐检索基线；
+- RC1 hard negative 与图像/diagram 证据检索；
 - RC2 的 text/image/wrong-image 鲁棒推理实验；
 - RC3 证据约束解释评测集。
 
@@ -141,7 +142,7 @@
 
 优先级：
 
-1. 在三数据集统一 schema 上实现 RC1 最小文本证据检索基线。
-2. 加入 same-topic、same-skill 和 wrong-image hard negative。
+1. 加入 same-topic、same-skill 和 wrong-image hard negative。
+2. 为 AI2D 实现 CLIP / SigLIP 图像证据检索 baseline。
 3. 用 wrong-image 和 drop-image 构造 RC2 主实验。
 4. 从 ScienceQA/TQA/AI2D 中抽 100 条构建 RC3 解释评测样本。

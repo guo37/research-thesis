@@ -12,15 +12,17 @@
 - [x] 完成 Exp1.0：ScienceQA 统一 schema 样例。
 - [x] 接入 TQA / CK12，并抽取 200 条统一 schema 样例。
 - [x] 接入 AI2D，并抽取 200 条统一 schema 样例。
-- [ ] 定义并实现 RC1 教育图文证据对齐检索基线。
+- [x] 定义并实现 RC1 文本证据对齐检索 baseline。
+- [ ] 为 RC1 增加 same-topic / same-skill hard negative 评测。
+- [ ] 为 AI2D 增加图像/diagram 证据检索 baseline。
 - [ ] 设计 RC2 的 text-only / text+image / wrong-image / drop-image 实验。
 - [ ] 定义 RC3 的 100 条证据约束解释评测集 schema。
 
 ## 下一步
 
-- [ ] 在三数据集 schema 上实现 BM25 / TF-IDF 文本证据检索 baseline。
 - [ ] 设计 RC1 hard negative：same-topic、same-skill、wrong-image。
-- [ ] 扩展到 Sentence-BERT 和 CLIP 图文检索 baseline。
+- [ ] 扩展到 Sentence-BERT 文本检索 baseline。
+- [ ] 实现 CLIP / SigLIP 图文证据检索 baseline。
 - [ ] 记录 TQA 官方完整包接入方案，用于后续补齐原始 diagram 文件。
 - [ ] 将文献综述按新主线重排为：教育图文问答、证据检索、模态鲁棒性、忠实解释。
 

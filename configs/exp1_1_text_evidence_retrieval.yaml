@@ -1,0 +1,31 @@
+paths:
+  report_dir: reports/exp1_1_text_evidence_retrieval
+  input_samples:
+    - data/educational_mm/schema_samples/scienceqa_schema_sample.csv
+    - data/educational_mm/schema_samples/tqa_ck12_schema_sample.csv
+    - data/educational_mm/schema_samples/ai2d_schema_sample.csv
+
+retrieval:
+  query_columns:
+    - question
+    - choices
+    - topic
+    - skill
+  evidence_column: text_context
+  min_evidence_chars: 5
+  top_k:
+    - 1
+    - 5
+    - 10
+  max_failure_examples: 20
+
+models:
+  tfidf:
+    ngram_range:
+      - 1
+      - 2
+    min_df: 1
+    max_features: 20000
+  bm25:
+    k1: 1.5
+    b: 0.75
