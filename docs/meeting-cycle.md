@@ -1,8 +1,8 @@
-# Group Meeting Cycle
+# 组会周期
 
-Last updated: 2026-06-30
+最后更新：2026-06-30
 
-Use one folder per two-week meeting.
+每两周组会使用一个独立文件夹。
 
 ```text
 meetings/
@@ -12,32 +12,32 @@ meetings/
     figures/
 ```
 
-## Available Templates
+## 可用模板
 
 - [templates/group-meeting-summary.md](templates/group-meeting-summary.md)
 - [templates/组会ppt6.6.pptx](templates/组会ppt6.6.pptx)
 - [templates/组会ppt6.20.pptx](templates/组会ppt6.20.pptx)
 
-## Meeting Summary Structure
+## 组会总结结构
 
-1. Progress since last meeting.
-2. Evidence and results.
-3. Problems and risks.
-4. Next two-week plan.
+1. 上次组会以来的进展。
+2. 证据和结果。
+3. 问题和风险。
+4. 未来两周计划。
 
-## Slide Structure
+## 幻灯片结构
 
-1. Research goal and current thesis line.
-2. What changed since last meeting.
-3. Experiment results and key tables.
-4. Interpretation: what the result supports and does not support.
-5. Problems and next two-week plan.
+1. 研究目标和当前论文主线。
+2. 相比上次组会的变化。
+3. 实验结果和关键表格。
+4. 结果解读：支持什么、不支持什么。
+5. 问题和未来两周计划。
 
-## Current Next Meeting Content
+## 下一次组会建议内容
 
-Recommended focus:
+建议重点：
 
-- Exp0 has run successfully on ScienceQA.
-- Image missingness is structured by subject/topic/skill.
-- Skill almost perfectly predicts `has_image` in the current report.
-- Exp0.1 manual review distinguishes `structural_absence` from image-needed `accidental_missing`; no final rows remain `ambiguous`.
+- Exp0 已经在 ScienceQA 上成功跑通。
+- 图像缺失与 subject/topic/skill 存在结构关联。
+- 当前报告中，skill 几乎可以完美预测 `has_image`。
+- Exp0.1 人工复核区分了 `structural_absence` 和需要图但缺图的 `accidental_missing`；最终没有样本保留为 `ambiguous`。

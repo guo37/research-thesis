@@ -1,43 +1,42 @@
-# Paper Roadmap
+# 论文路线图
 
-Last updated: 2026-06-30
+最后更新：2026-06-30
 
-Use this file to keep thesis writing aligned with experiment evidence.
+用这个文件保证论文写作始终对齐实验依据。
 
-## Thesis Structure
+## 论文结构
 
-| Chapter | Purpose | Current evidence source |
+| 章节 | 目的 | 当前证据来源 |
 | --- | --- | --- |
-| Chapter 1 Introduction | Problem, motivation, contributions | Planning files and final thesis line |
-| Chapter 2 Related Work | Multimodal education retrieval, missing modality, KG-grounded explanation | Literature review expansion pending |
-| Chapter 3 RC1 | Education knowledge constrained multimodal alignment and retrieval | Planned retrieval experiments |
-| Chapter 4 RC2 | Non-random missing modality diagnosis and selective completion | Exp0 complete, Exp0.1 pending labels |
-| Chapter 5 RC3 | Path/evidence/reliability constrained explanation generation | Planned evaluation set |
-| Chapter 6 Conclusion | Summary and limitations | Pending |
+| 第 1 章 绪论 | 问题、动机、贡献 | 规划文件和最终论文主线 |
+| 第 2 章 相关工作 | 教育多模态检索、缺失模态、KG 约束解释 | 文献综述扩展中 |
+| 第 3 章 RC1 | 教育知识约束的多模态对齐与检索 | 计划中的检索实验 |
+| 第 4 章 RC2 | 非随机缺失模态诊断与选择性补全 | Exp0/Exp0.1/Exp0.2 已形成初步证据 |
+| 第 5 章 RC3 | 路径/证据/可靠性约束解释生成 | 计划中的评测集 |
+| 第 6 章 总结与展望 | 总结和局限性 | 待补充 |
 
-## Contribution Mapping
+## 贡献映射
 
-| Contribution | Evidence needed | Current status |
+| 贡献 | 所需证据 | 当前状态 |
 | --- | --- | --- |
-| Knowledge-structured multimodal alignment | RC1 baseline comparison and hard negative ablation | Planned |
-| MNAR-aware missing modality modeling | Exp0 diagnosis, Exp0.1 labels, RC2 completion results | Partially supported |
-| Trustworthy explanation generation | RC3 evidence set and faithfulness evaluation | Planned |
+| 知识结构约束的多模态对齐 | RC1 基线对比和 hard negative 消融 | 计划中 |
+| MNAR 感知缺失模态建模 | Exp0 诊断、Exp0.1 标签、RC2 补全结果 | 部分支持 |
+| 可信解释生成 | RC3 证据集和忠实性评测 | 计划中 |
 
-## Writing Rules
+## 写作规则
 
-- Keep one canonical outline as the source of truth.
-- Mark older experiment conclusions as preliminary when they do not match the new thesis line.
-- Convert every experiment conclusion into one thesis paragraph only after the report and metrics are stable.
-- Do not use generated reports as final prose without rewriting the claim, evidence, and limitation.
+- 保留一个规范大纲作为论文主线的唯一依据。
+- 如果旧实验结论与新主线不一致，应标记为 preliminary。
+- 只有在报告和指标稳定后，才把实验结论转化为论文段落。
+- 生成报告不能直接作为论文正文，必须重写为“结论、证据、局限”结构。
 
-## Literature Plan
+## 文献计划
 
-Target: 30-40 papers.
+目标：30-40 篇论文。
 
-| Group | Target count | Focus |
+| 分组 | 目标数量 | 重点 |
 | --- | ---: | --- |
-| RC1 | 10-12 | Multimodal retrieval, contrastive learning, hard negatives, education resources |
-| RC2 | 10-12 | Missing modality, MNAR/MAR/MCAR, selective completion, robustness |
-| RC3 | 10-12 | KG-grounded explanation, faithful explanation, path-based reasoning |
-| Background | 3-5 | Education knowledge graph and benchmark context |
-
+| RC1 | 10-12 | 多模态检索、对比学习、hard negatives、教育资源 |
+| RC2 | 10-12 | 缺失模态、MNAR/MAR/MCAR、选择性补全、鲁棒性 |
+| RC3 | 10-12 | KG 约束解释、忠实解释、路径推理 |
+| 背景 | 3-5 | 教育知识图谱和基准数据背景 |

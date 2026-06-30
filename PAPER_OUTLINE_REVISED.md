@@ -268,15 +268,15 @@ Missing type classifier:
     structural_absence
     ambiguous
         ↓
-Selective completion:
+选择性补全：
     if accidental_missing:
-        retrieve / generate visual substitute
+        检索或生成视觉替代信息
     if structural_absence:
-        no visual completion; use text-only reliable representation
+        不做视觉补全；使用可靠的纯文本表示
     if ambiguous:
-        low-confidence fallback
+        低置信兜底处理
         ↓
-modality status + reliability score
+模态状态 + 可靠性评分
 ```
 
 ### 6.4 必须先做的数据诊断
@@ -402,33 +402,33 @@ LLM 可以生成流畅解释，但教育推荐解释必须回答：
 ### 7.3 技术路线
 
 ```text
-student query / target concept / current concept
+学生查询 / 目标概念 / 当前概念
         ↓
-concept identification
+概念识别
         ↓
-path retrieval:
-    prerequisite / related / remedial path
+路径检索：
+    先修 / 相关 / 补救路径
         ↓
-resource retrieval:
-    retrieve resources for path concepts
+资源检索：
+    为路径概念检索资源
         ↓
-evidence package:
-    graph path
-    alignment score from RC1
-    modality status from RC2
-    reliability score
+证据包：
+    图路径
+    RC1 对齐分数
+    RC2 模态状态
+    可靠性评分
         ↓
-constrained LLM explanation
+约束式 LLM 解释
         ↓
-verifier:
+验证器：
     entity grounding
     relation grounding
     unsupported claim detection
         ↓
-faithful educational explanation
+忠实的教育解释
 ```
 
-### 7.4 Evidence package
+### 7.4 证据包
 
 每条解释输入应包含：
 
@@ -513,7 +513,7 @@ ScienceQA 没有显式 prerequisite relation，因此 RC3 必须额外构图。
 
 应写：
 
-> 路径、对齐证据和模态可靠性共同构成可验证 evidence package，可降低 LLM 教育推荐解释中的无依据陈述和图谱外幻觉。
+> 路径、对齐证据和模态可靠性共同构成可验证证据包，可降低 LLM 教育推荐解释中的无依据陈述和图谱外幻觉。
 
 ---
 
@@ -609,10 +609,10 @@ modality_status.csv
 
 核心：
 
-- evidence package；
-- LLM constrained explanation；
-- verifier；
-- faithfulness evaluation。
+- 证据包；
+- LLM 约束解释；
+- 验证器；
+- 忠实性评估。
 
 ### 第 6 章 总结与展望
 
@@ -697,7 +697,7 @@ path
 candidate_resources
 alignment_score
 modality_status
-reference evidence
+参考证据
 ```
 
 ---

@@ -1,55 +1,55 @@
-# Experiment Registry
+# 实验登记表
 
-Last updated: 2026-06-30
+最后更新：2026-06-30
 
-Register every experiment that affects the thesis argument. Each row should point to config, code, outputs, and interpretation.
+这里登记所有会影响论文论证的实验。每一行都应指向对应配置、代码、输出和结果解读。
 
-## Experiments
+## 实验列表
 
-| ID | Name | Research content | Status | Config | Outputs | Interpretation |
+| ID | 名称 | 对应研究内容 | 状态 | 配置 | 输出 | 解读 |
 | --- | --- | --- | --- | --- | --- | --- |
-| Exp0 | ScienceQA dataset diagnosis | RC2 | Complete | [configs/exp0_scienceqa.yaml](../configs/exp0_scienceqa.yaml) | [reports/exp0_dataset_diagnosis](../reports/exp0_dataset_diagnosis) | [RESULT_INTERPRETATION.md](../reports/exp0_dataset_diagnosis/RESULT_INTERPRETATION.md) |
-| Exp0.1 | Missing type annotation labels | RC2 | Label analysis complete | [configs/exp0_1_missing_type_annotation.yaml](../configs/exp0_1_missing_type_annotation.yaml) | [data/scienceqa/annotation](../data/scienceqa/annotation), [reports/exp0_1_missing_type_annotation](../reports/exp0_1_missing_type_annotation) | [human_label_analysis.md](../reports/exp0_1_missing_type_annotation/human_label_analysis.md) |
-| Exp0.2 | Selective-completion gate baseline | RC2 | First baseline complete | [configs/exp0_2_selective_completion_gate.yaml](../configs/exp0_2_selective_completion_gate.yaml) | [reports/exp0_2_selective_completion_gate](../reports/exp0_2_selective_completion_gate) | [run_summary.md](../reports/exp0_2_selective_completion_gate/run_summary.md) |
-| Exp1 | Concept-aware retrieval | RC1 | Planned | Pending | Pending | Pending |
-| Exp2 | MNAR-aware selective completion | RC2 | Planned | Pending | Pending | Pending |
-| Exp3 | Evidence-constrained explanation generation | RC3 | Planned | Pending | Pending | Pending |
+| Exp0 | ScienceQA 数据集诊断 | RC2 | 已完成 | [configs/exp0_scienceqa.yaml](../configs/exp0_scienceqa.yaml) | [reports/exp0_dataset_diagnosis](../reports/exp0_dataset_diagnosis) | [RESULT_INTERPRETATION.md](../reports/exp0_dataset_diagnosis/RESULT_INTERPRETATION.md) |
+| Exp0.1 | 缺失类型标注结果 | RC2 | 标签分析已完成 | [configs/exp0_1_missing_type_annotation.yaml](../configs/exp0_1_missing_type_annotation.yaml) | [data/scienceqa/annotation](../data/scienceqa/annotation), [reports/exp0_1_missing_type_annotation](../reports/exp0_1_missing_type_annotation) | [human_label_analysis.md](../reports/exp0_1_missing_type_annotation/human_label_analysis.md) |
+| Exp0.2 | 选择性补全门控基线 | RC2 | 第一版基线已完成 | [configs/exp0_2_selective_completion_gate.yaml](../configs/exp0_2_selective_completion_gate.yaml) | [reports/exp0_2_selective_completion_gate](../reports/exp0_2_selective_completion_gate) | [run_summary.md](../reports/exp0_2_selective_completion_gate/run_summary.md) |
+| Exp1 | 概念感知检索 | RC1 | 计划中 | 待定 | 待定 | 待定 |
+| Exp2 | MNAR 感知选择性补全 | RC2 | 计划中 | 待定 | 待定 | 待定 |
+| Exp3 | 证据约束解释生成 | RC3 | 计划中 | 待定 | 待定 | 待定 |
 
-## Exp0 Current Conclusion
+## Exp0 当前结论
 
-ScienceQA image missingness is strongly structured by educational metadata. Current evidence:
+ScienceQA 的图像缺失与教育元数据存在明显结构关联。当前证据：
 
-- Total samples: 21,208.
-- Image missing rate: 51.28%.
-- `skill` has the strongest mutual information with `has_image`.
-- Skill-only prediction reaches near-perfect AUC in the current report.
+- 总样本数：21,208。
+- 图像缺失率：51.28%。
+- `skill` 与 `has_image` 的互信息最高。
+- 当前报告中，仅使用 `skill` 的预测模型已经达到接近完美的 AUC。
 
-Exp0 working implication:
+Exp0 工作性结论：
 
-> RC2 can continue as `MNAR-aware selective completion`, but `has_image = 0` must not be treated as `structural_absence` without label evidence.
+> RC2 可以继续按 `MNAR-aware selective completion` 推进，但在没有标注证据前，不能把 `has_image = 0` 直接当成 `structural_absence`。
 
-## Exp0.1 Current Conclusion
+## Exp0.1 当前结论
 
-The current label table contains 372 rows and no blank or invalid `human_label` values.
+当前标注表包含 372 行，没有空白或非法的 `human_label`。
 
-Missing-image rows only:
+只看缺图样本：
 
 - `structural_absence`: 230 / 322 (71.4%)
 - `accidental_missing`: 92 / 322 (28.6%)
 - `ambiguous`: 0 / 322 (0.0%)
 
-Working implication:
+工作性结论：
 
-> After manual review, the former ambiguous rows should be treated as image-needed missing samples. The RC2 task is a binary modality-necessity gate: `structural_absence` vs `accidental_missing`.
+> 经过人工复核，原先的 `ambiguous` 样本应视为“需要图但缺图”的样本。RC2 当前任务是二分类模态必要性门控：`structural_absence` vs `accidental_missing`。
 
-## Exp0.2 Current Conclusion
+## Exp0.2 当前结论
 
-The first selective-completion gate baseline performs perfectly on the original test split.
+第一版选择性补全门控基线在原始测试集划分上表现完美。
 
-Working implication:
+工作性结论：
 
-> The binary RC2 gate is feasible, but the result is not yet final thesis evidence because topic/skill overlap may allow memorization. Add topic/skill grouped stress tests before applying the gate to all missing-image samples.
+> 二分类 RC2 门控是可行的，但由于 topic/skill 重叠可能导致记忆效应，该结果还不能作为最终论文证据。在把门控应用到全部缺图样本前，需要加入 topic/skill 分组压力测试。
 
-## Required Run Note Template
+## 必需的运行记录模板
 
-For every new run, copy [templates/experiment-run.md](templates/experiment-run.md) into a dated report folder and fill it before interpreting results.
+每次新增实验运行时，都应复制 [templates/experiment-run.md](templates/experiment-run.md) 到带日期的报告目录，并在解读结果前填写完整。

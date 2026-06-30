@@ -1,81 +1,81 @@
-# Research Workspace
+# 研究工作空间
 
-This repository is the syncable workspace for the thesis research project:
+这个仓库是毕业论文研究项目的可同步工作空间：
 
 > 面向教育资源检索的可信多模态知识推理研究
 
-The current project state focuses on ScienceQA Exp0/Exp0.1:
+当前项目状态主要围绕 ScienceQA 的 Exp0/Exp0.1：
 
-- Exp0: diagnose whether image availability is structured by educational metadata.
-- Exp0.1: build missing-type annotation candidates for manual labeling.
-- Paper planning: keep the revised thesis outline, literature route, and final implementation plan.
+- Exp0：诊断图像可用性是否受教育元数据结构性影响。
+- Exp0.1：构建缺失类型标注候选集，用于人工标注。
+- 论文规划：维护修订后的论文大纲、文献路线和最终实施方案。
 
-Start from [docs/research-dashboard.md](docs/research-dashboard.md) before planning new research work.
+开始新的研究工作前，先查看 [docs/research-dashboard.md](docs/research-dashboard.md)。
 
-## Directory Map
+## 目录说明
 
 ```text
-configs/                  Experiment configuration files.
-data/scienceqa/processed/ Reproducible processed tables used by current reports.
-data/scienceqa/annotation/Annotation candidates and manual labeling batches.
-reports/                  Experiment reports and interpretation notes.
-scripts/                  Reproducible experiment and reporting scripts.
-tests/                    Small fixtures and regression checks.
-docs/                     Workspace management, sync, templates, and research planning notes.
+configs/                  实验配置文件。
+data/scienceqa/processed/ 当前报告使用的可复现实验处理表。
+data/scienceqa/annotation/标注候选集和人工标注批次。
+reports/                  实验报告和结果解读。
+scripts/                  可复现实验脚本和报告生成脚本。
+tests/                    小型测试样例和回归检查。
+docs/                     工作空间管理、同步、模板和研究规划文档。
 ```
 
-Do not commit local credentials or heavyweight cache files. `data/**/cache/` and `*.pem` are ignored.
+不要提交本地凭证或大型缓存文件。`data/**/cache/` 和 `*.pem` 已被忽略。
 
-## Standard Workflow
+## 标准工作流程
 
-Start work on any computer:
+在任意电脑开始工作：
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\scripts\sync_start.ps1
 ```
 
-On Mac:
+在 Mac 上：
 
 ```bash
 bash scripts/sync_start.sh
 ```
 
-Finish work before switching devices:
+切换设备前结束并同步工作：
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\scripts\sync_finish.ps1 -Message "describe the research change"
 ```
 
-On Mac:
+在 Mac 上：
 
 ```bash
 bash scripts/sync_finish.sh "describe the research change"
 ```
 
-If a remote has not been configured yet, create a private Git repository and run:
+如果还没有配置远端仓库，先创建一个私有 Git 仓库，然后运行：
 
 ```powershell
 git remote add origin <private-repo-url>
 git push -u origin main
 ```
 
-## Reproduce Exp0
+## 复现 Exp0
 
-Install dependencies with either Conda or pip:
+使用 Conda 或 pip 安装依赖：
 
 ```powershell
 conda env create -f environment_exp0.yml
 conda activate scienceqa-exp0
 ```
 
-or:
+或者：
 
 ```powershell
 python -m venv .venv
 .\.venv\Scripts\python -m pip install -r requirements_exp0.txt
 ```
 
-Run the diagnosis:
+运行数据诊断：
 
 ```powershell
 python scripts/exp0_dataset_diagnosis.py --config configs/exp0_scienceqa.yaml

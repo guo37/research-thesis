@@ -1,8 +1,8 @@
-# Missingness Prediction Results
+# 缺失预测结果
 
-Target: `has_image`.
+目标：`has_image`。
 
-Baselines are evaluated by split. The key comparison is whether `topic`, `skill`, and metadata improve over `majority` and `subject_only`.
+各基线按数据划分进行评估。关键比较是 `topic`、`skill` 和元数据是否优于 `majority` 与 `subject_only`。
 
 | model               | eval_split | auc    | average_precision | f1     | accuracy | positive_rate | features                                         |
 | ------------------- | ---------- | ------ | ----------------- | ------ | -------- | ------------- | ------------------------------------------------ |

@@ -1,8 +1,6 @@
-"""Exp0.2 selective-completion gate baselines.
+"""Exp0.2 选择性补全门控基线。
 
-Predict whether a missing-image item is structural absence or should be
-reviewed/completed. This avoids training an unsupported four-class model when
-`accidental_missing` has too few labeled examples.
+预测缺图样本是结构性无图，还是需要图但数据中缺图。
 """
 
 from __future__ import annotations
@@ -46,7 +44,7 @@ DEFAULT_CONFIG: dict[str, Any] = {
     },
     "target": {
         "negative_label": "structural_absence",
-        "positive_labels": ["ambiguous", "accidental_missing"],
+        "positive_labels": ["accidental_missing"],
     },
     "features": {
         "categorical": ["subject", "topic", "skill", "grade", "category"],
@@ -369,7 +367,7 @@ def write_summary(
             rows.append("| " + " | ".join(format_float(row[col]) for col in metric_cols) + " |")
         return "\n".join(rows)
 
-    overlap_headers = ["Field", "Split", "Unique values", "Unseen from train", "Examples"]
+    overlap_headers = ["字段", "数据划分", "唯一值数量", "训练集中未见值数量", "示例"]
     overlap_rows = split_overlap_rows(data, ["topic", "skill"])
     overlap_table = ["| " + " | ".join(overlap_headers) + " |"]
     overlap_table.append("| " + " | ".join("---" for _ in overlap_headers) + " |")
@@ -377,44 +375,44 @@ def write_summary(
         overlap_table.append("| " + " | ".join(str(cell) for cell in row) + " |")
 
     summary = [
-        "# Exp0.2 Selective-Completion Gate Baseline",
+        "# Exp0.2 选择性补全门控基线",
         "",
-        "Target:",
+        "目标：",
         "",
         "```text",
         "0 = structural_absence",
         f"1 = image_needed_missing = {positive_text}",
         "```",
         "",
-        "## Data",
+        "## 数据",
         "",
-        f"- Rows used: {len(data)} missing-image labeled candidates.",
-        f"- Label counts: `{json.dumps(label_counts, ensure_ascii=False, sort_keys=True)}`.",
-        f"- Target counts: `{json.dumps({str(k): int(v) for k, v in target_counts.items()}, ensure_ascii=False, sort_keys=True)}`.",
+        f"- 使用样本：{len(data)} 条已标注缺图候选样本。",
+        f"- 标签计数：`{json.dumps(label_counts, ensure_ascii=False, sort_keys=True)}`。",
+        f"- 目标计数：`{json.dumps({str(k): int(v) for k, v in target_counts.items()}, ensure_ascii=False, sort_keys=True)}`。",
         "",
-        "## Metrics",
+        "## 指标",
         "",
         md_table(metrics),
         "",
-        "## Split Overlap Check",
+        "## 划分重叠检查",
         "",
         "\n".join(overlap_table),
         "",
-        "If validation/test topics or skills are mostly seen in train, high scores may partly reflect topic/skill memorization. Add a grouped stress test before presenting final thesis evidence.",
+        "如果验证集/测试集中的 topic 或 skill 大多已经出现在训练集中，高分可能部分来自 topic/skill 记忆效应。作为论文证据前，需要增加分组压力测试。",
         "",
-        "## Current Best Test Result",
+        "## 当前最佳测试结果",
         "",
-        f"- Best model by positive F1: `{best['model']}`.",
-        f"- Positive F1: `{best['positive_f1']:.4f}`.",
-        f"- PR-AUC: `{best['pr_auc']:.4f}`.",
-        f"- Balanced accuracy: `{best['balanced_accuracy']:.4f}`.",
-        f"- Confusion matrix on test: TN={int(best['tn'])}, FP={int(best['fp'])}, FN={int(best['fn'])}, TP={int(best['tp'])}.",
+        f"- 按正类 F1 选择的最佳模型：`{best['model']}`。",
+        f"- 正类 F1：`{best['positive_f1']:.4f}`。",
+        f"- PR-AUC：`{best['pr_auc']:.4f}`。",
+        f"- Balanced accuracy：`{best['balanced_accuracy']:.4f}`。",
+        f"- 测试集混淆矩阵：TN={int(best['tn'])}, FP={int(best['fp'])}, FN={int(best['fn'])}, TP={int(best['tp'])}。",
         "",
-        "## Interpretation",
+        "## 结果解读",
         "",
-        "- This is a small labeled set, so the result is a feasibility signal, not final thesis evidence.",
-        "- This supports framing RC2 as a modality-necessity gate: skip structural absence, handle accidental missingness.",
-        "- If these labels are auto-assisted, manually review sampled positive rows before using this as a thesis result.",
+        "- 当前标注集较小，因此该结果是可行性信号，还不是最终论文证据。",
+        "- 结果支持将 RC2 表述为模态必要性门控：跳过结构性无图，处理意外缺图。",
+        "- 如果标签包含自动辅助过程，在写入论文前应抽查正类样本。",
         "",
     ]
     (report_dir / "run_summary.md").write_text("\n".join(summary), encoding="utf-8")

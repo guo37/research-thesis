@@ -1,12 +1,12 @@
-# Exp0 Dataset Statistics
+# Exp0 数据集统计
 
-## 1. ScienceQA Basic Scale
+## 1. ScienceQA 基本规模
 
-- Total samples: 21208
-- Overall has_image rate: 0.4872
-- Overall missing rate: 0.5128
+- 总样本数：21208
+- 总体 has_image 比例：0.4872
+- 总体缺失比例：0.5128
 
-## 2. Train / Validation / Test Samples
+## 2. Train / Validation / Test 样本数
 
 | split      | n     |
 | ---------- | ----- |
@@ -14,14 +14,14 @@
 | validation | 4241  |
 | test       | 4241  |
 
-## 3. Image Availability Distribution
+## 3. 图像可用性分布
 
 | has_image | n     | rate   |
 | --------- | ----- | ------ |
 | 0         | 10876 | 0.5128 |
 | 1         | 10332 | 0.4872 |
 
-## 4. Subject / Topic / Skill Distribution
+## 4. Subject / Topic / Skill 分布
 
 | field    | unique_values | non_empty |
 | -------- | ------------- | --------- |
@@ -31,7 +31,7 @@
 | grade    | 12            | 21208     |
 | category | 126           | 21208     |
 
-## 5. Subject-Level Image Missing Rate
+## 5. Subject 层面的图像缺失率
 
 | subject          | n     | has_image_count | has_image_rate | missing_count | missing_rate |
 | ---------------- | ----- | --------------- | -------------- | ------------- | ------------ |
@@ -39,9 +39,9 @@
 | natural science  | 11487 | 6332            | 0.5512         | 5155          | 0.4488       |
 | social science   | 4350  | 3772            | 0.8671         | 578           | 0.1329       |
 
-## 6. Topic-Level Image Missing Rate
+## 6. Topic 层面的图像缺失率
 
-Main-topic threshold: `topic_count >= 20`.
+主要 topic 阈值：`topic_count >= 20`。
 
 | topic                             | n    | has_image_count | has_image_rate | missing_count | missing_rate |
 | --------------------------------- | ---- | --------------- | -------------- | ------------- | ------------ |
@@ -66,9 +66,9 @@ Main-topic threshold: `topic_count >= 20`.
 | earth-science                     | 1152 | 827             | 0.7179         | 325           | 0.2821       |
 | world-history                     | 65   | 53              | 0.8154         | 12            | 0.1846       |
 
-## 7. Skill-Level Image Missing Rate
+## 7. Skill 层面的图像缺失率
 
-Main-skill threshold: `skill_count >= 20`.
+主要 skill 阈值：`skill_count >= 20`。
 
 | skill                                                                   | n   | has_image_count | has_image_rate | missing_count | missing_rate |
 | ----------------------------------------------------------------------- | --- | --------------- | -------------- | ------------- | ------------ |
@@ -93,7 +93,7 @@ Main-skill threshold: `skill_count >= 20`.
 | Compare properties of materials                                         | 151 | 0               | 0.0000         | 151           | 1.0000       |
 | What's the difference between weather and climate?                      | 149 | 0               | 0.0000         | 149           | 1.0000       |
 
-## 8. Mutual Information
+## 8. 互信息
 
 | field   | mutual_information |
 | ------- | ------------------ |
@@ -102,7 +102,7 @@ Main-skill threshold: `skill_count >= 20`.
 | skill   | 0.6884             |
 | grade   | 0.0719             |
 
-## 9. Chi-Square Tests
+## 9. 卡方检验
 
 | field   | chi2       | p_value | dof      |
 | ------- | ---------- | ------- | -------- |
@@ -111,7 +111,7 @@ Main-skill threshold: `skill_count >= 20`.
 | skill   | 20933.3005 | 0.0000  | 378.0000 |
 | grade   | 2275.1555  | 0.0000  | 11.0000  |
 
-## 10. Missingness Prediction AUC
+## 10. 缺失预测 AUC
 
 | model               | eval_split | auc    | average_precision | f1     | accuracy | positive_rate | features                                         |
 | ------------------- | ---------- | ------ | ----------------- | ------ | -------- | ------------- | ------------------------------------------------ |
@@ -130,11 +130,11 @@ Main-skill threshold: `skill_count >= 20`.
 | full_metadata_text  | validation | 0.9998 | 0.9998            | 0.9917 | 0.9917   | 0.4945        | subject,topic,skill,grade,text_length,word_count |
 | full_metadata_text  | test       | 0.9997 | 0.9996            | 0.9902 | 0.9906   | 0.4756        | subject,topic,skill,grade,text_length,word_count |
 
-## 11. High-MNAR / Low-MNAR Topic Candidates
+## 11. High-MNAR / Low-MNAR Topic 候选
 
-High-MNAR candidates are frequent topics with high missing rate. Low-MNAR candidates are frequent topics with low missing rate.
+High-MNAR 候选是高频且缺失率高的 topic；Low-MNAR 候选是高频且缺失率低的 topic。
 
-### High-MNAR Topic Candidates
+### High-MNAR Topic 候选
 
 | topic                             | n    | has_image_count | has_image_rate | missing_count | missing_rate |
 | --------------------------------- | ---- | --------------- | -------------- | ------------- | ------------ |
@@ -159,7 +159,7 @@ High-MNAR candidates are frequent topics with high missing rate. Low-MNAR candid
 | earth-science                     | 1152 | 827             | 0.7179         | 325           | 0.2821       |
 | world-history                     | 65   | 53              | 0.8154         | 12            | 0.1846       |
 
-### Low-MNAR Topic Candidates
+### Low-MNAR Topic 候选
 
 | topic                             | n    | has_image_count | has_image_rate | missing_count | missing_rate |
 | --------------------------------- | ---- | --------------- | -------------- | ------------- | ------------ |
@@ -184,8 +184,8 @@ High-MNAR candidates are frequent topics with high missing rate. Low-MNAR candid
 | punctuation                       | 514  | 0               | 0.0000         | 514           | 1.0000       |
 | grammar                           | 379  | 0               | 0.0000         | 379           | 1.0000       |
 
-## 12. RC2 Continuation Decision
+## 12. RC2 后续判断
 
-Preliminary support for structured missingness: full metadata improves over subject-only.
+初步支持结构性缺失：完整元数据模型优于 subject-only。
 
-Caveat: Exp0 does not equate missing images with `structural_absence`. Missing-type labels require the later 300-500 sample annotation step.
+注意：Exp0 不能把缺图直接等同于 `structural_absence`。缺失类型必须通过后续 300-500 条样本标注确认。

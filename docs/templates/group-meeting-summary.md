@@ -1,16 +1,16 @@
-# Group Meeting Summary
+# 组会总结
 
-## Metadata
+## 元数据
 
-- Date:
-- Cycle:
-- Related experiments:
-- Related thesis section:
+- 日期：
+- 周期：
+- 相关实验：
+- 相关论文章节：
 
-## Progress Since Last Meeting
+## 上次组会以来的进展
 
-## Evidence And Results
+## 证据和结果
 
-## Problems
+## 问题
 
-## Next Two-Week Plan
+## 未来两周计划

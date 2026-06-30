@@ -1,4 +1,4 @@
-"""Analyze Exp0.1 missing-type labels and write a Markdown report."""
+"""分析 Exp0.1 缺失类型标签，并生成 Markdown 报告。"""
 
 from __future__ import annotations
 
@@ -79,12 +79,12 @@ def main() -> None:
     parser.add_argument(
         "--input",
         default="data/scienceqa/annotation/missing_type_annotation_candidates.csv",
-        help="Annotated Exp0.1 candidate CSV.",
+        help="已标注的 Exp0.1 候选 CSV。",
     )
     parser.add_argument(
         "--output",
         default="reports/exp0_1_missing_type_annotation/human_label_analysis.md",
-        help="Markdown report path.",
+        help="Markdown 报告路径。",
     )
     args = parser.parse_args()
 
@@ -120,89 +120,89 @@ def main() -> None:
     ambiguous_missing = missing_label_counts.get("ambiguous", 0)
     if ambiguous_missing == 0:
         interpretation_lines = [
-            f"- Among missing-image rows, `{structural_missing}` / `{len(missing_rows)}` ({pct(structural_missing, len(missing_rows))}) are labeled `structural_absence`.",
-            f"- Among missing-image rows, `{accidental_missing}` / `{len(missing_rows)}` ({pct(accidental_missing, len(missing_rows))}) are labeled `accidental_missing`: these are items where an image is needed but absent.",
-            "- No rows remain labeled `ambiguous` after manual review.",
-            "- The next RC2 task should be a binary modality-necessity gate: predict `structural_absence` vs `accidental_missing` for missing-image samples.",
-            "- Positive labels are concentrated in natural-science/biology rows, so the gate should be tested with topic/skill grouped splits before thesis use.",
+            f"- 在缺图样本中，`{structural_missing}` / `{len(missing_rows)}`（{pct(structural_missing, len(missing_rows))}）被标为 `structural_absence`。",
+            f"- 在缺图样本中，`{accidental_missing}` / `{len(missing_rows)}`（{pct(accidental_missing, len(missing_rows))}）被标为 `accidental_missing`：这些题目需要图，但数据中缺图。",
+            "- 人工复核后，没有样本继续保留为 `ambiguous`。",
+            "- 下一步 RC2 任务应是二分类模态必要性门控：在缺图样本中预测 `structural_absence` vs `accidental_missing`。",
+            "- 正类样本集中在 natural-science/biology，因此论文使用前应进行 topic/skill 分组测试。",
         ]
         target_definition = "`accidental_missing`"
     else:
         interpretation_lines = [
-            f"- Among missing-image rows, `{structural_missing}` / `{len(missing_rows)}` ({pct(structural_missing, len(missing_rows))}) are labeled `structural_absence`.",
-            f"- Among missing-image rows, `{non_observed_missing}` / `{len(missing_rows)}` ({pct(non_observed_missing, len(missing_rows))}) are `ambiguous` or `accidental_missing`, so they should be treated as review/completion candidates rather than automatically completed.",
-            "- The next RC2 task should be a selective-completion gate: predict `structural_absence` vs `review_or_completion_needed` for missing-image samples.",
-            "- Ambiguity is concentrated in natural-science/biology rows, which suggests the gate should use topic/skill plus question text rather than subject alone.",
+            f"- 在缺图样本中，`{structural_missing}` / `{len(missing_rows)}`（{pct(structural_missing, len(missing_rows))}）被标为 `structural_absence`。",
+            f"- 在缺图样本中，`{non_observed_missing}` / `{len(missing_rows)}`（{pct(non_observed_missing, len(missing_rows))}）为 `ambiguous` 或 `accidental_missing`，应作为复核/补全候选，而不是自动补全。",
+            "- 下一步 RC2 任务应是选择性补全门控：在缺图样本中预测 `structural_absence` vs `review_or_completion_needed`。",
+            "- 不确定样本集中在 natural-science/biology，说明门控模型需要结合 topic/skill 和题目文本，而不能只依赖 subject。",
         ]
         target_definition = "`accidental_missing OR ambiguous`"
 
     lines = [
-        "# Exp0.1 Human Label Analysis",
+        "# Exp0.1 人工标签分析",
         "",
-        "Generated from `data/scienceqa/annotation/missing_type_annotation_candidates.csv`.",
+        "基于 `data/scienceqa/annotation/missing_type_annotation_candidates.csv` 生成。",
         "",
-        "## Data Quality",
+        "## 数据质量",
         "",
         md_table(
-            ["Check", "Value"],
+            ["检查项", "值"],
             [
-                ["Total rows", total],
-                ["Missing-image rows", len(missing_rows)],
-                ["Blank `human_label`", blank_labels],
-                ["Invalid labels", ", ".join(invalid_labels) if invalid_labels else "0"],
-                ["Image/label consistency issues", len(issues)],
+                ["总行数", total],
+                ["缺图样本数", len(missing_rows)],
+                ["空白 `human_label`", blank_labels],
+                ["非法标签", ", ".join(invalid_labels) if invalid_labels else "0"],
+                ["图像状态/标签一致性问题", len(issues)],
             ],
         ),
         "",
-        "## Label Distribution",
+        "## 标签分布",
         "",
-        md_table(["Label", "Count", "Share of all rows"], label_rows(label_counts, total)),
+        md_table(["标签", "数量", "占全部样本比例"], label_rows(label_counts, total)),
         "",
-        "Missing-image rows only:",
+        "只看缺图样本：",
         "",
         md_table(
-            ["Label", "Count", "Share of missing-image rows"],
+            ["标签", "数量", "占缺图样本比例"],
             [[label, missing_label_counts.get(label, 0), pct(missing_label_counts.get(label, 0), len(missing_rows))] for label in MISSING_LABELS],
         ),
         "",
-        "## Suggested Type vs Human Label",
+        "## 抽样提示类型 vs 人工标签",
         "",
-        md_table(["Suggested type", "Total", *LABELS], suggested_rows),
+        md_table(["抽样提示类型", "总数", *LABELS], suggested_rows),
         "",
-        "## Subject vs Human Label",
+        "## Subject vs 人工标签",
         "",
-        md_table(["Subject", "Total", *LABELS], subject_rows),
+        md_table(["Subject", "总数", *LABELS], subject_rows),
         "",
-        "## Split vs Human Label",
+        "## 数据划分 vs 人工标签",
         "",
-        md_table(["Split", "Total", *LABELS], split_rows),
+        md_table(["数据划分", "总数", *LABELS], split_rows),
         "",
-        "## Top Topics",
+        "## 主要 Topic",
         "",
-        md_table(["Topic", "Total", *LABELS], top_topics),
+        md_table(["Topic", "总数", *LABELS], top_topics),
         "",
-        "## Confidence Distribution",
+        "## 置信度分布",
         "",
-        md_table(["Confidence band", "Count"], confidence_rows),
+        md_table(["置信度区间", "数量"], confidence_rows),
         "",
-        "## Interpretation",
+        "## 结果解读",
         "",
         *interpretation_lines,
         "",
-        "## Recommended Next Experiment",
+        "## 推荐下一步实验",
         "",
-        f"Define the positive class as {target_definition} for missing-image rows.",
+        f"在缺图样本中，将正类定义为 {target_definition}。",
         "",
-        "Run an Exp0.2 baseline comparison:",
+        "运行 Exp0.2 基线对比：",
         "",
-        "1. Majority baseline.",
-        "2. Metadata-only logistic regression: subject, topic, skill, grade, text length.",
-        "3. Text-only TF-IDF logistic regression: question, choices, hint, lecture, solution.",
-        "4. Metadata + text TF-IDF logistic regression.",
+        "1. 多数类基线。",
+        "2. 仅元数据 Logistic Regression：subject、topic、skill、grade、text length。",
+        "3. 仅文本 TF-IDF Logistic Regression：question、choices、hint、lecture、solution。",
+        "4. 元数据 + 文本 TF-IDF Logistic Regression。",
         "",
-        "Report balanced accuracy, macro F1, positive-class F1, PR-AUC, and confusion matrix.",
+        "报告 balanced accuracy、macro F1、正类 F1、PR-AUC 和混淆矩阵。",
         "",
-        "If Exp0.2 can identify image-needed missing samples above baseline, RC2 can continue as `MNAR-aware selective completion`. If not, RC2 should be narrowed to descriptive MNAR diagnosis plus rule-assisted modality necessity analysis.",
+        "如果 Exp0.2 能明显优于基线地识别“需要图但缺图”的样本，RC2 可以继续按 `MNAR-aware selective completion` 推进。否则，RC2 应收窄为描述性 MNAR 诊断和规则辅助的模态必要性分析。",
         "",
     ]
 

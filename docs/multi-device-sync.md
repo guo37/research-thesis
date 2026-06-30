@@ -1,14 +1,14 @@
-# Multi-Device Sync
+# 多设备同步
 
-Target devices:
+目标设备：
 
-- Windows home
-- Windows work
-- Mac mobile
+- 家用 Windows
+- 办公 Windows
+- 出门使用的 Mac
 
-Use Git as the source of truth for this research workspace. Each device should clone the same private repository into its local research folder. Do not put this Git repository inside a cloud drive auto-sync folder.
+本研究工作空间以 Git 作为同步基准。每台设备都应把同一个私有仓库克隆到本地研究目录。不要把这个 Git 仓库放进云盘自动同步目录。
 
-## One-Time Setup On First Device
+## 第一台设备的一次性设置
 
 ```powershell
 git init
@@ -20,7 +20,7 @@ git remote add origin <private-repo-url>
 git push -u origin main
 ```
 
-## One-Time Setup On Other Windows Devices
+## 其他 Windows 设备的一次性设置
 
 ```powershell
 git clone <private-repo-url> E:\Research\reserach
@@ -28,9 +28,9 @@ cd E:\Research\reserach
 git lfs install
 ```
 
-If the target path differs, keep the path in your personal workspace index.
+如果目标路径不同，应在个人工作空间索引中记录实际路径。
 
-## One-Time Setup On Mac
+## Mac 的一次性设置
 
 ```bash
 git clone <private-repo-url> ~/Research/reserach
@@ -38,34 +38,34 @@ cd ~/Research/reserach
 git lfs install
 ```
 
-## Start Work
+## 开始工作
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\scripts\sync_start.ps1
 ```
 
-On Mac:
+在 Mac 上：
 
 ```bash
 bash scripts/sync_start.sh
 ```
 
-This pulls remote changes with rebase and shows the local status.
+该命令会用 rebase 方式拉取远端变更，并显示本地状态。
 
-## Finish Work
+## 结束工作
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\scripts\sync_finish.ps1 -Message "your commit message"
 ```
 
-On Mac:
+在 Mac 上：
 
 ```bash
 bash scripts/sync_finish.sh "your commit message"
 ```
 
-This checks ignored-sensitive files, stages allowed changes, commits them, and pushes when a remote exists.
+该命令会检查被忽略的敏感文件、暂存允许提交的变更、创建提交，并在存在远端时推送。
 
-## Conflict Rule
+## 冲突规则
 
-Before switching devices, always finish with a clean `git status`. If two devices edited the same Markdown file, pull first and resolve the conflict immediately on the device where you notice it.
+切换设备前，必须确保 `git status` 干净。如果两台设备修改了同一个 Markdown 文件，先拉取，然后在发现冲突的设备上立即解决。

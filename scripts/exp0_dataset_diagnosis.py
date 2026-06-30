@@ -1,7 +1,6 @@
-"""Exp0 ScienceQA dataset diagnosis.
+"""Exp0 ScienceQA 数据集诊断。
 
-This script builds the first unified ScienceQA schema and tests whether
-image availability is structured by educational metadata.
+该脚本构建第一版统一 ScienceQA schema，并检验图像可用性是否受到教育元数据的结构性影响。
 """
 
 from __future__ import annotations
@@ -566,7 +565,7 @@ def format_float(value: Any, digits: int = 4) -> str:
 
 def df_to_markdown(df: pd.DataFrame, max_rows: int = 20) -> str:
     if df.empty:
-        return "_No rows._"
+        return "_无记录。_"
     view = df.head(max_rows).copy()
     for col in view.columns:
         if pd.api.types.is_float_dtype(view[col]):
@@ -587,11 +586,11 @@ def df_to_markdown(df: pd.DataFrame, max_rows: int = 20) -> str:
 
 def write_prediction_report(predictions: pd.DataFrame, path: Path) -> None:
     lines = [
-        "# Missingness Prediction Results",
+        "# 缺失预测结果",
         "",
-        "Target: `has_image`.",
+        "目标：`has_image`。",
         "",
-        "Baselines are evaluated by split. The key comparison is whether `topic`, `skill`, and metadata improve over `majority` and `subject_only`.",
+        "各基线按数据划分进行评估。关键比较是 `topic`、`skill` 和元数据是否优于 `majority` 与 `subject_only`。",
         "",
         df_to_markdown(predictions.sort_values(["eval_split", "model"])),
         "",
@@ -630,83 +629,83 @@ def write_dataset_report(
     if not subject_auc.empty and not full_auc.empty and not pd.isna(subject_auc.iloc[0]) and not pd.isna(full_auc.iloc[0]):
         delta = full_auc.iloc[0] - subject_auc.iloc[0]
         conclusion = (
-            "Preliminary support for structured missingness: full metadata improves over subject-only."
+            "初步支持结构性缺失：完整元数据模型优于 subject-only。"
             if delta >= 0.03
-            else "Weak or inconclusive structured-missingness signal: full metadata does not clearly improve over subject-only."
+            else "结构性缺失信号较弱或不明确：完整元数据模型没有明显优于 subject-only。"
         )
     elif not pd.isna(best_auc):
         conclusion = (
-            "Preliminary support for predictable missingness." if best_auc >= 0.65 else "Weak or inconclusive predictability signal."
+            "初步支持可预测的缺失机制。" if best_auc >= 0.65 else "缺失可预测性的信号较弱或不明确。"
         )
     else:
-        conclusion = "Prediction conclusion unavailable because AUC could not be computed."
+        conclusion = "由于无法计算 AUC，暂时不能给出预测结论。"
 
     lines = [
-        "# Exp0 Dataset Statistics",
+        "# Exp0 数据集统计",
         "",
-        "## 1. ScienceQA Basic Scale",
+        "## 1. ScienceQA 基本规模",
         "",
-        f"- Total samples: {len(resources)}",
-        f"- Overall has_image rate: {resources['has_image'].mean():.4f}",
-        f"- Overall missing rate: {1.0 - resources['has_image'].mean():.4f}",
+        f"- 总样本数：{len(resources)}",
+        f"- 总体 has_image 比例：{resources['has_image'].mean():.4f}",
+        f"- 总体缺失比例：{1.0 - resources['has_image'].mean():.4f}",
         "",
-        "## 2. Train / Validation / Test Samples",
+        "## 2. Train / Validation / Test 样本数",
         "",
         df_to_markdown(split_counts),
         "",
-        "## 3. Image Availability Distribution",
+        "## 3. 图像可用性分布",
         "",
         df_to_markdown(image_dist),
         "",
-        "## 4. Subject / Topic / Skill Distribution",
+        "## 4. Subject / Topic / Skill 分布",
         "",
         df_to_markdown(concept_dist),
         "",
-        "## 5. Subject-Level Image Missing Rate",
+        "## 5. Subject 层面的图像缺失率",
         "",
         df_to_markdown(by_subject),
         "",
-        "## 6. Topic-Level Image Missing Rate",
+        "## 6. Topic 层面的图像缺失率",
         "",
-        f"Main-topic threshold: `topic_count >= {cfg.min_topic_count}`.",
+        f"主要 topic 阈值：`topic_count >= {cfg.min_topic_count}`。",
         "",
         df_to_markdown(by_topic[by_topic["n"] >= cfg.min_topic_count]),
         "",
-        "## 7. Skill-Level Image Missing Rate",
+        "## 7. Skill 层面的图像缺失率",
         "",
-        f"Main-skill threshold: `skill_count >= {cfg.min_skill_count}`.",
+        f"主要 skill 阈值：`skill_count >= {cfg.min_skill_count}`。",
         "",
         df_to_markdown(by_skill[by_skill["n"] >= cfg.min_skill_count]),
         "",
-        "## 8. Mutual Information",
+        "## 8. 互信息",
         "",
         df_to_markdown(mi_df),
         "",
-        "## 9. Chi-Square Tests",
+        "## 9. 卡方检验",
         "",
         df_to_markdown(chi_df),
         "",
-        "## 10. Missingness Prediction AUC",
+        "## 10. 缺失预测 AUC",
         "",
         df_to_markdown(predictions),
         "",
-        "## 11. High-MNAR / Low-MNAR Topic Candidates",
+        "## 11. High-MNAR / Low-MNAR Topic 候选",
         "",
-        "High-MNAR candidates are frequent topics with high missing rate. Low-MNAR candidates are frequent topics with low missing rate.",
+        "High-MNAR 候选是高频且缺失率高的 topic；Low-MNAR 候选是高频且缺失率低的 topic。",
         "",
-        "### High-MNAR Topic Candidates",
+        "### High-MNAR Topic 候选",
         "",
         df_to_markdown(high_topics),
         "",
-        "### Low-MNAR Topic Candidates",
+        "### Low-MNAR Topic 候选",
         "",
         df_to_markdown(low_topics),
         "",
-        "## 12. RC2 Continuation Decision",
+        "## 12. RC2 后续判断",
         "",
         conclusion,
         "",
-        "Caveat: Exp0 does not equate missing images with `structural_absence`. Missing-type labels require the later 300-500 sample annotation step.",
+        "注意：Exp0 不能把缺图直接等同于 `structural_absence`。缺失类型必须通过后续 300-500 条样本标注确认。",
         "",
     ]
     (cfg.report_dir / "dataset_statistics.md").write_text("\n".join(lines), encoding="utf-8")

@@ -1,39 +1,38 @@
-# Experiment Run
+# 实验运行记录
 
-## Metadata
+## 元数据
 
-- Date:
-- Experiment:
-- Branch:
-- Commit:
-- Device:
-- Environment:
+- 日期：
+- 实验：
+- 分支：
+- 提交：
+- 设备：
+- 环境：
 
-## Research Question
+## 研究问题
 
 
-## Config
+## 配置
 
-- Config file:
-- Dataset:
-- Input path:
-- Output path:
+- 配置文件：
+- 数据集：
+- 输入路径：
+- 输出路径：
 
-## Command
+## 命令
 
 ```powershell
 
 ```
 
-## Results
+## 结果
 
-- Main metric:
-- Baseline:
-- Comparison:
+- 主要指标：
+- 基线：
+- 对比：
 
-## Interpretation
+## 解读
 
 
-## Next Step
-
+## 下一步
 

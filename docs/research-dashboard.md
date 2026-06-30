@@ -1,65 +1,65 @@
-# Research Dashboard
+# 研究总控台
 
-Last updated: 2026-06-30
+最后更新：2026-06-30
 
-This is the working entry point for the thesis research workspace. Start here before opening experiment files, paper drafts, or meeting notes.
+这是毕业论文研究工作空间的工作入口。打开实验文件、论文草稿或组会记录前，先从这里开始。
 
-## Current Thesis Line
+## 当前论文主线
 
-Topic direction:
+题目方向：
 
 > 面向教育资源检索的可信多模态知识推理研究
 
-Core line:
+核心主线：
 
 > 教育知识结构约束跨模态对齐 + MNAR-aware 选择性补全 + 路径/对齐/可靠性约束解释生成。
 
-Canonical planning files:
+规范规划文件：
 
 - [论文重构_最终主线与实施方案.md](../论文重构_最终主线与实施方案.md)
 - [研究重构_文献综述与技术路线.md](../研究重构_文献综述与技术路线.md)
 - [PAPER_OUTLINE_REVISED.md](../PAPER_OUTLINE_REVISED.md)
 
-## Active Workstreams
+## 当前工作流
 
-| Workstream | Status | Next action |
+| 工作流 | 状态 | 下一步 |
 | --- | --- | --- |
-| RC2 missingness diagnosis | Exp0.2 first baseline complete | Add grouped stress test before thesis use |
-| RC1 concept-aware retrieval | Planned | Define baselines and first runnable retrieval experiment |
-| RC3 explanation generation | Planned | Build 100-sample explanation evaluation set after RC1/RC2 inputs are stable |
-| Literature review | In progress | Expand to 30-40 papers, 10-12 per research content |
-| Group meetings | Needs structure | Use the two-week meeting cycle and PPT templates |
+| RC2 缺失机制诊断 | Exp0.2 第一版基线已完成 | 论文使用前加入分组压力测试 |
+| RC1 概念感知检索 | 计划中 | 定义基线和第一个可运行检索实验 |
+| RC3 解释生成 | 计划中 | 在 RC1/RC2 输入稳定后构建 100 条解释评测集 |
+| 文献综述 | 进行中 | 扩展到 30-40 篇，每个研究内容 10-12 篇 |
+| 组会汇报 | 需要规范化 | 使用两周组会节奏和 PPT 模板 |
 
-## Core Indexes
+## 核心索引
 
-- [Task board](task-board.md)
-- [Experiment registry](experiment-registry.md)
-- [Paper roadmap](paper-roadmap.md)
-- [Meeting cycle](meeting-cycle.md)
-- [Research space map](research-space-map.md)
-- [Multi-device sync](multi-device-sync.md)
+- [任务看板](task-board.md)
+- [实验登记表](experiment-registry.md)
+- [论文路线图](paper-roadmap.md)
+- [组会周期](meeting-cycle.md)
+- [研究空间地图](research-space-map.md)
+- [多设备同步](multi-device-sync.md)
 
-## Session Routine
+## 每次工作流程
 
 1. Run `scripts/sync_start.ps1` or `scripts/sync_start.sh`.
-2. Check [Task board](task-board.md).
-3. Work on one active task only.
-4. Record experiment commands, outputs, and interpretation.
-5. Run `scripts/sync_finish.ps1` or `scripts/sync_finish.sh` before switching devices.
+2. 查看 [任务看板](task-board.md)。
+3. 一次只处理一个活动任务。
+4. 记录实验命令、输出和结果解读。
+5. 切换设备前运行 `scripts/sync_finish.ps1` 或 `scripts/sync_finish.sh`。
 
-## Evidence Rules
+## 证据规则
 
-- Claims about RC2 must cite Exp0/Exp0.1 outputs.
-- Claims about RC1 must cite retrieval metrics and baseline comparisons.
-- Claims about RC3 must cite explanation samples, path evidence, and evaluator results.
-- Draft thesis prose should distinguish proven results from working assumptions.
+- 关于 RC2 的结论必须引用 Exp0/Exp0.1 输出。
+- 关于 RC1 的结论必须引用检索指标和基线对比。
+- 关于 RC3 的结论必须引用解释样本、路径证据和评测结果。
+- 论文草稿必须区分已经验证的结果和工作性假设。
 
-## Current RC2 Decision
+## 当前 RC2 判断
 
-Exp0.1 currently supports a selective-completion framing:
+Exp0.1 当前支持“选择性补全”的研究表述：
 
-- Most missing-image samples in the candidate set are labeled `structural_absence`.
-- Manual review indicates the previous `ambiguous` rows are image-needed missing samples.
-- The missing-image candidate set now has 230 `structural_absence` rows and 92 `accidental_missing` rows.
-- Exp0.2 shows the binary gate is feasible on the original split.
-- The next check should hold out topic or skill groups to test whether the gate generalizes beyond seen categories.
+- 候选集中多数缺图样本被标为 `structural_absence`。
+- 人工复核表明，原先的 `ambiguous` 行属于“需要图但缺图”的样本。
+- 当前缺图候选集包含 230 条 `structural_absence` 和 92 条 `accidental_missing`。
+- Exp0.2 表明二分类门控在原始划分上可行。
+- 下一步需要按 topic 或 skill 留出分组，测试模型是否能泛化到未见类别。

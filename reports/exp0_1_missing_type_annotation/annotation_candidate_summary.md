@@ -1,12 +1,12 @@
-# Exp0.1 Missing Type Annotation Candidate Summary
+# Exp0.1 缺失类型标注候选集汇总
 
-- Candidate rows: 372
-- Source resources: data\scienceqa\processed\resources.csv
-- Minimum group count: 20
-- High missing-rate threshold: 0.9
-- Low missing-rate threshold: 0.2
+- 候选样本数：372
+- 来源资源表：data\scienceqa\processed\resources.csv
+- 最小分组样本数：20
+- 高缺失率阈值：0.9
+- 低缺失率阈值：0.2
 
-## Candidate Type Counts
+## 候选类型计数
 
 | candidate_type               | n   |
 | ---------------------------- | --- |
@@ -15,7 +15,7 @@
 | accidental_missing_candidate | 72  |
 | observed_reference           | 50  |
 
-## Split Counts
+## 数据划分计数
 
 | suggested_missing_type       | split      | n   |
 | ---------------------------- | ---------- | --- |
@@ -32,7 +32,7 @@
 | structural_absence_candidate | train      | 90  |
 | structural_absence_candidate | validation | 35  |
 
-## Top Topics Per Candidate Type
+## 各候选类型的主要 Topic
 
 | suggested_missing_type       | topic                             | n   |
 | ---------------------------- | --------------------------------- | --- |
@@ -64,13 +64,13 @@
 | structural_absence_candidate | earth-science                     | 4   |
 | structural_absence_candidate | economics                         | 4   |
 
-## Labeling Instruction
+## 标注说明
 
-Use `suggested_missing_type` only as a sampling hint. Fill `human_label` with one of:
+`suggested_missing_type` 仅作为抽样提示。请将 `human_label` 填为以下之一：
 
 - `observed`
 - `accidental_missing`
 - `structural_absence`
 - `ambiguous`
 
-Do not infer `structural_absence` only from `has_image=0`; judge whether an image is pedagogically necessary for understanding or solving the item.
+不要仅根据 `has_image=0` 推断 `structural_absence`；需要判断图像对理解或解题是否具有教学必要性。
