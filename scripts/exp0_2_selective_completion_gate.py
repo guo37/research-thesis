@@ -331,11 +331,18 @@ def split_overlap_rows(data: pd.DataFrame, fields: list[str]) -> list[list[Any]]
     return rows
 
 
-def write_summary(report_dir: Path, metrics: pd.DataFrame, details: list[dict[str, Any]], data: pd.DataFrame) -> None:
+def write_summary(
+    report_dir: Path,
+    metrics: pd.DataFrame,
+    details: list[dict[str, Any]],
+    data: pd.DataFrame,
+    cfg: Config,
+) -> None:
     test = metrics[metrics["split"] == "test"].sort_values(["positive_f1", "pr_auc"], ascending=False)
     best = test.iloc[0].to_dict()
     label_counts = data["human_label"].value_counts().to_dict()
     target_counts = data["target"].value_counts().to_dict()
+    positive_text = " OR ".join(cfg.positive_labels)
 
     metric_cols = [
         "model",
@@ -376,7 +383,7 @@ def write_summary(report_dir: Path, metrics: pd.DataFrame, details: list[dict[st
         "",
         "```text",
         "0 = structural_absence",
-        "1 = review_or_completion_needed = ambiguous OR accidental_missing",
+        f"1 = image_needed_missing = {positive_text}",
         "```",
         "",
         "## Data",
@@ -406,8 +413,8 @@ def write_summary(report_dir: Path, metrics: pd.DataFrame, details: list[dict[st
         "## Interpretation",
         "",
         "- This is a small labeled set, so the result is a feasibility signal, not final thesis evidence.",
-        "- The gate is more defensible than a four-class model because `accidental_missing` has only one labeled row.",
-        "- If these labels are auto-assisted, manually review low-confidence and ambiguous rows before using this as a thesis result.",
+        "- This supports framing RC2 as a modality-necessity gate: skip structural absence, handle accidental missingness.",
+        "- If these labels are auto-assisted, manually review sampled positive rows before using this as a thesis result.",
         "",
     ]
     (report_dir / "run_summary.md").write_text("\n".join(summary), encoding="utf-8")
@@ -466,7 +473,7 @@ def main() -> None:
 
     metrics = pd.DataFrame(metric_rows)
     metrics.to_csv(cfg.report_dir / "metrics.csv", index=False, quoting=csv.QUOTE_MINIMAL)
-    write_summary(cfg.report_dir, metrics, details, data)
+    write_summary(cfg.report_dir, metrics, details, data, cfg)
     print(f"Wrote {cfg.report_dir}")
 
 

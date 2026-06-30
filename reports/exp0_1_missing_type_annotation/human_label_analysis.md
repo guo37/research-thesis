@@ -18,23 +18,23 @@ Generated from `data/scienceqa/annotation/missing_type_annotation_candidates.csv
 | --- | --- | --- |
 | observed | 50 | 13.4% |
 | structural_absence | 230 | 61.8% |
-| accidental_missing | 1 | 0.3% |
-| ambiguous | 91 | 24.5% |
+| accidental_missing | 92 | 24.7% |
+| ambiguous | 0 | 0.0% |
 
 Missing-image rows only:
 
 | Label | Count | Share of missing-image rows |
 | --- | --- | --- |
 | structural_absence | 230 | 71.4% |
-| accidental_missing | 1 | 0.3% |
-| ambiguous | 91 | 28.3% |
+| accidental_missing | 92 | 28.6% |
+| ambiguous | 0 | 0.0% |
 
 ## Suggested Type vs Human Label
 
 | Suggested type | Total | observed | structural_absence | accidental_missing | ambiguous |
 | --- | --- | --- | --- | --- | --- |
 | structural_absence_candidate | 150 | 0 | 150 | 0 | 0 |
-| ambiguous_missing_candidate | 100 | 0 | 8 | 1 | 91 |
+| ambiguous_missing_candidate | 100 | 0 | 8 | 92 | 0 |
 | accidental_missing_candidate | 72 | 0 | 72 | 0 | 0 |
 | observed_reference | 50 | 50 | 0 | 0 | 0 |
 
@@ -42,7 +42,7 @@ Missing-image rows only:
 
 | Subject | Total | observed | structural_absence | accidental_missing | ambiguous |
 | --- | --- | --- | --- | --- | --- |
-| natural science | 204 | 30 | 83 | 0 | 91 |
+| natural science | 204 | 30 | 83 | 91 | 0 |
 | social science | 92 | 17 | 74 | 1 | 0 |
 | language science | 76 | 3 | 73 | 0 | 0 |
 
@@ -50,21 +50,21 @@ Missing-image rows only:
 
 | Split | Total | observed | structural_absence | accidental_missing | ambiguous |
 | --- | --- | --- | --- | --- | --- |
-| train | 223 | 33 | 137 | 1 | 52 |
-| validation | 84 | 10 | 52 | 0 | 22 |
-| test | 65 | 7 | 41 | 0 | 17 |
+| train | 223 | 33 | 137 | 53 | 0 |
+| validation | 84 | 10 | 52 | 22 | 0 |
+| test | 65 | 7 | 41 | 17 | 0 |
 
 ## Top Topics
 
 | Topic | Total | observed | structural_absence | accidental_missing | ambiguous |
 | --- | --- | --- | --- | --- | --- |
-| biology | 138 | 10 | 38 | 0 | 90 |
+| biology | 138 | 10 | 38 | 90 | 0 |
 | us-history | 45 | 2 | 43 | 0 | 0 |
 | geography | 26 | 14 | 12 | 0 | 0 |
 | figurative-language | 22 | 0 | 22 | 0 | 0 |
 | physics | 22 | 8 | 14 | 0 | 0 |
 | writing-strategies | 19 | 1 | 18 | 0 | 0 |
-| chemistry | 15 | 3 | 11 | 0 | 1 |
+| chemistry | 15 | 3 | 11 | 1 | 0 |
 | reference-skills | 13 | 0 | 13 | 0 | 0 |
 | world-history | 12 | 0 | 12 | 0 | 0 |
 | units-and-measurement | 11 | 0 | 11 | 0 | 0 |
@@ -78,24 +78,24 @@ Missing-image rows only:
 
 | Confidence band | Count |
 | --- | --- |
-| >=0.90 | 124 |
+| >=0.90 | 215 |
 | 0.80-0.89 | 149 |
 | 0.70-0.79 | 8 |
-| <0.70 | 91 |
+| <0.70 | 0 |
 | <blank> | 0 |
 | invalid | 0 |
 
 ## Interpretation
 
 - Among missing-image rows, `230` / `322` (71.4%) are labeled `structural_absence`.
-- Among missing-image rows, `92` / `322` (28.6%) are `ambiguous` or `accidental_missing`, so they should be treated as review/completion candidates rather than automatically completed.
-- `accidental_missing` has only 1 labeled row, so a four-class supervised classifier is not currently defensible.
-- The next RC2 task should be a selective-completion gate: predict `structural_absence` vs `review_or_completion_needed` for missing-image samples.
-- Ambiguity is concentrated in natural-science/biology rows, which suggests the gate should use topic/skill plus question text rather than subject alone.
+- Among missing-image rows, `92` / `322` (28.6%) are labeled `accidental_missing`: these are items where an image is needed but absent.
+- No rows remain labeled `ambiguous` after manual review.
+- The next RC2 task should be a binary modality-necessity gate: predict `structural_absence` vs `accidental_missing` for missing-image samples.
+- Positive labels are concentrated in natural-science/biology rows, so the gate should be tested with topic/skill grouped splits before thesis use.
 
 ## Recommended Next Experiment
 
-Define `review_or_completion_needed = accidental_missing OR ambiguous` for missing-image rows.
+Define the positive class as `accidental_missing` for missing-image rows.
 
 Run an Exp0.2 baseline comparison:
 
@@ -106,4 +106,4 @@ Run an Exp0.2 baseline comparison:
 
 Report balanced accuracy, macro F1, positive-class F1, PR-AUC, and confusion matrix.
 
-If Exp0.2 can identify `review_or_completion_needed` above baseline, RC2 can continue as `MNAR-aware selective completion`. If not, RC2 should be narrowed to descriptive MNAR diagnosis plus rule-assisted modality necessity analysis.
+If Exp0.2 can identify image-needed missing samples above baseline, RC2 can continue as `MNAR-aware selective completion`. If not, RC2 should be narrowed to descriptive MNAR diagnosis plus rule-assisted modality necessity analysis.

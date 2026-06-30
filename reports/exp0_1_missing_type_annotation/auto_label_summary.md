@@ -2,6 +2,8 @@
 
 Generated: 2026-06-30
 
+> Superseded by manual review: the 91 auto-labeled `ambiguous` rows were reviewed and relabeled as `accidental_missing` because they need images but `has_image=0`. Use `human_label_analysis.md` as the current label evidence.
+
 ## Method
 
 A conservative rule-assisted model pass filled `human_label`, `label_confidence`, and `label_note` in `data/scienceqa/annotation/missing_type_annotation_candidates.csv`. The intermediate auto-labeled copy remains available at `data/scienceqa/annotation/missing_type_annotation_candidates_auto_labeled.csv` for audit.

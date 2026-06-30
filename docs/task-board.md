@@ -8,8 +8,9 @@ Use this file as the short operational queue. Keep large reasoning in the linked
 
 - [x] Complete Exp0.1 labeling for `data/scienceqa/annotation/missing_type_annotation_candidates.csv`.
 - [x] Summarize Exp0.1 label distribution and decide whether RC2 remains `MNAR-aware selective completion`.
-- [ ] If labels are still auto-assisted, manually review all low-confidence/ambiguous rows before using them as thesis evidence.
-- [x] Implement Exp0.2 selective-completion gate: predict `structural_absence` vs `review_or_completion_needed`.
+- [x] Relabel the 91 image-needed former `ambiguous` rows as `accidental_missing`.
+- [ ] Before thesis use, spot-check a sample of positive `accidental_missing` and negative `structural_absence` rows.
+- [x] Implement Exp0.2 selective-completion gate: predict `structural_absence` vs `accidental_missing`.
 - [ ] Add grouped stress test for Exp0.2 by holding out topic or skill groups.
 - [ ] Choose one canonical thesis outline file and mark older outline content as preliminary.
 - [ ] Prepare the next two-week group meeting summary from Exp0 and Exp0.1.

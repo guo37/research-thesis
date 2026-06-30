@@ -5,7 +5,6 @@ paths:
 target:
   negative_label: structural_absence
   positive_labels:
-    - ambiguous
     - accidental_missing
 
 features:
@@ -32,4 +31,3 @@ model:
     start: 0.05
     stop: 0.95
     step: 0.05
-

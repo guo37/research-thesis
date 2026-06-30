@@ -116,6 +116,25 @@ def main() -> None:
 
     non_observed_missing = missing_label_counts.get("accidental_missing", 0) + missing_label_counts.get("ambiguous", 0)
     structural_missing = missing_label_counts.get("structural_absence", 0)
+    accidental_missing = missing_label_counts.get("accidental_missing", 0)
+    ambiguous_missing = missing_label_counts.get("ambiguous", 0)
+    if ambiguous_missing == 0:
+        interpretation_lines = [
+            f"- Among missing-image rows, `{structural_missing}` / `{len(missing_rows)}` ({pct(structural_missing, len(missing_rows))}) are labeled `structural_absence`.",
+            f"- Among missing-image rows, `{accidental_missing}` / `{len(missing_rows)}` ({pct(accidental_missing, len(missing_rows))}) are labeled `accidental_missing`: these are items where an image is needed but absent.",
+            "- No rows remain labeled `ambiguous` after manual review.",
+            "- The next RC2 task should be a binary modality-necessity gate: predict `structural_absence` vs `accidental_missing` for missing-image samples.",
+            "- Positive labels are concentrated in natural-science/biology rows, so the gate should be tested with topic/skill grouped splits before thesis use.",
+        ]
+        target_definition = "`accidental_missing`"
+    else:
+        interpretation_lines = [
+            f"- Among missing-image rows, `{structural_missing}` / `{len(missing_rows)}` ({pct(structural_missing, len(missing_rows))}) are labeled `structural_absence`.",
+            f"- Among missing-image rows, `{non_observed_missing}` / `{len(missing_rows)}` ({pct(non_observed_missing, len(missing_rows))}) are `ambiguous` or `accidental_missing`, so they should be treated as review/completion candidates rather than automatically completed.",
+            "- The next RC2 task should be a selective-completion gate: predict `structural_absence` vs `review_or_completion_needed` for missing-image samples.",
+            "- Ambiguity is concentrated in natural-science/biology rows, which suggests the gate should use topic/skill plus question text rather than subject alone.",
+        ]
+        target_definition = "`accidental_missing OR ambiguous`"
 
     lines = [
         "# Exp0.1 Human Label Analysis",
@@ -168,15 +187,11 @@ def main() -> None:
         "",
         "## Interpretation",
         "",
-        f"- Among missing-image rows, `{structural_missing}` / `{len(missing_rows)}` ({pct(structural_missing, len(missing_rows))}) are labeled `structural_absence`.",
-        f"- Among missing-image rows, `{non_observed_missing}` / `{len(missing_rows)}` ({pct(non_observed_missing, len(missing_rows))}) are `ambiguous` or `accidental_missing`, so they should be treated as review/completion candidates rather than automatically completed.",
-        "- `accidental_missing` has only 1 labeled row, so a four-class supervised classifier is not currently defensible.",
-        "- The next RC2 task should be a selective-completion gate: predict `structural_absence` vs `review_or_completion_needed` for missing-image samples.",
-        "- Ambiguity is concentrated in natural-science/biology rows, which suggests the gate should use topic/skill plus question text rather than subject alone.",
+        *interpretation_lines,
         "",
         "## Recommended Next Experiment",
         "",
-        "Define `review_or_completion_needed = accidental_missing OR ambiguous` for missing-image rows.",
+        f"Define the positive class as {target_definition} for missing-image rows.",
         "",
         "Run an Exp0.2 baseline comparison:",
         "",
@@ -187,7 +202,7 @@ def main() -> None:
         "",
         "Report balanced accuracy, macro F1, positive-class F1, PR-AUC, and confusion matrix.",
         "",
-        "If Exp0.2 can identify `review_or_completion_needed` above baseline, RC2 can continue as `MNAR-aware selective completion`. If not, RC2 should be narrowed to descriptive MNAR diagnosis plus rule-assisted modality necessity analysis.",
+        "If Exp0.2 can identify image-needed missing samples above baseline, RC2 can continue as `MNAR-aware selective completion`. If not, RC2 should be narrowed to descriptive MNAR diagnosis plus rule-assisted modality necessity analysis.",
         "",
     ]
 

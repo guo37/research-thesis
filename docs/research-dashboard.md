@@ -59,6 +59,7 @@ Canonical planning files:
 Exp0.1 currently supports a selective-completion framing:
 
 - Most missing-image samples in the candidate set are labeled `structural_absence`.
-- `accidental_missing` is too rare to support a four-class supervised model.
+- Manual review indicates the previous `ambiguous` rows are image-needed missing samples.
+- The missing-image candidate set now has 230 `structural_absence` rows and 92 `accidental_missing` rows.
 - Exp0.2 shows the binary gate is feasible on the original split.
 - The next check should hold out topic or skill groups to test whether the gate generalizes beyond seen categories.

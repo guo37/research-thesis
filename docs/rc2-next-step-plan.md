@@ -11,18 +11,16 @@ Exp0.1 label analysis shows:
 - 372 labeled candidate rows.
 - 322 missing-image rows.
 - 230 / 322 missing-image rows are labeled `structural_absence`.
-- 91 / 322 missing-image rows are labeled `ambiguous`.
-- 1 / 322 missing-image rows is labeled `accidental_missing`.
+- 92 / 322 missing-image rows are labeled `accidental_missing`.
+- 0 / 322 missing-image rows remain labeled `ambiguous`.
 
 ## Decision
-
-Do not train a four-class missing-type model yet. `accidental_missing` has only one example.
 
 Use a binary RC2 gate:
 
 ```text
 structural_absence = skip completion
-review_or_completion_needed = ambiguous OR accidental_missing
+accidental_missing = image needed but missing
 ```
 
 This keeps the thesis claim defensible:
@@ -44,7 +42,7 @@ Rows:
 Target:
 
 ```text
-y = 1 if human_label in {ambiguous, accidental_missing}
+y = 1 if human_label == accidental_missing
 y = 0 if human_label == structural_absence
 ```
 
@@ -82,8 +80,8 @@ Next validation:
 
 ## Before Thesis Use
 
-If labels are still auto-assisted, manually review:
+Before thesis use, spot-check:
 
-1. The single `accidental_missing` row.
-2. All `ambiguous` rows.
-3. All rows with `label_confidence < 0.80`.
+1. A sample of `accidental_missing` rows.
+2. A sample of `structural_absence` rows from language/social/natural science.
+3. Any rows with unusual topic/skill combinations.

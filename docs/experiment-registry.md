@@ -35,12 +35,12 @@ The current label table contains 372 rows and no blank or invalid `human_label` 
 Missing-image rows only:
 
 - `structural_absence`: 230 / 322 (71.4%)
-- `ambiguous`: 91 / 322 (28.3%)
-- `accidental_missing`: 1 / 322 (0.3%)
+- `accidental_missing`: 92 / 322 (28.6%)
+- `ambiguous`: 0 / 322 (0.0%)
 
 Working implication:
 
-> A four-class classifier is not defensible because `accidental_missing` has only one labeled example. The next RC2 experiment should be a binary selective-completion gate: `structural_absence` vs `review_or_completion_needed`.
+> After manual review, the former ambiguous rows should be treated as image-needed missing samples. The RC2 task is a binary modality-necessity gate: `structural_absence` vs `accidental_missing`.
 
 ## Exp0.2 Current Conclusion
 

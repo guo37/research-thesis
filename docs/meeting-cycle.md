@@ -40,5 +40,4 @@ Recommended focus:
 - Exp0 has run successfully on ScienceQA.
 - Image missingness is structured by subject/topic/skill.
 - Skill almost perfectly predicts `has_image` in the current report.
-- The next necessary step is Exp0.1 human labeling to distinguish `structural_absence`, `accidental_missing`, and `ambiguous`.
-
+- Exp0.1 manual review distinguishes `structural_absence` from image-needed `accidental_missing`; no final rows remain `ambiguous`.

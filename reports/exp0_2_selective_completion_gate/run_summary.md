@@ -4,13 +4,13 @@ Target:
 
 ```text
 0 = structural_absence
-1 = review_or_completion_needed = ambiguous OR accidental_missing
+1 = image_needed_missing = accidental_missing
 ```
 
 ## Data
 
 - Rows used: 322 missing-image labeled candidates.
-- Label counts: `{"accidental_missing": 1, "ambiguous": 91, "structural_absence": 230}`.
+- Label counts: `{"accidental_missing": 92, "structural_absence": 230}`.
 - Target counts: `{"0": 230, "1": 92}`.
 
 ## Metrics
@@ -48,5 +48,5 @@ If validation/test topics or skills are mostly seen in train, high scores may pa
 ## Interpretation
 
 - This is a small labeled set, so the result is a feasibility signal, not final thesis evidence.
-- The gate is more defensible than a four-class model because `accidental_missing` has only one labeled row.
-- If these labels are auto-assisted, manually review low-confidence and ambiguous rows before using this as a thesis result.
+- This supports framing RC2 as a modality-necessity gate: skip structural absence, handle accidental missingness.
+- If these labels are auto-assisted, manually review sampled positive rows before using this as a thesis result.
