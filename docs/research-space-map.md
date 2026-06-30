@@ -15,6 +15,7 @@
 - `tests/`：测试样例和基础检查。
 - `data/scienceqa/processed/`：当前分析需要同步的处理后表格。
 - `data/scienceqa/annotation/`：标注候选集和批次文件。
+- `data/educational_mm/schema_samples/`：统一教育图文证据 schema 样例。
 - `reports/`：生成的实验报告和结果解读。
 
 规则：
@@ -30,9 +31,9 @@
 
 当前文件：
 
-- `PAPER_OUTLINE_REVISED.md`
-- `论文重构_最终主线与实施方案.md`
-- `研究重构_文献综述与技术路线.md`
+- `docs/current-research-plan.md`
+- `docs/paper-roadmap.md`
+- `docs/archive/old-resource-retrieval-route/`：旧路线归档，仅作历史参考。
 
 写作内容增加后，建议新增目录：
 

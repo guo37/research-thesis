@@ -6,30 +6,29 @@
 
 ## 当前
 
-- [x] 完成 `data/scienceqa/annotation/missing_type_annotation_candidates.csv` 的 Exp0.1 标注。
-- [x] 汇总 Exp0.1 标签分布，并判断 RC2 是否继续按 `MNAR-aware selective completion` 推进。
-- [x] 将 91 条需要图的原 `ambiguous` 样本重标为 `accidental_missing`。
-- [ ] 论文使用前，抽查一部分正类 `accidental_missing` 和负类 `structural_absence` 样本。
-- [x] 实现 Exp0.2 选择性补全门控：预测 `structural_absence` vs `accidental_missing`。
-- [x] 为 Exp0.2 增加按 topic 或 skill 留出的分组压力测试。
-- [x] 将 Exp0.2 门控应用到全部 ScienceQA 缺图样本，生成伪标签排序清单。
-- [ ] 抽查 `full_missing_predictions.csv` 中高置信 `need_completion_accidental_missing` 与高置信 `skip_structural_absence` 样本。
-- [ ] 选择一个规范论文大纲文件，并把旧大纲中不再适用的内容标为 preliminary。
-- [ ] 基于 Exp0 和 Exp0.1 准备下一次两周组会总结。
+- [x] 将最新主线调整为“教育图文证据对齐检索 + 模态必要性判断 + 证据约束推理”。
+- [x] 归档旧“教育资源检索可信多模态知识推理”路线文档。
+- [x] 删除 Exp0 smoke 旧报告，保留正式 Exp0/Exp0.1/Exp0.2 证据链。
+- [x] 完成 Exp1.0：ScienceQA 统一 schema 样例。
+- [ ] 接入 TQA / CK12，并抽取 100-200 条统一 schema 样例。
+- [ ] 接入 AI2D，并抽取 100-200 条统一 schema 样例。
+- [ ] 定义并实现 RC1 教育图文证据对齐检索基线。
+- [ ] 设计 RC2 的 text-only / text+image / wrong-image / drop-image 实验。
+- [ ] 定义 RC3 的 100 条证据约束解释评测集 schema。
 
 ## 下一步
 
-- [ ] 围绕 topic 级别正类过度集中问题，补充抽样标注 biology 以外的潜在 `accidental_missing` 样本。
-- [ ] 将文献综述扩展到 30-40 篇论文。
-- [ ] 构建最小教育知识图谱：concept、resource、belongs_to、same_skill、prerequisite、related。
-- [ ] 定义 RC1 基线：CLIP、CLIP + adapter、ordinary contrastive、random hard negative、same-subject hard negative、concept-aware hard negative。
-- [ ] 定义 RC3 的 100 条解释评测集 schema。
+- [ ] 优先接入 TQA / CK12；如果原始数据下载或格式受阻，先记录阻塞原因并转向 AI2D。
+- [ ] 接入 AI2D 后，比较三个数据集的字段覆盖率和模态分布。
+- [ ] 在 ScienceQA schema 上实现 BM25 / TF-IDF 文本证据检索 baseline。
+- [ ] 扩展到 Sentence-BERT 和 CLIP 图文检索 baseline。
+- [ ] 将文献综述按新主线重排为：教育图文问答、证据检索、模态鲁棒性、忠实解释。
 
 ## 后续
 
-- [ ] 增加 RC1 检索实验脚本和配置。
-- [ ] 增加 RC2 选择性补全基线和消融计划。
-- [ ] 增加 RC3 解释生成脚本和评测报告。
+- [ ] 增加 RC1 证据对齐检索实验脚本和配置。
+- [ ] 增加 RC2 模态必要性判断和鲁棒推理实验脚本。
+- [ ] 增加 RC3 证据约束解释生成脚本和评测报告。
 - [ ] 将稳定的组会总结转化为论文写作要点。
 
 ## 暂存事项

@@ -8,26 +8,25 @@
 
 题目方向：
 
-> 面向教育资源检索的可信多模态知识推理研究
+> 面向教育图文问答的模态证据对齐检索与鲁棒推理方法研究
 
 核心主线：
 
-> 教育知识结构约束跨模态对齐 + MNAR-aware 选择性补全 + 路径/对齐/可靠性约束解释生成。
+> 教育图文证据对齐检索 + 模态必要性判断与鲁棒推理 + 证据约束的可解释教育推理。
 
 规范规划文件：
 
-- [论文重构_最终主线与实施方案.md](../论文重构_最终主线与实施方案.md)
-- [研究重构_文献综述与技术路线.md](../研究重构_文献综述与技术路线.md)
-- [PAPER_OUTLINE_REVISED.md](../PAPER_OUTLINE_REVISED.md)
+- [current-research-plan.md](current-research-plan.md)
 
 ## 当前工作流
 
 | 工作流 | 状态 | 下一步 |
 | --- | --- | --- |
-| RC2 缺失机制诊断 | Exp0.2 第一版基线已完成 | 论文使用前加入分组压力测试 |
-| RC1 概念感知检索 | 计划中 | 定义基线和第一个可运行检索实验 |
-| RC3 解释生成 | 计划中 | 在 RC1/RC2 输入稳定后构建 100 条解释评测集 |
-| 文献综述 | 进行中 | 扩展到 30-40 篇，每个研究内容 10-12 篇 |
+| 统一数据 schema | ScienceQA 样例已完成 | 接入 TQA / CK12，再接入 AI2D |
+| RC1 证据对齐检索 | 计划中 | 定义 BM25/SBERT/CLIP 与 hard negative 基线 |
+| RC2 模态必要性判断 | ScienceQA pilot 已完成 | 升级为 text/image/wrong-image 鲁棒推理实验 |
+| RC3 证据约束解释 | 计划中 | 在 RC1/RC2 输入稳定后构建 100 条解释评测集 |
+| 文献综述 | 进行中 | 围绕教育图文问答、证据检索、模态鲁棒性、忠实解释扩展 |
 | 组会汇报 | 需要规范化 | 使用两周组会节奏和 PPT 模板 |
 
 ## 核心索引
@@ -35,6 +34,7 @@
 - [任务看板](task-board.md)
 - [实验登记表](experiment-registry.md)
 - [论文路线图](paper-roadmap.md)
+- [当前研究主线](current-research-plan.md)
 - [组会周期](meeting-cycle.md)
 - [研究空间地图](research-space-map.md)
 - [多设备同步](multi-device-sync.md)
@@ -49,17 +49,18 @@
 
 ## 证据规则
 
-- 关于 RC2 的结论必须引用 Exp0/Exp0.1 输出。
-- 关于 RC1 的结论必须引用检索指标和基线对比。
-- 关于 RC3 的结论必须引用解释样本、路径证据和评测结果。
+- 关于统一 schema 的结论必须引用数据字段覆盖率和样例表。
+- 关于 RC1 的结论必须引用检索指标和 hard negative 基线对比。
+- 关于 RC2 的结论必须引用模态必要性、wrong-image、drop-image 实验。
+- 关于 RC3 的结论必须引用解释样本、证据 grounding 和 unsupported claim 评测。
 - 论文草稿必须区分已经验证的结果和工作性假设。
 
-## 当前 RC2 判断
+## 当前 ScienceQA Pilot 判断
 
-Exp0.1 当前支持“选择性补全”的研究表述：
+Exp0/Exp0.1/Exp0.2 当前支持把 ScienceQA 作为 RC2 pilot：
 
 - 候选集中多数缺图样本被标为 `structural_absence`。
 - 人工复核表明，原先的 `ambiguous` 行属于“需要图但缺图”的样本。
 - 当前缺图候选集包含 230 条 `structural_absence` 和 92 条 `accidental_missing`。
-- Exp0.2 表明二分类门控在原始划分上可行。
-- 下一步需要按 topic 或 skill 留出分组，测试模型是否能泛化到未见类别。
+- Exp0.2 表明二分类门控在原始划分和 `skill_holdout` 上有可行性信号。
+- 这部分不再作为完整论文主线，而是服务于“模态必要性判断”的前置证据。

@@ -2,15 +2,16 @@
 
 这个仓库是毕业论文研究项目的可同步工作空间：
 
-> 面向教育资源检索的可信多模态知识推理研究
+> 面向教育图文问答的模态证据对齐检索与鲁棒推理方法研究
 
-当前项目状态主要围绕 ScienceQA 的 Exp0/Exp0.1：
+当前项目状态主要围绕 ScienceQA 的 Exp0/Exp0.1/Exp0.2 和 Exp1.0：
 
 - Exp0：诊断图像可用性是否受教育元数据结构性影响。
 - Exp0.1：构建缺失类型标注候选集，用于人工标注。
-- 论文规划：维护修订后的论文大纲、文献路线和最终实施方案。
+- Exp0.2：构建 `structural_absence` vs `accidental_missing` 门控 pilot。
+- Exp1.0：建立教育图文证据统一 schema，当前已生成 ScienceQA 样例。
 
-开始新的研究工作前，先查看 [docs/research-dashboard.md](docs/research-dashboard.md)。
+开始新的研究工作前，先查看 [docs/research-dashboard.md](docs/research-dashboard.md) 和 [docs/current-research-plan.md](docs/current-research-plan.md)。
 
 ## 目录说明
 

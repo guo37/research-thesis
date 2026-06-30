@@ -1,0 +1,35 @@
+paths:
+  report_dir: reports/exp1_educational_mm_schema
+  sample_dir: data/educational_mm/schema_samples
+
+datasets:
+  scienceqa:
+    resources_csv: data/scienceqa/processed/resources.csv
+    sample_size: 200
+    random_seed: 42
+  tqa:
+    raw_dir: data/tqa/raw
+    status: pending_local_data
+  ai2d:
+    raw_dir: data/ai2d/raw
+    status: pending_local_data
+
+schema:
+  columns:
+    - dataset
+    - sample_id
+    - original_id
+    - split
+    - question
+    - choices
+    - answer
+    - text_context
+    - image_ref
+    - has_image
+    - subject
+    - topic
+    - skill
+    - evidence_type
+    - modality_case
+    - answer_format
+    - source_task

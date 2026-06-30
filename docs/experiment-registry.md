@@ -11,9 +11,10 @@
 | Exp0 | ScienceQA 数据集诊断 | RC2 | 已完成 | [configs/exp0_scienceqa.yaml](../configs/exp0_scienceqa.yaml) | [reports/exp0_dataset_diagnosis](../reports/exp0_dataset_diagnosis) | [RESULT_INTERPRETATION.md](../reports/exp0_dataset_diagnosis/RESULT_INTERPRETATION.md) |
 | Exp0.1 | 缺失类型标注结果 | RC2 | 标签分析已完成 | [configs/exp0_1_missing_type_annotation.yaml](../configs/exp0_1_missing_type_annotation.yaml) | [data/scienceqa/annotation](../data/scienceqa/annotation), [reports/exp0_1_missing_type_annotation](../reports/exp0_1_missing_type_annotation) | [human_label_analysis.md](../reports/exp0_1_missing_type_annotation/human_label_analysis.md) |
 | Exp0.2 | 选择性补全门控基线 | RC2 | 分组压力测试与全量预测已完成 | [configs/exp0_2_selective_completion_gate.yaml](../configs/exp0_2_selective_completion_gate.yaml) | [reports/exp0_2_selective_completion_gate](../reports/exp0_2_selective_completion_gate) | [run_summary.md](../reports/exp0_2_selective_completion_gate/run_summary.md) |
-| Exp1 | 概念感知检索 | RC1 | 计划中 | 待定 | 待定 | 待定 |
-| Exp2 | MNAR 感知选择性补全 | RC2 | 计划中 | 待定 | 待定 | 待定 |
-| Exp3 | 证据约束解释生成 | RC3 | 计划中 | 待定 | 待定 | 待定 |
+| Exp1.0 | 教育多模态证据统一 schema | RC1/RC2/RC3 基础 | ScienceQA 样例已完成，TQA/AI2D 待接入 | [configs/exp1_educational_mm_schema.yaml](../configs/exp1_educational_mm_schema.yaml) | [data/educational_mm/schema_samples](../data/educational_mm/schema_samples), [reports/exp1_educational_mm_schema](../reports/exp1_educational_mm_schema) | [schema_summary.md](../reports/exp1_educational_mm_schema/schema_summary.md) |
+| Exp1 | 教育图文证据对齐检索 | RC1 | 计划中 | 待定 | 待定 | 待定 |
+| Exp2 | 模态必要性判断与鲁棒推理 | RC2 | ScienceQA pilot 已完成，主实验计划中 | 待定 | 待定 | 待定 |
+| Exp3 | 证据约束的可解释教育推理 | RC3 | 计划中 | 待定 | 待定 | 待定 |
 
 ## Exp0 当前结论
 
@@ -54,6 +55,21 @@ Exp0 工作性结论：
 工作性结论：
 
 > 二分类 RC2 门控是可行的，且在未见 skill 的评测上有一定泛化信号；但 topic 级别正类样本太少，后续需要补充标注 biology 以外的疑似 `accidental_missing` 样本，并抽查全量预测中的高置信正负类。
+
+## Exp1.0 当前结论
+
+已建立新的教育图文证据统一 schema，并先用 ScienceQA 生成 200 条样例。
+
+当前状态：
+
+- ScienceQA 可映射到统一 schema，共 21,208 条。
+- `text_context` 覆盖率为 99.30%。
+- `image_ref` / `has_image` 可用于构造 text-only、text+image、drop-image 和 wrong-image 实验。
+- TQA / CK12 与 AI2D 暂未接入本地数据，下一步需要分别编写 adapter。
+
+工作性结论：
+
+> 新主线应先以统一 schema 为入口推进。ScienceQA 负责打通流程，TQA / CK12 和 AI2D 用于验证方法是否能迁移到教材图文问答和科学图示问答。
 
 ## 必需的运行记录模板
 
