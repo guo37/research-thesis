@@ -24,7 +24,7 @@ Canonical planning files:
 
 | Workstream | Status | Next action |
 | --- | --- | --- |
-| RC2 missingness diagnosis | Exp0 complete | Finish Exp0.1 human labels and summarize missing types |
+| RC2 missingness diagnosis | Exp0.2 first baseline complete | Add grouped stress test before thesis use |
 | RC1 concept-aware retrieval | Planned | Define baselines and first runnable retrieval experiment |
 | RC3 explanation generation | Planned | Build 100-sample explanation evaluation set after RC1/RC2 inputs are stable |
 | Literature review | In progress | Expand to 30-40 papers, 10-12 per research content |
@@ -54,3 +54,11 @@ Canonical planning files:
 - Claims about RC3 must cite explanation samples, path evidence, and evaluator results.
 - Draft thesis prose should distinguish proven results from working assumptions.
 
+## Current RC2 Decision
+
+Exp0.1 currently supports a selective-completion framing:
+
+- Most missing-image samples in the candidate set are labeled `structural_absence`.
+- `accidental_missing` is too rare to support a four-class supervised model.
+- Exp0.2 shows the binary gate is feasible on the original split.
+- The next check should hold out topic or skill groups to test whether the gate generalizes beyond seen categories.

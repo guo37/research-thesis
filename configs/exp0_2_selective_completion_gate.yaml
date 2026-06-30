@@ -1,0 +1,35 @@
+paths:
+  input_csv: data/scienceqa/annotation/missing_type_annotation_candidates.csv
+  report_dir: reports/exp0_2_selective_completion_gate
+
+target:
+  negative_label: structural_absence
+  positive_labels:
+    - ambiguous
+    - accidental_missing
+
+features:
+  categorical:
+    - subject
+    - topic
+    - skill
+    - grade
+    - category
+  numeric:
+    - text_length
+    - word_count
+  text:
+    - question
+    - choices
+    - hint
+    - lecture
+    - solution
+
+model:
+  random_seed: 42
+  max_text_features: 3000
+  threshold_grid:
+    start: 0.05
+    stop: 0.95
+    step: 0.05
+
