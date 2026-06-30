@@ -9,13 +9,8 @@
 
 ## Progress Since Last Meeting
 
-
 ## Evidence And Results
-
 
 ## Problems
 
-
 ## Next Two-Week Plan
-
-

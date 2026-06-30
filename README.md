@@ -10,6 +10,8 @@ The current project state focuses on ScienceQA Exp0/Exp0.1:
 - Exp0.1: build missing-type annotation candidates for manual labeling.
 - Paper planning: keep the revised thesis outline, literature route, and final implementation plan.
 
+Start from [docs/research-dashboard.md](docs/research-dashboard.md) before planning new research work.
+
 ## Directory Map
 
 ```text
