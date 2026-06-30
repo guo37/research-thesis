@@ -1,0 +1,1038 @@
+﻿resource_id,original_id,split,subject,topic,skill,grade,category,need_image_probability,gate_prediction,completion_decision,known_human_label,known_target,question,choices,hint,lecture,solution,review_bucket
+r020593,r020593,test,natural science,biology,"Identify mammals, birds, fish, reptiles, and amphibians",grade5,Classification,0.9279925695195901,1,need_completion_accidental_missing,,,Select the reptile.,Mojave rattlesnake | rabbit | American bullfrog | ocean sunfish,,"Reptiles have scaly, waterproof skin. Most reptiles live on land.","A rabbit is a mammal. It has fur and feeds its young milk.
+Rabbits live underground in burrows. A group of rabbit burrows is called a warren.
+A Mojave rattlesnake is a reptile. It has scaly, waterproof skin.
+Rattlesnakes have fangs they can use to inject venom into their prey.
+An ocean sunfish is a fish. It lives underwater. It has fins, not limbs.
+Ocean sunfish have a flat body and wide fins. They sometimes swim to the ocean's surface to rest in the sun.
+An American bullfrog is an amphibian. It has moist skin and begins its life in water.
+Frogs live near water or in damp places. Most frogs lay their eggs in water.",high_confidence_need_completion
+r010895,r010895,train,natural science,biology,"Identify mammals, birds, fish, reptiles, and amphibians",grade5,Classification,0.9229322909684984,1,need_completion_accidental_missing,,,Select the amphibian.,olive toad | emu | rabbit | anchovy,,Amphibians have moist skin and begin their lives in water.,"An anchovy is a fish. It lives underwater. It has fins, not limbs.
+An anchovy is a small fish that lives in the ocean. Like some other types of fish, anchovies swim in large groups called schools.
+A rabbit is a mammal. It has fur and feeds its young milk.
+Rabbits live underground in burrows. A group of rabbit burrows is called a warren.
+An olive toad is an amphibian. It has moist skin and begins its life in water.
+Toads do not have teeth! They swallow their food whole.
+An emu is a bird. It has feathers, two wings, and a beak.
+Emus cannot fly, but they can run very fast. They run to avoid predators.",high_confidence_need_completion
+r010875,r010875,train,natural science,biology,"Identify mammals, birds, fish, reptiles, and amphibians",grade5,Classification,0.9167156810560299,1,need_completion_accidental_missing,,,Select the mammal.,human | American toad | alpine newt | green frog,,Mammals have hair or fur and feed their young milk.,"An American toad is an amphibian. It has moist skin and begins its life in water.
+Toads do not have teeth! They swallow their food whole.
+An alpine newt is an amphibian. It has moist skin and begins its life in water.
+Some newts live in water. Other newts live on land but lay their eggs in water.
+A human is a mammal. It has hair and feeds its young milk.
+Humans are a type of animal called a primate. Monkeys and apes are also primates.
+A green frog is an amphibian. It has moist skin and begins its life in water.
+Frogs live near water or in damp places. Most frogs lay their eggs in water.",high_confidence_need_completion
+r016999,r016999,test,natural science,biology,"Identify mammals, birds, fish, reptiles, and amphibians",grade5,Classification,0.9159785806447859,1,need_completion_accidental_missing,,,Select the reptile.,Chinese alligator | California toad | grass frog | eastern newt,,"Reptiles have scaly, waterproof skin. Most reptiles live on land.","A Chinese alligator is a reptile. It has scaly, waterproof skin.
+Alligators live in and around water. They can live near ponds, rivers, marshes, and lakes.
+An eastern newt is an amphibian. It has moist skin and begins its life in water.
+Some newts live in water. Other newts live on land but lay their eggs in water.
+A grass frog is an amphibian. It has moist skin and begins its life in water.
+Frogs live near water or in damp places. Most frogs lay their eggs in water.
+A California toad is an amphibian. It has moist skin and begins its life in water.
+Toads do not have teeth! They swallow their food whole.",high_confidence_need_completion
+r002313,r002313,train,natural science,biology,"Identify mammals, birds, fish, reptiles, and amphibians",grade5,Classification,0.9145089299183929,1,need_completion_accidental_missing,,,Select the mammal.,bottlenose dolphin | red-headed poison frog | cane toad | parrotfish,,Mammals have hair or fur and feed their young milk.,"A red-headed poison frog is an amphibian. It has moist skin and begins its life in water.
+Poison dart frogs come in many bright colors. Their bright color warns other animals that these frogs are poisonous.
+A parrotfish is a fish. It lives underwater. It has fins, not limbs.
+Parrotfish have fins and live underwater near coral reefs. They get their name from their bird-like beak!
+A bottlenose dolphin is a mammal. It has hair and feeds its young milk.
+Dolphins may look like sharks or other fish, but they are mammals! When a baby dolphin is born, it has hair around its jaw. This hair falls out as the dolphin grows.
+A cane toad is an amphibian. It has moist skin and begins its life in water.
+Toads do not have teeth! They swallow their food whole.",high_confidence_need_completion
+r012050,r012050,train,natural science,biology,"Identify mammals, birds, fish, reptiles, and amphibians",grade5,Classification,0.9143457540181301,1,need_completion_accidental_missing,,,Select the reptile.,domestic pig | tortoise | leafy seadragon | American toad,,"Reptiles have scaly, waterproof skin. Most reptiles live on land.","A leafy seadragon is a fish. It lives underwater. It has fins, not limbs.
+A seadragon's body looks like a clump of seaweed. This helps the seadragon hide from its predators.
+An American toad is an amphibian. It has moist skin and begins its life in water.
+Toads do not have teeth! They swallow their food whole.
+A domestic pig is a mammal. It has hair and feeds its young milk.
+Pigs are omnivores. This means that they can eat both plants and animals.
+A tortoise is a reptile. It has scaly, waterproof skin.
+A tortoise's shell protects it from predators. When a tortoise feels threatened, it can pull its head and legs inside its shell.",high_confidence_need_completion
+r010039,r010039,train,natural science,biology,"Identify mammals, birds, fish, reptiles, and amphibians",grade5,Classification,0.9139918762965624,1,need_completion_accidental_missing,,,Select the fish.,horned frog | cassowary | Amazon tree boa | tiger shark,,"Fish live underwater. They have fins, not limbs.","An Amazon tree boa is a reptile. It has scaly, waterproof skin.
+Tree boas eat small mammals, birds, lizards, and frogs. Tree boas only need to eat once every few months!
+A cassowary is a bird. It has feathers, two wings, and a beak.
+Cassowaries have wings, but they cannot fly! They can run very fast.
+A horned frog is an amphibian. It has moist skin and begins its life in water.
+Frogs live near water or in damp places. Most frogs lay their eggs in water.
+A tiger shark is a fish. It lives underwater. It has fins, not limbs.
+Tiger sharks are nocturnal. This means that they are active mostly at night.",high_confidence_need_completion
+r013807,r013807,validation,natural science,biology,"Identify mammals, birds, fish, reptiles, and amphibians",grade5,Classification,0.9124101069721486,1,need_completion_accidental_missing,,,Select the reptile.,Banggai cardinalfish | seahorse | horned frog | Madagascar day gecko,,"Reptiles have scaly, waterproof skin. Most reptiles live on land.","A seahorse is a fish. It lives underwater. It has fins, not limbs.
+Seahorses live in shallow, warm water. They can use their tails to hold on to plants.
+A Banggai cardinalfish is a fish. It lives underwater. It has fins, not limbs.
+Cardinalfish often live near coral reefs. They are nocturnal, which means that they are active mostly at night.
+A Madagascar day gecko is a reptile. It has scaly, waterproof skin.
+Many geckos have special pads on their toes. The pads help them climb up plants and rocks.
+A horned frog is an amphibian. It has moist skin and begins its life in water.
+Frogs live near water or in damp places. Most frogs lay their eggs in water.",high_confidence_need_completion
+r021009,r021009,test,natural science,biology,"Identify mammals, birds, fish, reptiles, and amphibians",grade5,Classification,0.909916181413155,1,need_completion_accidental_missing,,,Select the fish.,cane toad | gray tree frog | ocean sunfish | spotted dolphin,,"Fish live underwater. They have fins, not limbs.","A spotted dolphin is a mammal. It has hair and feeds its young milk.
+Dolphins may look like sharks or other fish, but they are mammals! When a baby dolphin is born, it has hair around its jaw. This hair falls out as the dolphin grows.
+A gray tree frog is an amphibian. It has moist skin and begins its life in water.
+There are many kinds of tree frogs. Most tree frogs are very small. They can walk on thin branches.
+An ocean sunfish is a fish. It lives underwater. It has fins, not limbs.
+Ocean sunfish have a flat body and wide fins. They sometimes swim to the ocean's surface to rest in the sun.
+A cane toad is an amphibian. It has moist skin and begins its life in water.
+Toads do not have teeth! They swallow their food whole.",high_confidence_need_completion
+r011463,r011463,train,natural science,biology,"Identify mammals, birds, fish, reptiles, and amphibians",grade5,Classification,0.9096474388086809,1,need_completion_accidental_missing,,,Select the amphibian.,domestic pig | western rattlesnake | green tree frog | water buffalo,,Amphibians have moist skin and begin their lives in water.,"A domestic pig is a mammal. It has hair and feeds its young milk.
+Pigs are omnivores. This means that they can eat both plants and animals.
+A western rattlesnake is a reptile. It has scaly, waterproof skin.
+Rattlesnakes have fangs they can use to inject venom into their prey.
+A water buffalo is a mammal. It has hair and feeds its young milk.
+Water buffaloes live in Asia. Some people raise water buffaloes for their milk.
+A green tree frog is an amphibian. It has moist skin and begins its life in water.
+There are many kinds of tree frogs. Most tree frogs are very small. They can walk on thin branches.",high_confidence_need_completion
+r015246,r015246,validation,natural science,biology,"Identify mammals, birds, fish, reptiles, and amphibians",grade5,Classification,0.9090315493868931,1,need_completion_accidental_missing,,,Select the fish.,red howler | American bullfrog | human | leafy seadragon,,"Fish live underwater. They have fins, not limbs.","A leafy seadragon is a fish. It lives underwater. It has fins, not limbs.
+A seadragon's body looks like a clump of seaweed. This helps the seadragon hide from its predators.
+An American bullfrog is an amphibian. It has moist skin and begins its life in water.
+Frogs live near water or in damp places. Most frogs lay their eggs in water.
+A human is a mammal. It has hair and feeds its young milk.
+Humans are a type of animal called a primate. Monkeys and apes are also primates.
+A red howler is a mammal. It has hair and feeds its young milk.
+Howler monkeys have loud calls, or howls. Their calls can be heard over three miles away!",high_confidence_need_completion
+r014602,r014602,validation,natural science,biology,"Identify mammals, birds, fish, reptiles, and amphibians",grade5,Classification,0.9080665294669923,1,need_completion_accidental_missing,,,Select the bird.,sea otter | albatross | box turtle | common toad,,"Birds have feathers, two wings, and a beak.","A sea otter is a mammal. It has fur and feeds its young milk.
+Sea otters have very thick fur. Their fur keeps them warm in cold water.
+A common toad is an amphibian. It has moist skin and begins its life in water.
+Toads do not have teeth! They swallow their food whole.
+A box turtle is a reptile. It has scaly, waterproof skin.
+Box turtles can live to be over 100 years old!
+An albatross is a bird. It has feathers, two wings, and a beak.
+Albatrosses live near the ocean. They hunt squid, fish, and other small animals.",high_confidence_need_completion
+r011290,r011290,train,natural science,biology,"Identify mammals, birds, fish, reptiles, and amphibians",grade5,Classification,0.9067053328387531,1,need_completion_accidental_missing,,,Select the reptile.,green sea turtle | salmon | green tree frog | anchovy,,"Reptiles have scaly, waterproof skin. Most reptiles live on land.","A green sea turtle is a reptile. It has scaly, waterproof skin.
+Sea turtles live in the water, but they lay their eggs on land.
+A salmon is a fish. It lives underwater. It has fins, not limbs.
+Unlike most other fish, salmon can live in both fresh water and salt water.
+An anchovy is a fish. It lives underwater. It has fins, not limbs.
+An anchovy is a small fish that lives in the ocean. Like some other types of fish, anchovies swim in large groups called schools.
+A green tree frog is an amphibian. It has moist skin and begins its life in water.
+There are many kinds of tree frogs. Most tree frogs are very small. They can walk on thin branches.",high_confidence_need_completion
+r008347,r008347,train,natural science,biology,"Identify mammals, birds, fish, reptiles, and amphibians",grade5,Classification,0.9018318407785557,1,need_completion_accidental_missing,,,Select the bird.,gray tree frog | Surinam horned frog | turkey vulture | green moray eel,,"Birds have feathers, two wings, and a beak.","A green moray eel is a fish. It lives underwater. It has fins, not limbs.
+Eels are long and thin. They may have small fins. They look like snakes, but they are fish!
+A Surinam horned frog is an amphibian. It has moist skin and begins its life in water.
+Frogs live near water or in damp places. Most frogs lay their eggs in water.
+A gray tree frog is an amphibian. It has moist skin and begins its life in water.
+There are many kinds of tree frogs. Most tree frogs are very small. They can walk on thin branches.
+A turkey vulture is a bird. It has feathers, two wings, and a beak.
+Vultures do not usually hunt live animals. They eat animals that are already dead! This behavior is called scavenging.",high_confidence_need_completion
+r010664,r010664,train,natural science,biology,"Identify mammals, birds, fish, reptiles, and amphibians",grade5,Classification,0.9011392762887956,1,need_completion_accidental_missing,,,Select the mammal.,California toad | gray crowned crane | giraffe | western rattlesnake,,Mammals have hair or fur and feed their young milk.,"A gray crowned crane is a bird. It has feathers, two wings, and a beak.
+Cranes wade in shallow water to look for food. Cranes eat insects, worms, and plants.
+A California toad is an amphibian. It has moist skin and begins its life in water.
+Toads do not have teeth! They swallow their food whole.
+A giraffe is a mammal. It has hair and feeds its young milk.
+Giraffes eat mostly leaves that are too high up for other animals to reach.
+A western rattlesnake is a reptile. It has scaly, waterproof skin.
+Rattlesnakes have fangs they can use to inject venom into their prey.",high_confidence_need_completion
+r016866,r016866,validation,natural science,biology,"Identify mammals, birds, fish, reptiles, and amphibians",grade5,Classification,0.8983963175153612,1,need_completion_accidental_missing,,,Select the mammal.,bald eagle | yak | American alligator | anchovy,,Mammals have hair or fur and feed their young milk.,"An American alligator is a reptile. It has scaly, waterproof skin.
+Alligators live in and around water. They can live near ponds, rivers, marshes, and lakes.
+An anchovy is a fish. It lives underwater. It has fins, not limbs.
+An anchovy is a small fish that lives in the ocean. Like some other types of fish, anchovies swim in large groups called schools.
+A bald eagle is a bird. It has feathers, two wings, and a beak.
+Bald eagles live in trees near water. They build nests that can be up to 13 feet wide!
+A yak is a mammal. It has hair and feeds its young milk.
+Yaks live in cold places. Their long hair helps keep them warm.",high_confidence_need_completion
+r020541,r020541,test,natural science,biology,"Identify mammals, birds, fish, reptiles, and amphibians",grade5,Classification,0.8970323526589559,1,need_completion_accidental_missing,,,Select the bird.,seahorse | Hermann's tortoise | loon | salmon,,"Birds have feathers, two wings, and a beak.","A seahorse is a fish. It lives underwater. It has fins, not limbs.
+Seahorses live in shallow, warm water. They can use their tails to hold on to plants.
+A loon is a bird. It has feathers, two wings, and a beak.
+Loons usually live near lakes. They dive in the water to hunt for food.
+A salmon is a fish. It lives underwater. It has fins, not limbs.
+Unlike most other fish, salmon can live in both fresh water and salt water.
+A Hermann's tortoise is a reptile. It has scaly, waterproof skin.
+A tortoise's shell protects it from predators. When a tortoise feels threatened, it can pull its head and legs inside its shell.",high_confidence_need_completion
+r020324,r020324,test,natural science,biology,"Identify mammals, birds, fish, reptiles, and amphibians",grade5,Classification,0.8964187361994921,1,need_completion_accidental_missing,,,Select the amphibian.,hippopotamus | California toad | bald eagle | fruit bat,,Amphibians have moist skin and begin their lives in water.,"A fruit bat is a mammal. It has hair and feeds its young milk.
+Fruit bats eat fruit and drink nectar from flowers. They have special teeth to help them bite through fruit skins.
+A bald eagle is a bird. It has feathers, two wings, and a beak.
+Bald eagles live in trees near water. They build nests that can be up to 13 feet wide!
+A hippopotamus is a mammal. It has hair and feeds its young milk.
+Hippopotamuses keep cool by lying in mud or water.
+A California toad is an amphibian. It has moist skin and begins its life in water.
+Toads do not have teeth! They swallow their food whole.",high_confidence_need_completion
+r010044,r010044,train,natural science,biology,"Identify mammals, birds, fish, reptiles, and amphibians",grade5,Classification,0.8914130555066611,1,need_completion_accidental_missing,,,Select the mammal.,hippopotamus | great white shark | arroyo toad | great crested newt,,Mammals have hair or fur and feed their young milk.,"An arroyo toad is an amphibian. It has moist skin and begins its life in water.
+Toads do not have teeth! They swallow their food whole.
+A great crested newt is an amphibian. It has moist skin and begins its life in water.
+Some newts live in water. Other newts live on land but lay their eggs in water.
+A great white shark is a fish. It lives underwater. It has fins, not limbs.
+Great white sharks can live for up to 70 years.
+A hippopotamus is a mammal. It has hair and feeds its young milk.
+Hippopotamuses keep cool by lying in mud or water.",high_confidence_need_completion
+r017855,r017855,test,natural science,biology,"Identify mammals, birds, fish, reptiles, and amphibians",grade5,Classification,0.890569582682444,1,need_completion_accidental_missing,,,Select the mammal.,ostrich | fire salamander | elephant seal | parrotfish,,Mammals have hair or fur and feed their young milk.,"A parrotfish is a fish. It lives underwater. It has fins, not limbs.
+Parrotfish have fins and live underwater near coral reefs. They get their name from their bird-like beak!
+An elephant seal is a mammal. It has hair and feeds its young milk.
+Seals have flippers instead of arms! They use their flippers to swim underwater or to crawl on the beach.
+A fire salamander is an amphibian. It has moist skin and begins its life in water.
+Fire salamanders can release poison from their skin. This poison helps protect them from predators.
+An ostrich is a bird. It has feathers, two wings, and a beak.
+The ostrich is the largest bird alive today. Ostriches cannot fly, but they can run very fast.",high_confidence_need_completion
+r009364,r009364,train,natural science,biology,"Identify mammals, birds, fish, reptiles, and amphibians",grade5,Classification,0.8891142985136097,1,need_completion_accidental_missing,,,Select the amphibian.,piranha | emerald tree boa | ostrich | red salamander,,Amphibians have moist skin and begin their lives in water.,"An ostrich is a bird. It has feathers, two wings, and a beak.
+The ostrich is the largest bird alive today. Ostriches cannot fly, but they can run very fast.
+A piranha is a fish. It lives underwater. It has fins, not limbs.
+Piranhas have sharp teeth. Piranhas hunt in groups. A group of piranhas can eat a large animal.
+An emerald tree boa is a reptile. It has scaly, waterproof skin.
+Tree boas eat small mammals, birds, lizards, and frogs. Tree boas only need to eat once every few months!
+A red salamander is an amphibian. It has moist skin and begins its life in water.
+Red salamanders do not have lungs. They breathe through their skin!",high_confidence_need_completion
+r013203,r013203,validation,natural science,biology,"Identify mammals, birds, fish, reptiles, and amphibians",grade5,Classification,0.8749493108324526,1,need_completion_accidental_missing,,,Select the bird.,cobra | salmon | bison | blue-footed booby,,"Birds have feathers, two wings, and a beak.","A bison is a mammal. It has fur and feeds its young milk.
+Male bison have horns. They can use their horns to defend themselves.
+A salmon is a fish. It lives underwater. It has fins, not limbs.
+Unlike most other fish, salmon can live in both fresh water and salt water.
+A blue-footed booby is a bird. It has feathers, two wings, and a beak.
+Blue-footed boobies live on tropical islands in the Pacific Ocean.
+A cobra is a reptile. It has scaly, waterproof skin.
+Most cobras have a wide, flat hood below their head. A cobra can display its hood to scare away a predator.",high_confidence_need_completion
+r019447,r019447,test,natural science,biology,"Identify mammals, birds, fish, reptiles, and amphibians",grade5,Classification,0.868436432872098,1,need_completion_accidental_missing,,,Select the fish.,bull shark | Asian elephant | red kangaroo | green iguana,,"Fish live underwater. They have fins, not limbs.","A green iguana is a reptile. It has scaly, waterproof skin.
+Iguanas are a type of lizard. Iguanas eat plants and fruit.
+A bull shark is a fish. It lives underwater. It has fins, not limbs.
+Bull sharks can live in both fresh and salt water. They are found in rivers and in shallow parts of the ocean.
+A red kangaroo is a mammal. It has fur and feeds its young milk.
+Kangaroos hop to move around. They use their large tails for balance while hopping.
+An Asian elephant is a mammal. It has hair and feeds its young milk.
+Elephants live in groups called herds. The oldest female in the herd is usually the leader.",high_confidence_need_completion
+r000200,r000200,train,natural science,biology,"Identify mammals, birds, fish, reptiles, and amphibians",grade5,Classification,0.8666003967003968,1,need_completion_accidental_missing,,,Select the amphibian.,great crested newt | robin | blue-footed booby | helmeted iguana,,Amphibians have moist skin and begin their lives in water.,"A great crested newt is an amphibian. It has moist skin and begins its life in water.
+Some newts live in water. Other newts live on land but lay their eggs in water.
+A blue-footed booby is a bird. It has feathers, two wings, and a beak.
+Blue-footed boobies live on tropical islands in the Pacific Ocean.
+A helmeted iguana is a reptile. It has scaly, waterproof skin.
+Iguanas are a type of lizard. Iguanas eat plants and fruit.
+A robin is a bird. It has feathers, two wings, and a beak.
+A robin is a songbird. It sings different songs at different times of the day.",high_confidence_need_completion
+r004948,r004948,train,natural science,biology,Identify functions of plant cell parts,grade7,Cells,0.8527995996154314,1,need_completion_accidental_missing,,,Select the part whose main job is to control which substances enter and leave a plant cell.,cell membrane | cytoplasm | mitochondria | vacuole,,"Plant cells are made up of many different parts. Each cell part has a function that helps the cell survive and grow.
+Some cell parts are called organelles. Organelles are cell structures that are surrounded by their own membranes. Here are some of the organelles in plant cells:
+Chloroplasts and mitochondria work together to help the cell get the energy it needs. The chloroplasts use photosynthesis to make sugar. The mitochondria break down this sugar and release energy that the cell can use for all of its activities.
+The nucleus directs cell activities by sending instructions to different parts of the cell. The nucleus contains structures called chromosomes. The chromosomes are made mostly of hereditary material called DNA. DNA contains information that the cell uses for growth and activities. These instructions tell ribosomes how to build molecules called proteins, which make up cell structures and help chemical reactions happen in the cell.
+The endoplasmic reticulum is an organelle that helps ribosomes build proteins. The nucleus sends instructions for making proteins to ribosomes. Ribosomes can attach to the endoplamic reticulum. The endoplasmic reticulum and ribosomes use these instructions to make proteins that the cell needs to survive and grow.
+After proteins are made in the endoplasmic reticulum, they can be transferred to the Golgi. The Golgi is an organelle made up of flat, stacked membranes. The Golgi sorts and packages proteins and other substances. Then, the Golgi sends these substances to different parts of the cell. Some of these substances are sent to the cell membrane and released from the cell.
+In plant cells, the vacuole stores waste, water, and nutrients such as sugar. Most plant cells have one vacuole.
+Other cell parts are not surrounded by their own membranes. These cell parts are not organelles.
+The cell wall is the cell's tough outer covering. It gives the cell strength and stiffness and helps the cell keep its shape.
+On the inside of the cell wall is a thin layer called the cell membrane. This layer is a membrane, but it does not have a membrane surrounding it, so it is not an organelle. The cell membrane controls which substances enter and leave the cell.
+The cytoplasm is a thick liquid that fills the space inside the cell. The cytoplasm also helps the cell keep its shape and supports the other cell parts.","The cell membrane is a thin layer that wraps around the cytoplasm.
+In a plant cell, the cell wall surrounds the cell membrane. Most substances can pass through the cell wall. But when these substances reach the cell membrane, only some of them are able to enter the cell.",high_confidence_need_completion
+r005847,r005847,train,natural science,biology,Identify functions of animal cell parts,grade8,Cells,0.8454218449162461,1,need_completion_accidental_missing,,,Select the part whose main job is to help an animal cell make proteins.,vacuoles | endoplasmic reticulum | mitochondria | cytoplasm,,"Animal cells are made up of many different parts. Each cell part has a function that helps the cell survive and grow.
+Some cell parts are called organelles. Organelles are cell structures that are surrounded by their own membranes. Here are some of the organelles in animal cells:
+Mitochondria help the cell get the energy it needs. Mitochondria break down sugar and release energy that the cell can use for all of its activities.
+The nucleus directs cell activities by sending instructions to different parts of the cell. The nucleus contains structures called chromosomes. The chromosomes are made mostly of hereditary material called DNA. DNA contains information that the cell uses for growth and activities. These instructions tell ribosomes how to build molecules called proteins, which make up cell structures and help chemical reactions happen in the cell.
+The endoplasmic reticulum is an organelle that helps ribosomes build proteins. The nucleus sends instructions for making proteins to ribosomes. Ribosomes can attach to the endoplamic reticulum. The endoplasmic reticulum and ribosomes use these instructions to make proteins that the cell needs to survive and grow.
+After proteins are made in the endoplasmic reticulum, they can be transferred to the Golgi. The Golgi is an organelle made up of flat, stacked membranes. The Golgi sorts and packages proteins and other substances. Then, the Golgi sends these substances to different parts of the cell. Some of these substances are sent to the cell membrane and released from the cell.
+Animal cells also have organelles for storage and waste removal. The vacuoles store sugar and other nutrients. The lysosomes break down worn-out cell parts and other waste. Animal cells usually have several vacuoles and lysosomes.
+Other cell parts are not surrounded by their own membranes. These cell parts are not organelles.
+The cell membrane is a thin layer that surrounds and protects the cell. This layer is a membrane, but it does not have a membrane surrounding it, so it is not an organelle. The cell membrane controls which substances enter and leave the cell.
+The cytoplasm is a thick liquid that fills the space inside the cell. The cytoplasm also helps the cell keep its shape and supports the other cell parts.",The endoplasmic reticulum helps the cell make proteins. Instructions for making proteins are sent to ribosomes. Ribosomes can attach to the endoplamic reticulum and use the instructions to make proteins.,high_confidence_need_completion
+r019266,r019266,test,natural science,biology,"Identify mammals, birds, fish, reptiles, and amphibians",grade5,Classification,0.8454007721515265,1,need_completion_accidental_missing,,,Select the bird.,red-eyed tree frog | harbor seal | Steller's sea eagle | humpback whale,,"Birds have feathers, two wings, and a beak.","A humpback whale is a mammal. It has hair and feeds its young milk.
+Whales are mammals that live in the ocean. Humpback whales have small hairs that grow from bumps around their mouth.
+A red-eyed tree frog is an amphibian. It has moist skin and begins its life in water.
+A red-eyed tree frog has sticky pads on its toes. The sticky pads help the red-eyed tree frog hold on to leaves.
+A harbor seal is a mammal. It has fur and feeds its young milk.
+Seals have flippers instead of arms! They use their flippers to swim underwater or to crawl on the beach.
+A Steller's sea eagle is a bird. It has feathers, two wings, and a beak.
+Sea eagles use their sharp beaks to eat fish and other birds.",high_confidence_need_completion
+r008685,r008685,train,natural science,biology,Identify functions of animal cell parts,grade8,Cells,0.8435663460185604,1,need_completion_accidental_missing,,,Select the part whose main job is to sort and package proteins and other substances in an animal cell.,chromosomes | Golgi | nucleus | vacuoles,,"Animal cells are made up of many different parts. Each cell part has a function that helps the cell survive and grow.
+Some cell parts are called organelles. Organelles are cell structures that are surrounded by their own membranes. Here are some of the organelles in animal cells:
+Mitochondria help the cell get the energy it needs. Mitochondria break down sugar and release energy that the cell can use for all of its activities.
+The nucleus directs cell activities by sending instructions to different parts of the cell. The nucleus contains structures called chromosomes. The chromosomes are made mostly of hereditary material called DNA. DNA contains information that the cell uses for growth and activities. These instructions tell ribosomes how to build molecules called proteins, which make up cell structures and help chemical reactions happen in the cell.
+The endoplasmic reticulum is an organelle that helps ribosomes build proteins. The nucleus sends instructions for making proteins to ribosomes. Ribosomes can attach to the endoplamic reticulum. The endoplasmic reticulum and ribosomes use these instructions to make proteins that the cell needs to survive and grow.
+After proteins are made in the endoplasmic reticulum, they can be transferred to the Golgi. The Golgi is an organelle made up of flat, stacked membranes. The Golgi sorts and packages proteins and other substances. Then, the Golgi sends these substances to different parts of the cell. Some of these substances are sent to the cell membrane and released from the cell.
+Animal cells also have organelles for storage and waste removal. The vacuoles store sugar and other nutrients. The lysosomes break down worn-out cell parts and other waste. Animal cells usually have several vacuoles and lysosomes.
+Other cell parts are not surrounded by their own membranes. These cell parts are not organelles.
+The cell membrane is a thin layer that surrounds and protects the cell. This layer is a membrane, but it does not have a membrane surrounding it, so it is not an organelle. The cell membrane controls which substances enter and leave the cell.
+The cytoplasm is a thick liquid that fills the space inside the cell. The cytoplasm also helps the cell keep its shape and supports the other cell parts.","The Golgi sorts and packages proteins and other substances for the cell. The Golgi sends some of these substances to parts of the cell where they are needed. It sends other substances to the cell membrane, where they are released from the cell.",high_confidence_need_completion
+r007569,r007569,train,natural science,biology,"Identify mammals, birds, fish, reptiles, and amphibians",grade5,Classification,0.8399727750929288,1,need_completion_accidental_missing,,,Select the mammal.,Tasmanian devil | clownfish | gray crowned crane | robin,,Mammals have hair or fur and feed their young milk.,"A gray crowned crane is a bird. It has feathers, two wings, and a beak.
+Cranes wade in shallow water to look for food. Cranes eat insects, worms, and plants.
+A clownfish is a fish. It lives underwater. It has fins, not limbs.
+Clownfish live with animals called anemones. In the image of the clownfish, you can see the brown anemone surrounding the clownfish.
+A Tasmanian devil is a mammal. It has fur and feeds its young milk.
+Tasmanian devils are meat-eating marsupials. They live on the island of Tasmania, near Australia.
+A robin is a bird. It has feathers, two wings, and a beak.
+A robin is a songbird. It sings different songs at different times of the day.",high_confidence_need_completion
+r012232,r012232,train,natural science,biology,Identify functions of animal cell parts,grade4,Cells,0.8396300900413642,1,need_completion_accidental_missing,,,Select the part whose main job is to break down sugar to release energy that an animal cell can use.,chromosomes | cytoplasm | mitochondria,,"The cell membrane controls which substances enter and leave the cell. The cell membrane also protects the cell from the outside environment.
+The cytoplasm is made up of a thick liquid that fills the space inside the cell membrane. The cytoplasm supports the other cell parts and holds them in place. Many important chemical reactions happen in the cytoplasm.
+The mitochondria break down sugar to release energy that the cell can use.
+The vacuoles store nutrients, such as sugar, in the cell. Vacuoles also store water and waste.
+The nucleus directs cell activities. It does this by sending instructions to different parts of the cell.
+The chromosomes contain the information that the cell uses for growth and activities. In animal and plant cells, the chromosomes are inside the nucleus.",Mitochondria break down sugar to release energy that the cell can use. Animal and plant cells usually have many mitochondria.,high_confidence_need_completion
+r011551,r011551,train,natural science,biology,Identify functions of animal cell parts,grade4,Cells,0.8326054214973237,1,need_completion_accidental_missing,,,Select the part whose main job is to direct an animal cell's activities by sending instructions to different parts of the cell.,cytoplasm | cell membrane | nucleus,,"The cell membrane controls which substances enter and leave the cell. The cell membrane also protects the cell from the outside environment.
+The cytoplasm is made up of a thick liquid that fills the space inside the cell membrane. The cytoplasm supports the other cell parts and holds them in place. Many important chemical reactions happen in the cytoplasm.
+The mitochondria break down sugar to release energy that the cell can use.
+The vacuoles store nutrients, such as sugar, in the cell. Vacuoles also store water and waste.
+The nucleus directs cell activities. It does this by sending instructions to different parts of the cell.
+The chromosomes contain the information that the cell uses for growth and activities. In animal and plant cells, the chromosomes are inside the nucleus.","The nucleus is the master control center for cell activities. The nucleus sends signals and instructions to different parts of the cell. Not every cell has a nucleus, but most plant and animal cells have one.",high_confidence_need_completion
+r013307,r013307,validation,natural science,biology,Identify functions of animal cell parts,grade4,Cells,0.8298716913694157,1,need_completion_accidental_missing,,,"Select the part whose main job is to store nutrients, water, and waste in an animal cell.",mitochondria | vacuoles | cytoplasm,,"The cell membrane controls which substances enter and leave the cell. The cell membrane also protects the cell from the outside environment.
+The cytoplasm is made up of a thick liquid that fills the space inside the cell membrane. The cytoplasm supports the other cell parts and holds them in place. Many important chemical reactions happen in the cytoplasm.
+The mitochondria break down sugar to release energy that the cell can use.
+The vacuoles store nutrients, such as sugar, in the cell. Vacuoles also store water and waste.
+The nucleus directs cell activities. It does this by sending instructions to different parts of the cell.
+The chromosomes contain the information that the cell uses for growth and activities. In animal and plant cells, the chromosomes are inside the nucleus.","Vacuoles store water, waste, and nutrients such as sugar. Animal cells usually have several small vacuoles.",high_confidence_need_completion
+r012635,r012635,train,natural science,biology,Compare cells and cell parts,grade7,Cells,0.8202582763257624,1,need_completion_accidental_missing,,,Select the one true statement.,"The cell membrane stores nutrients, water, and waste in a plant cell. | In animal cells, lysosomes break down waste and worn-out cell parts. | The endoplasmic reticulum breaks down sugar to release energy that an animal cell can use.",,,,high_confidence_need_completion
+r004073,r004073,train,natural science,biology,"Identify mammals, birds, fish, reptiles, and amphibians",grade5,Classification,0.8085296753994268,1,need_completion_accidental_missing,,,Select the bird.,western gorilla | red crowned crane | Asian elephant | giraffe,,"Birds have feathers, two wings, and a beak.","An Asian elephant is a mammal. It has hair and feeds its young milk.
+Elephants live in groups called herds. The oldest female in the herd is usually the leader.
+A giraffe is a mammal. It has hair and feeds its young milk.
+Giraffes eat mostly leaves that are too high up for other animals to reach.
+A red crowned crane is a bird. It has feathers, two wings, and a beak.
+Cranes wade in shallow water to look for food. Cranes eat insects, worms, and plants.
+A western gorilla is a mammal. It has fur and feeds its young milk.
+Gorillas live in groups called troops. The largest male in the troop is usually the leader.",high_confidence_need_completion
+r017697,r017697,test,natural science,biology,Compare cells and cell parts,grade7,Cells,0.8043933038372093,1,need_completion_accidental_missing,,,Select the one true statement.,"Vacuoles store nutrients, water, and waste in plant cells. | The cell membrane of an animal cell contains the master plan for cell activities and cell development. | The chromosomes of a plant cell use sunlight to make sugar.",,,,high_confidence_need_completion
+r015071,r015071,validation,natural science,biology,Compare cells and cell parts,grade8,Cells,0.7979327308784478,1,need_completion_accidental_missing,,,Select the one true statement.,Mitochondria are outside the nucleus of a plant cell. | The cell membrane breaks down sugar to release energy that a plant cell can use. | Lysosomes contain the master plan for all cell activities and cell development in animal cells.,,,,high_confidence_need_completion
+r008039,r008039,train,natural science,biology,Compare cells and cell parts,grade7,Cells,0.7953272186524685,1,need_completion_accidental_missing,,,Select the one true statement.,The cell wall breaks down sugar to release energy that a plant cell can use. | The Golgi packages proteins and other substances and directs them to different parts of an animal cell. | The cell membrane of a plant cell contains the master plan for cell activities and cell development.,,,,high_confidence_need_completion
+r007261,r007261,train,natural science,biology,Compare plant and animal cells,grade4,Cells,0.7838461991735989,1,need_completion_accidental_missing,,,Which of the following parts does an animal cell have?,chloroplasts | cell membrane | cell wall,,"Plant and animal cells have many parts in common, but not all. This table shows some of their similarities and differences.
+Cell part | Plant cell | Animal cell
+cell wall | yes | no
+cell membrane | yes | yes
+cytoplasm | yes | yes
+mitochondria | yes | yes
+vacuole | yes | yes
+chloroplasts | yes | no
+nucleus | yes | yes
+chromosomes | yes | yes
+Think about how plant and animal cells are different:
+Plant cells have a cell wall, but animal cells do not. The cell wall helps plant cells keep a fixed shape. Most animal cells do not have a fixed shape.
+Plant cells have chloroplasts, but animal cells do not. Chloroplasts make sugar that plants cells can use as food. Animal cells cannot make their own food.",,high_confidence_need_completion
+r003101,r003101,train,natural science,biology,Compare cells and cell parts,grade7,Cells,0.7817874032791088,1,need_completion_accidental_missing,,,Select the one true statement.,"Chromosomes are inside the nucleus of an animal cell. | The cell membrane stores nutrients, water, and waste in a plant cell. | Plant cells can have mitochondria but do not have vacuoles.",,,,high_confidence_need_completion
+r004013,r004013,train,natural science,biology,Compare cells and cell parts,grade8,Cells,0.7790171530674449,1,need_completion_accidental_missing,,,Select the one true statement.,Chloroplasts are outside the nucleus of a plant cell. | The cell membrane breaks down sugar to release energy that an animal cell can use. | The mitochondria of a plant cell use sunlight to make sugar.,,,,high_confidence_need_completion
+r020372,r020372,test,natural science,biology,Compare plant and animal cells,grade4,Cells,0.7766728618534146,1,need_completion_accidental_missing,,,Which of the following parts does an animal cell have?,chromosomes | cell wall | chloroplasts,,"Plant and animal cells have many parts in common, but not all. This table shows some of their similarities and differences.
+Cell part | Plant cell | Animal cell
+cell wall | yes | no
+cell membrane | yes | yes
+cytoplasm | yes | yes
+mitochondria | yes | yes
+vacuole | yes | yes
+chloroplasts | yes | no
+nucleus | yes | yes
+chromosomes | yes | yes
+Think about how plant and animal cells are different:
+Plant cells have a cell wall, but animal cells do not. The cell wall helps plant cells keep a fixed shape. Most animal cells do not have a fixed shape.
+Plant cells have chloroplasts, but animal cells do not. Chloroplasts make sugar that plants cells can use as food. Animal cells cannot make their own food.",,high_confidence_need_completion
+r017948,r017948,test,natural science,biology,Compare plant and animal cells,grade4,Cells,0.7765394282155728,1,need_completion_accidental_missing,,,Which of the following parts does an animal cell have?,nucleus | cell wall | chloroplasts,,"Plant and animal cells have many parts in common, but not all. This table shows some of their similarities and differences.
+Cell part | Plant cell | Animal cell
+cell wall | yes | no
+cell membrane | yes | yes
+cytoplasm | yes | yes
+mitochondria | yes | yes
+vacuole | yes | yes
+chloroplasts | yes | no
+nucleus | yes | yes
+chromosomes | yes | yes
+Think about how plant and animal cells are different:
+Plant cells have a cell wall, but animal cells do not. The cell wall helps plant cells keep a fixed shape. Most animal cells do not have a fixed shape.
+Plant cells have chloroplasts, but animal cells do not. Chloroplasts make sugar that plants cells can use as food. Animal cells cannot make their own food.",,high_confidence_need_completion
+r007415,r007415,train,natural science,biology,Compare cells and cell parts,grade8,Cells,0.7738329801197344,1,need_completion_accidental_missing,,,Select the one true statement.,The cell membrane of an animal cell contains the master plan for cell activities and cell development. | The cytoplasm of a plant cell is inside the cell membrane. | Animal cells can have lysosomes but do not have vacuoles.,,,,high_confidence_need_completion
+r021131,r021131,test,natural science,biology,Compare cells and cell parts,grade7,Cells,0.7731089259306919,1,need_completion_accidental_missing,,,Select the one true statement.,Lysosomes contain the master plan for all cell activities and cell development in animal cells. | Plant cells can have mitochondria but do not have vacuoles. | The cell membrane controls which substances enter and leave a plant cell.,,,,high_confidence_need_completion
+r009612,r009612,train,natural science,biology,Body systems: digestion,grade5,Animals,0.7728366082077349,1,need_completion_accidental_missing,,,Which job does the digestive system do?,breaks down food into small particles | helps make food,,"All organisms need food. Food gives organisms the energy they need to survive.
+Animals get their food by eating other organisms. An animal's digestive system breaks down food into small particles of fat, protein, sugar, and other nutrients. The blood carries these small particles to cells throughout the animal's body.
+Inside cells, nutrient particles can be broken down to release energy. Cells need energy to do their jobs. A cell's job might include sending signals to other cells, rearranging chemicals to make new substances, or moving substances from place to place.
+Cells also use nutrient particles as building materials. Cells use building materials to help the animal grow and to replace worn-out parts.","The digestive system breaks down food into small particles of nutrients. Cells can get energy and building materials from these small particles.
+The digestive system does not help make food. Animals cannot make food inside their bodies. They must eat other organisms.",high_confidence_need_completion
+r019653,r019653,test,natural science,biology,Compare cells and cell parts,grade7,Cells,0.7707747805994809,1,need_completion_accidental_missing,,,Select the one true statement.,The Golgi is inside the cell membrane in an animal cell. | Plant cells can have vacuoles but do not have mitochondria. | The endoplasmic reticulum breaks down sugar to release energy that a plant cell can use.,,,,high_confidence_need_completion
+r003944,r003944,train,natural science,biology,Compare cells and cell parts,grade7,Cells,0.7657162001597543,1,need_completion_accidental_missing,,,Select the one true statement.,The cell wall gives a plant cell its fixed shape. | The endoplasmic reticulum breaks down sugar to release energy that an animal cell can use. | Chloroplasts are inside the nucleus of a plant cell.,,,,high_confidence_need_completion
+r008324,r008324,train,natural science,biology,Compare cells and cell parts,grade7,Cells,0.7656800294031643,1,need_completion_accidental_missing,,,Select the one true statement.,"In a plant cell, the endoplasmic reticulum contains the master plan for cell activities and cell development. | Chloroplasts break down sugar to release energy that a plant cell can use. | The cell wall is outside the cell membrane of a plant cell.",,,,high_confidence_need_completion
+r003049,r003049,train,natural science,biology,Compare cells and cell parts,grade7,Cells,0.7609441013083136,1,need_completion_accidental_missing,,,Select the one true statement.,"In an animal cell, the endoplasmic reticulum contains the master plan for cell activities and cell development. | Mitochondria break down sugar to release energy that a plant cell can use. | Chromosomes store nutrients, water, and waste in an animal cell.",,,,high_confidence_need_completion
+r007974,r007974,train,natural science,biology,Compare cells and cell parts,grade7,Cells,0.7566808819448259,1,need_completion_accidental_missing,,,Select the one true statement.,"In animal cells, chromosomes contain the master plan for cell activities and cell development. | Vacuoles break down sugar to release energy that plant cells can use. | A plant cell can have endoplasmic reticulum but does not have a Golgi.",,,,high_confidence_need_completion
+r018410,r018410,test,language science,reference-skills,Use guide words,grade5,Reference skills,0.09684446224706682,0,skip_structural_absence,,,"Would you find the word rock on a dictionary page with the following guide words?
+regret - ruffle",yes | no,,"Guide words appear on each page of a dictionary. They tell you the first word and last word on the page. The other words on the page come between the guide words in alphabetical order.
+To put words in alphabetical order, put them in order by their first letters. If the first letters are the same, look at the second letters. If the second letters are the same, look at the third letters, and so on.
+If one word is shorter, and there are no more letters to compare, then the shorter word comes first in alphabetical order. For example, be comes before bed.","Put the words in alphabetical order.
+Since rock is between the guide words regret - ruffle, it would be found on that page.",high_confidence_skip
+r014578,r014578,validation,language science,reference-skills,Use guide words,grade8,Reference skills,0.09719118455645119,0,skip_structural_absence,,,"Would you find the word people on a dictionary page with the following guide words?
+pattern - plot",no | yes,,"Guide words appear on each page of a dictionary. They tell you the first word and last word on the page. The other words on the page come between the guide words in alphabetical order.
+To put words in alphabetical order, put them in order by their first letters. If the first letters are the same, look at the second letters. If the second letters are the same, look at the third letters, and so on.
+If one word is shorter, and there are no more letters to compare, then the shorter word comes first in alphabetical order. For example, be comes before bed.","Put the words in alphabetical order.
+Since people is between the guide words pattern - plot, it would be found on that page.",high_confidence_skip
+r009708,r009708,train,language science,reference-skills,Use guide words,grade6,Reference skills,0.09780644569916613,0,skip_structural_absence,,,"Would you find the word grief on a dictionary page with the following guide words?
+generally - good",no | yes,,"Guide words appear on each page of a dictionary. They tell you the first word and last word on the page. The other words on the page come between the guide words in alphabetical order.
+To put words in alphabetical order, put them in order by their first letters. If the first letters are the same, look at the second letters. If the second letters are the same, look at the third letters, and so on.
+If one word is shorter, and there are no more letters to compare, then the shorter word comes first in alphabetical order. For example, be comes before bed.","Put the words in alphabetical order.
+Since grief is not between the guide words generally - good, it would not be found on that page.",high_confidence_skip
+r000463,r000463,train,language science,reference-skills,Use guide words,grade8,Reference skills,0.09792907512584309,0,skip_structural_absence,,,"Would you find the word did on a dictionary page with the following guide words?
+dangle - drank",no | yes,,"Guide words appear on each page of a dictionary. They tell you the first word and last word on the page. The other words on the page come between the guide words in alphabetical order.
+To put words in alphabetical order, put them in order by their first letters. If the first letters are the same, look at the second letters. If the second letters are the same, look at the third letters, and so on.
+If one word is shorter, and there are no more letters to compare, then the shorter word comes first in alphabetical order. For example, be comes before bed.","Put the words in alphabetical order.
+Since did is between the guide words dangle - drank, it would be found on that page.",high_confidence_skip
+r003296,r003296,train,language science,reference-skills,Use guide words,grade7,Reference skills,0.0979472297656661,0,skip_structural_absence,,,"Which word would you find on a dictionary page with the following guide words?
+person - plug",pity | preserve,,"Guide words appear on each page of a dictionary. They tell you the first word and last word on the page. The other words on the page come between the guide words in alphabetical order.
+To put words in alphabetical order, put them in order by their first letters. If the first letters are the same, look at the second letters. If the second letters are the same, look at the third letters, and so on.
+If one word is shorter, and there are no more letters to compare, then the shorter word comes first in alphabetical order. For example, be comes before bed.","Put the words in alphabetical order.
+Since pity is between the guide words person - plug, it would be found on that page.",high_confidence_skip
+r020642,r020642,test,language science,reference-skills,Use guide words,grade8,Reference skills,0.0980230065775526,0,skip_structural_absence,,,"Which word would you find on a dictionary page with the following guide words?
+walnut - who",wink | weary,,"Guide words appear on each page of a dictionary. They tell you the first word and last word on the page. The other words on the page come between the guide words in alphabetical order.
+To put words in alphabetical order, put them in order by their first letters. If the first letters are the same, look at the second letters. If the second letters are the same, look at the third letters, and so on.
+If one word is shorter, and there are no more letters to compare, then the shorter word comes first in alphabetical order. For example, be comes before bed.","Put the words in alphabetical order.
+Since weary is between the guide words walnut - who, it would be found on that page.",high_confidence_skip
+r006701,r006701,train,language science,reference-skills,Use guide words,grade3,Reference skills,0.09804118127924218,0,skip_structural_absence,,,"Which word would you find on a dictionary page with the following guide words?
+pond - purple",pretty | people,,"Guide words appear on each page of a dictionary. They tell you the first word and last word on the page. The other words on the page come between the guide words in alphabetical order.
+To put words in alphabetical order, put them in order by their first letters. If the first letters are the same, look at the second letters. If the second letters are the same, look at the third letters, and so on.
+If one word is shorter, and there are no more letters to compare, then the shorter word comes first in alphabetical order. For example, be comes before bed.","Put the words in alphabetical order.
+Since pretty is between the guide words pond - purple, it would be found on that page.",high_confidence_skip
+r014215,r014215,validation,language science,reference-skills,Use guide words,grade3,Reference skills,0.09810851906023932,0,skip_structural_absence,,,"Which word would you find on a dictionary page with the following guide words?
+alphabet - area",ahead | antenna,,"Guide words appear on each page of a dictionary. They tell you the first word and last word on the page. The other words on the page come between the guide words in alphabetical order.
+To put words in alphabetical order, put them in order by their first letters. If the first letters are the same, look at the second letters. If the second letters are the same, look at the third letters, and so on.
+If one word is shorter, and there are no more letters to compare, then the shorter word comes first in alphabetical order. For example, be comes before bed.","Put the words in alphabetical order.
+Since antenna is between the guide words alphabet - area, it would be found on that page.",high_confidence_skip
+r019958,r019958,test,language science,reference-skills,Use guide words,grade8,Reference skills,0.09830946673306898,0,skip_structural_absence,,,"Would you find the word old on a dictionary page with the following guide words?
+object - orchard",yes | no,,"Guide words appear on each page of a dictionary. They tell you the first word and last word on the page. The other words on the page come between the guide words in alphabetical order.
+To put words in alphabetical order, put them in order by their first letters. If the first letters are the same, look at the second letters. If the second letters are the same, look at the third letters, and so on.
+If one word is shorter, and there are no more letters to compare, then the shorter word comes first in alphabetical order. For example, be comes before bed.","Put the words in alphabetical order.
+Since old is between the guide words object - orchard, it would be found on that page.",high_confidence_skip
+r000364,r000364,train,language science,reference-skills,Use guide words,grade8,Reference skills,0.09844253425371817,0,skip_structural_absence,,,"Would you find the word period on a dictionary page with the following guide words?
+pity - practice",no | yes,,"Guide words appear on each page of a dictionary. They tell you the first word and last word on the page. The other words on the page come between the guide words in alphabetical order.
+To put words in alphabetical order, put them in order by their first letters. If the first letters are the same, look at the second letters. If the second letters are the same, look at the third letters, and so on.
+If one word is shorter, and there are no more letters to compare, then the shorter word comes first in alphabetical order. For example, be comes before bed.","Put the words in alphabetical order.
+Since period is not between the guide words pity - practice, it would not be found on that page.",high_confidence_skip
+r007784,r007784,train,language science,reference-skills,Use guide words,grade7,Reference skills,0.09844911035189889,0,skip_structural_absence,,,"Which word would you find on a dictionary page with the following guide words?
+scene - sped",stallion | so,,"Guide words appear on each page of a dictionary. They tell you the first word and last word on the page. The other words on the page come between the guide words in alphabetical order.
+To put words in alphabetical order, put them in order by their first letters. If the first letters are the same, look at the second letters. If the second letters are the same, look at the third letters, and so on.
+If one word is shorter, and there are no more letters to compare, then the shorter word comes first in alphabetical order. For example, be comes before bed.","Put the words in alphabetical order.
+Since so is between the guide words scene - sped, it would be found on that page.",high_confidence_skip
+r004499,r004499,train,language science,reference-skills,Use guide words,grade6,Reference skills,0.09845536777345229,0,skip_structural_absence,,,"Would you find the word equal on a dictionary page with the following guide words?
+enjoy - example",no | yes,,"Guide words appear on each page of a dictionary. They tell you the first word and last word on the page. The other words on the page come between the guide words in alphabetical order.
+To put words in alphabetical order, put them in order by their first letters. If the first letters are the same, look at the second letters. If the second letters are the same, look at the third letters, and so on.
+If one word is shorter, and there are no more letters to compare, then the shorter word comes first in alphabetical order. For example, be comes before bed.","Put the words in alphabetical order.
+Since equal is between the guide words enjoy - example, it would be found on that page.",high_confidence_skip
+r009056,r009056,train,language science,reference-skills,Use guide words,grade8,Reference skills,0.09845899253401443,0,skip_structural_absence,,,"Would you find the word adopt on a dictionary page with the following guide words?
+about - ashes",yes | no,,"Guide words appear on each page of a dictionary. They tell you the first word and last word on the page. The other words on the page come between the guide words in alphabetical order.
+To put words in alphabetical order, put them in order by their first letters. If the first letters are the same, look at the second letters. If the second letters are the same, look at the third letters, and so on.
+If one word is shorter, and there are no more letters to compare, then the shorter word comes first in alphabetical order. For example, be comes before bed.","Put the words in alphabetical order.
+Since adopt is between the guide words about - ashes, it would be found on that page.",high_confidence_skip
+r014341,r014341,validation,language science,reference-skills,Use guide words,grade8,Reference skills,0.0984692869000084,0,skip_structural_absence,,,"Which word would you find on a dictionary page with the following guide words?
+we - wink",waiter | whom,,"Guide words appear on each page of a dictionary. They tell you the first word and last word on the page. The other words on the page come between the guide words in alphabetical order.
+To put words in alphabetical order, put them in order by their first letters. If the first letters are the same, look at the second letters. If the second letters are the same, look at the third letters, and so on.
+If one word is shorter, and there are no more letters to compare, then the shorter word comes first in alphabetical order. For example, be comes before bed.","Put the words in alphabetical order.
+Since whom is between the guide words we - wink, it would be found on that page.",high_confidence_skip
+r014487,r014487,validation,language science,reference-skills,Use guide words,grade5,Reference skills,0.0984692869000084,0,skip_structural_absence,,,"Which word would you find on a dictionary page with the following guide words?
+wait - wound",wrote | we,,"Guide words appear on each page of a dictionary. They tell you the first word and last word on the page. The other words on the page come between the guide words in alphabetical order.
+To put words in alphabetical order, put them in order by their first letters. If the first letters are the same, look at the second letters. If the second letters are the same, look at the third letters, and so on.
+If one word is shorter, and there are no more letters to compare, then the shorter word comes first in alphabetical order. For example, be comes before bed.","Put the words in alphabetical order.
+Since we is between the guide words wait - wound, it would be found on that page.",high_confidence_skip
+r014125,r014125,validation,language science,reference-skills,Use guide words,grade6,Reference skills,0.09849252718163355,0,skip_structural_absence,,,"Which word would you find on a dictionary page with the following guide words?
+bacteria - brag",be | bunch,,"Guide words appear on each page of a dictionary. They tell you the first word and last word on the page. The other words on the page come between the guide words in alphabetical order.
+To put words in alphabetical order, put them in order by their first letters. If the first letters are the same, look at the second letters. If the second letters are the same, look at the third letters, and so on.
+If one word is shorter, and there are no more letters to compare, then the shorter word comes first in alphabetical order. For example, be comes before bed.","Put the words in alphabetical order.
+Since be is between the guide words bacteria - brag, it would be found on that page.",high_confidence_skip
+r007558,r007558,train,language science,reference-skills,Use guide words,grade6,Reference skills,0.09852225993796983,0,skip_structural_absence,,,"Would you find the word inventor on a dictionary page with the following guide words?
+idle - irrigate",no | yes,,"Guide words appear on each page of a dictionary. They tell you the first word and last word on the page. The other words on the page come between the guide words in alphabetical order.
+To put words in alphabetical order, put them in order by their first letters. If the first letters are the same, look at the second letters. If the second letters are the same, look at the third letters, and so on.
+If one word is shorter, and there are no more letters to compare, then the shorter word comes first in alphabetical order. For example, be comes before bed.","Put the words in alphabetical order.
+Since inventor is between the guide words idle - irrigate, it would be found on that page.",high_confidence_skip
+r012286,r012286,train,language science,reference-skills,Use guide words,grade7,Reference skills,0.09854036765592752,0,skip_structural_absence,,,"Which word would you find on a dictionary page with the following guide words?
+early - engineer",elf | exact,,"Guide words appear on each page of a dictionary. They tell you the first word and last word on the page. The other words on the page come between the guide words in alphabetical order.
+To put words in alphabetical order, put them in order by their first letters. If the first letters are the same, look at the second letters. If the second letters are the same, look at the third letters, and so on.
+If one word is shorter, and there are no more letters to compare, then the shorter word comes first in alphabetical order. For example, be comes before bed.","Put the words in alphabetical order.
+Since elf is between the guide words early - engineer, it would be found on that page.",high_confidence_skip
+r004980,r004980,train,language science,reference-skills,Use guide words,grade5,Reference skills,0.09856656380752515,0,skip_structural_absence,,,"Which word would you find on a dictionary page with the following guide words?
+beast - brownie",born | bundle,,"Guide words appear on each page of a dictionary. They tell you the first word and last word on the page. The other words on the page come between the guide words in alphabetical order.
+To put words in alphabetical order, put them in order by their first letters. If the first letters are the same, look at the second letters. If the second letters are the same, look at the third letters, and so on.
+If one word is shorter, and there are no more letters to compare, then the shorter word comes first in alphabetical order. For example, be comes before bed.","Put the words in alphabetical order.
+Since born is between the guide words beast - brownie, it would be found on that page.",high_confidence_skip
+r021122,r021122,test,language science,reference-skills,Use guide words,grade4,Reference skills,0.0985845937514334,0,skip_structural_absence,,,"Would you find the word parent on a dictionary page with the following guide words?
+president - public",no | yes,,"Guide words appear on each page of a dictionary. They tell you the first word and last word on the page. The other words on the page come between the guide words in alphabetical order.
+To put words in alphabetical order, put them in order by their first letters. If the first letters are the same, look at the second letters. If the second letters are the same, look at the third letters, and so on.
+If one word is shorter, and there are no more letters to compare, then the shorter word comes first in alphabetical order. For example, be comes before bed.","Put the words in alphabetical order.
+Since parent is not between the guide words president - public, it would not be found on that page.",high_confidence_skip
+r016971,r016971,test,language science,reference-skills,Use guide words,grade8,Reference skills,0.09859761537607029,0,skip_structural_absence,,,"Which word would you find on a dictionary page with the following guide words?
+shot - suit",service | stockade,,"Guide words appear on each page of a dictionary. They tell you the first word and last word on the page. The other words on the page come between the guide words in alphabetical order.
+To put words in alphabetical order, put them in order by their first letters. If the first letters are the same, look at the second letters. If the second letters are the same, look at the third letters, and so on.
+If one word is shorter, and there are no more letters to compare, then the shorter word comes first in alphabetical order. For example, be comes before bed.","Put the words in alphabetical order.
+Since stockade is between the guide words shot - suit, it would be found on that page.",high_confidence_skip
+r016097,r016097,validation,language science,reference-skills,Use guide words,grade5,Reference skills,0.09860206686183659,0,skip_structural_absence,,,"Would you find the word material on a dictionary page with the following guide words?
+mitt - mug",no | yes,,"Guide words appear on each page of a dictionary. They tell you the first word and last word on the page. The other words on the page come between the guide words in alphabetical order.
+To put words in alphabetical order, put them in order by their first letters. If the first letters are the same, look at the second letters. If the second letters are the same, look at the third letters, and so on.
+If one word is shorter, and there are no more letters to compare, then the shorter word comes first in alphabetical order. For example, be comes before bed.","Put the words in alphabetical order.
+Since material is not between the guide words mitt - mug, it would not be found on that page.",high_confidence_skip
+r006333,r006333,train,language science,reference-skills,Use guide words,grade5,Reference skills,0.09862874802455068,0,skip_structural_absence,,,"Which word would you find on a dictionary page with the following guide words?
+magic - money",middle | museum,,"Guide words appear on each page of a dictionary. They tell you the first word and last word on the page. The other words on the page come between the guide words in alphabetical order.
+To put words in alphabetical order, put them in order by their first letters. If the first letters are the same, look at the second letters. If the second letters are the same, look at the third letters, and so on.
+If one word is shorter, and there are no more letters to compare, then the shorter word comes first in alphabetical order. For example, be comes before bed.","Put the words in alphabetical order.
+Since middle is between the guide words magic - money, it would be found on that page.",high_confidence_skip
+r007183,r007183,train,language science,reference-skills,Use guide words,grade4,Reference skills,0.09862972761735794,0,skip_structural_absence,,,"Would you find the word at on a dictionary page with the following guide words?
+architect - astound",no | yes,,"Guide words appear on each page of a dictionary. They tell you the first word and last word on the page. The other words on the page come between the guide words in alphabetical order.
+To put words in alphabetical order, put them in order by their first letters. If the first letters are the same, look at the second letters. If the second letters are the same, look at the third letters, and so on.
+If one word is shorter, and there are no more letters to compare, then the shorter word comes first in alphabetical order. For example, be comes before bed.","Put the words in alphabetical order.
+Since at is not between the guide words architect - astound, it would not be found on that page.",high_confidence_skip
+r014957,r014957,validation,language science,reference-skills,Use guide words,grade5,Reference skills,0.09863905385319681,0,skip_structural_absence,,,"Which word would you find on a dictionary page with the following guide words?
+plump - prevail",poetry | person,,"Guide words appear on each page of a dictionary. They tell you the first word and last word on the page. The other words on the page come between the guide words in alphabetical order.
+To put words in alphabetical order, put them in order by their first letters. If the first letters are the same, look at the second letters. If the second letters are the same, look at the third letters, and so on.
+If one word is shorter, and there are no more letters to compare, then the shorter word comes first in alphabetical order. For example, be comes before bed.","Put the words in alphabetical order.
+Since poetry is between the guide words plump - prevail, it would be found on that page.",high_confidence_skip
+r003998,r003998,train,language science,reference-skills,Use guide words,grade5,Reference skills,0.09868469506002146,0,skip_structural_absence,,,"Would you find the word ostrich on a dictionary page with the following guide words?
+of - oh",no | yes,,"Guide words appear on each page of a dictionary. They tell you the first word and last word on the page. The other words on the page come between the guide words in alphabetical order.
+To put words in alphabetical order, put them in order by their first letters. If the first letters are the same, look at the second letters. If the second letters are the same, look at the third letters, and so on.
+If one word is shorter, and there are no more letters to compare, then the shorter word comes first in alphabetical order. For example, be comes before bed.","Put the words in alphabetical order.
+Since ostrich is not between the guide words of - oh, it would not be found on that page.",high_confidence_skip
+r017352,r017352,test,language science,reference-skills,Use guide words,grade4,Reference skills,0.09868851728744966,0,skip_structural_absence,,,"Would you find the word wealthy on a dictionary page with the following guide words?
+wand - what",yes | no,,"Guide words appear on each page of a dictionary. They tell you the first word and last word on the page. The other words on the page come between the guide words in alphabetical order.
+To put words in alphabetical order, put them in order by their first letters. If the first letters are the same, look at the second letters. If the second letters are the same, look at the third letters, and so on.
+If one word is shorter, and there are no more letters to compare, then the shorter word comes first in alphabetical order. For example, be comes before bed.","Put the words in alphabetical order.
+Since wealthy is between the guide words wand - what, it would be found on that page.",high_confidence_skip
+r016878,r016878,validation,language science,reference-skills,Use guide words,grade3,Reference skills,0.0987047473259831,0,skip_structural_absence,,,"Which word would you find on a dictionary page with the following guide words?
+gnaw - group",gown | glory,,"Guide words appear on each page of a dictionary. They tell you the first word and last word on the page. The other words on the page come between the guide words in alphabetical order.
+To put words in alphabetical order, put them in order by their first letters. If the first letters are the same, look at the second letters. If the second letters are the same, look at the third letters, and so on.
+If one word is shorter, and there are no more letters to compare, then the shorter word comes first in alphabetical order. For example, be comes before bed.","Put the words in alphabetical order.
+Since gown is between the guide words gnaw - group, it would be found on that page.",high_confidence_skip
+r015089,r015089,validation,language science,reference-skills,Use guide words,grade7,Reference skills,0.09872368546311609,0,skip_structural_absence,,,"Which word would you find on a dictionary page with the following guide words?
+careful - correct",cent | cube,,"Guide words appear on each page of a dictionary. They tell you the first word and last word on the page. The other words on the page come between the guide words in alphabetical order.
+To put words in alphabetical order, put them in order by their first letters. If the first letters are the same, look at the second letters. If the second letters are the same, look at the third letters, and so on.
+If one word is shorter, and there are no more letters to compare, then the shorter word comes first in alphabetical order. For example, be comes before bed.","Put the words in alphabetical order.
+Since cent is between the guide words careful - correct, it would be found on that page.",high_confidence_skip
+r018705,r018705,test,language science,reference-skills,Use guide words,grade5,Reference skills,0.09875478616734118,0,skip_structural_absence,,,"Which word would you find on a dictionary page with the following guide words?
+bare - bite",because | booth,,"Guide words appear on each page of a dictionary. They tell you the first word and last word on the page. The other words on the page come between the guide words in alphabetical order.
+To put words in alphabetical order, put them in order by their first letters. If the first letters are the same, look at the second letters. If the second letters are the same, look at the third letters, and so on.
+If one word is shorter, and there are no more letters to compare, then the shorter word comes first in alphabetical order. For example, be comes before bed.","Put the words in alphabetical order.
+Since because is between the guide words bare - bite, it would be found on that page.",high_confidence_skip
+r013649,r013649,validation,language science,reference-skills,Use guide words,grade5,Reference skills,0.09876703735507858,0,skip_structural_absence,,,"Which word would you find on a dictionary page with the following guide words?
+unit - urgent",us | up,,"Guide words appear on each page of a dictionary. They tell you the first word and last word on the page. The other words on the page come between the guide words in alphabetical order.
+To put words in alphabetical order, put them in order by their first letters. If the first letters are the same, look at the second letters. If the second letters are the same, look at the third letters, and so on.
+If one word is shorter, and there are no more letters to compare, then the shorter word comes first in alphabetical order. For example, be comes before bed.","Put the words in alphabetical order.
+Since up is between the guide words unit - urgent, it would be found on that page.",high_confidence_skip
+r019780,r019780,test,language science,reference-skills,Use guide words,grade3,Reference skills,0.0987821178506756,0,skip_structural_absence,,,"Which word would you find on a dictionary page with the following guide words?
+pen - popular",physical | presence,,"Guide words appear on each page of a dictionary. They tell you the first word and last word on the page. The other words on the page come between the guide words in alphabetical order.
+To put words in alphabetical order, put them in order by their first letters. If the first letters are the same, look at the second letters. If the second letters are the same, look at the third letters, and so on.
+If one word is shorter, and there are no more letters to compare, then the shorter word comes first in alphabetical order. For example, be comes before bed.","Put the words in alphabetical order.
+Since physical is between the guide words pen - popular, it would be found on that page.",high_confidence_skip
+r009514,r009514,train,language science,reference-skills,Use guide words,grade4,Reference skills,0.09879466830209101,0,skip_structural_absence,,,"Which word would you find on a dictionary page with the following guide words?
+met - monk",mass | mistake,,"Guide words appear on each page of a dictionary. They tell you the first word and last word on the page. The other words on the page come between the guide words in alphabetical order.
+To put words in alphabetical order, put them in order by their first letters. If the first letters are the same, look at the second letters. If the second letters are the same, look at the third letters, and so on.
+If one word is shorter, and there are no more letters to compare, then the shorter word comes first in alphabetical order. For example, be comes before bed.","Put the words in alphabetical order.
+Since mistake is between the guide words met - monk, it would be found on that page.",high_confidence_skip
+r001146,r001146,train,language science,reference-skills,Use guide words,grade8,Reference skills,0.09879523309115465,0,skip_structural_absence,,,"Which word would you find on a dictionary page with the following guide words?
+ceiling - claim",car | chick,,"Guide words appear on each page of a dictionary. They tell you the first word and last word on the page. The other words on the page come between the guide words in alphabetical order.
+To put words in alphabetical order, put them in order by their first letters. If the first letters are the same, look at the second letters. If the second letters are the same, look at the third letters, and so on.
+If one word is shorter, and there are no more letters to compare, then the shorter word comes first in alphabetical order. For example, be comes before bed.","Put the words in alphabetical order.
+Since chick is between the guide words ceiling - claim, it would be found on that page.",high_confidence_skip
+r002986,r002986,train,language science,reference-skills,Use guide words,grade3,Reference skills,0.09880599547654298,0,skip_structural_absence,,,"Which word would you find on a dictionary page with the following guide words?
+dairy - dog",distance | drop,,"Guide words appear on each page of a dictionary. They tell you the first word and last word on the page. The other words on the page come between the guide words in alphabetical order.
+To put words in alphabetical order, put them in order by their first letters. If the first letters are the same, look at the second letters. If the second letters are the same, look at the third letters, and so on.
+If one word is shorter, and there are no more letters to compare, then the shorter word comes first in alphabetical order. For example, be comes before bed.","Put the words in alphabetical order.
+Since distance is between the guide words dairy - dog, it would be found on that page.",high_confidence_skip
+r008423,r008423,train,language science,reference-skills,Use guide words,grade7,Reference skills,0.09882621291217963,0,skip_structural_absence,,,"Which word would you find on a dictionary page with the following guide words?
+spiral - such",slice | stranger,,"Guide words appear on each page of a dictionary. They tell you the first word and last word on the page. The other words on the page come between the guide words in alphabetical order.
+To put words in alphabetical order, put them in order by their first letters. If the first letters are the same, look at the second letters. If the second letters are the same, look at the third letters, and so on.
+If one word is shorter, and there are no more letters to compare, then the shorter word comes first in alphabetical order. For example, be comes before bed.","Put the words in alphabetical order.
+Since stranger is between the guide words spiral - such, it would be found on that page.",high_confidence_skip
+r013560,r013560,validation,language science,reference-skills,Use guide words,grade5,Reference skills,0.09882655708223044,0,skip_structural_absence,,,"Would you find the word foul on a dictionary page with the following guide words?
+farm - free",no | yes,,"Guide words appear on each page of a dictionary. They tell you the first word and last word on the page. The other words on the page come between the guide words in alphabetical order.
+To put words in alphabetical order, put them in order by their first letters. If the first letters are the same, look at the second letters. If the second letters are the same, look at the third letters, and so on.
+If one word is shorter, and there are no more letters to compare, then the shorter word comes first in alphabetical order. For example, be comes before bed.","Put the words in alphabetical order.
+Since foul is between the guide words farm - free, it would be found on that page.",high_confidence_skip
+r014060,r014060,validation,language science,reference-skills,Use guide words,grade3,Reference skills,0.09883094584530572,0,skip_structural_absence,,,"Would you find the word disease on a dictionary page with the following guide words?
+desert - dodge",yes | no,,"Guide words appear on each page of a dictionary. They tell you the first word and last word on the page. The other words on the page come between the guide words in alphabetical order.
+To put words in alphabetical order, put them in order by their first letters. If the first letters are the same, look at the second letters. If the second letters are the same, look at the third letters, and so on.
+If one word is shorter, and there are no more letters to compare, then the shorter word comes first in alphabetical order. For example, be comes before bed.","Put the words in alphabetical order.
+Since disease is between the guide words desert - dodge, it would be found on that page.",high_confidence_skip
+r004358,r004358,train,language science,reference-skills,Use guide words,grade4,Reference skills,0.09883914923157708,0,skip_structural_absence,,,"Would you find the word stuff on a dictionary page with the following guide words?
+should - sly",yes | no,,"Guide words appear on each page of a dictionary. They tell you the first word and last word on the page. The other words on the page come between the guide words in alphabetical order.
+To put words in alphabetical order, put them in order by their first letters. If the first letters are the same, look at the second letters. If the second letters are the same, look at the third letters, and so on.
+If one word is shorter, and there are no more letters to compare, then the shorter word comes first in alphabetical order. For example, be comes before bed.","Put the words in alphabetical order.
+Since stuff is not between the guide words should - sly, it would not be found on that page.",high_confidence_skip
+r010326,r010326,train,language science,reference-skills,Use guide words,grade4,Reference skills,0.09891883363928655,0,skip_structural_absence,,,"Would you find the word doubt on a dictionary page with the following guide words?
+dessert - during",no | yes,,"Guide words appear on each page of a dictionary. They tell you the first word and last word on the page. The other words on the page come between the guide words in alphabetical order.
+To put words in alphabetical order, put them in order by their first letters. If the first letters are the same, look at the second letters. If the second letters are the same, look at the third letters, and so on.
+If one word is shorter, and there are no more letters to compare, then the shorter word comes first in alphabetical order. For example, be comes before bed.","Put the words in alphabetical order.
+Since doubt is between the guide words dessert - during, it would be found on that page.",high_confidence_skip
+r004984,r004984,train,language science,reference-skills,Use guide words,grade6,Reference skills,0.09894974627437043,0,skip_structural_absence,,,"Which word would you find on a dictionary page with the following guide words?
+recently - ruby",rain | root,,"Guide words appear on each page of a dictionary. They tell you the first word and last word on the page. The other words on the page come between the guide words in alphabetical order.
+To put words in alphabetical order, put them in order by their first letters. If the first letters are the same, look at the second letters. If the second letters are the same, look at the third letters, and so on.
+If one word is shorter, and there are no more letters to compare, then the shorter word comes first in alphabetical order. For example, be comes before bed.","Put the words in alphabetical order.
+Since root is between the guide words recently - ruby, it would be found on that page.",high_confidence_skip
+r013970,r013970,validation,language science,reference-skills,Use guide words,grade3,Reference skills,0.09895225674531397,0,skip_structural_absence,,,"Which word would you find on a dictionary page with the following guide words?
+paper - porch",peril | praise,,"Guide words appear on each page of a dictionary. They tell you the first word and last word on the page. The other words on the page come between the guide words in alphabetical order.
+To put words in alphabetical order, put them in order by their first letters. If the first letters are the same, look at the second letters. If the second letters are the same, look at the third letters, and so on.
+If one word is shorter, and there are no more letters to compare, then the shorter word comes first in alphabetical order. For example, be comes before bed.","Put the words in alphabetical order.
+Since peril is between the guide words paper - porch, it would be found on that page.",high_confidence_skip
+r000761,r000761,train,language science,reference-skills,Use guide words,grade6,Reference skills,0.09895415050959505,0,skip_structural_absence,,,"Which word would you find on a dictionary page with the following guide words?
+thankful - too",truant | tickle,,"Guide words appear on each page of a dictionary. They tell you the first word and last word on the page. The other words on the page come between the guide words in alphabetical order.
+To put words in alphabetical order, put them in order by their first letters. If the first letters are the same, look at the second letters. If the second letters are the same, look at the third letters, and so on.
+If one word is shorter, and there are no more letters to compare, then the shorter word comes first in alphabetical order. For example, be comes before bed.","Put the words in alphabetical order.
+Since tickle is between the guide words thankful - too, it would be found on that page.",high_confidence_skip
+r004905,r004905,train,language science,reference-skills,Use guide words,grade6,Reference skills,0.09895644358418705,0,skip_structural_absence,,,"Which word would you find on a dictionary page with the following guide words?
+dodge - dynamite",drive | deer,,"Guide words appear on each page of a dictionary. They tell you the first word and last word on the page. The other words on the page come between the guide words in alphabetical order.
+To put words in alphabetical order, put them in order by their first letters. If the first letters are the same, look at the second letters. If the second letters are the same, look at the third letters, and so on.
+If one word is shorter, and there are no more letters to compare, then the shorter word comes first in alphabetical order. For example, be comes before bed.","Put the words in alphabetical order.
+Since drive is between the guide words dodge - dynamite, it would be found on that page.",high_confidence_skip
+r012177,r012177,train,language science,reference-skills,Use guide words,grade6,Reference skills,0.09895915030835993,0,skip_structural_absence,,,"Would you find the word wade on a dictionary page with the following guide words?
+weary - world",yes | no,,"Guide words appear on each page of a dictionary. They tell you the first word and last word on the page. The other words on the page come between the guide words in alphabetical order.
+To put words in alphabetical order, put them in order by their first letters. If the first letters are the same, look at the second letters. If the second letters are the same, look at the third letters, and so on.
+If one word is shorter, and there are no more letters to compare, then the shorter word comes first in alphabetical order. For example, be comes before bed.","Put the words in alphabetical order.
+Since wade is not between the guide words weary - world, it would not be found on that page.",high_confidence_skip
+r000058,r000058,train,language science,reference-skills,Use guide words,grade8,Reference skills,0.099003435916042,0,skip_structural_absence,,,"Would you find the word miracle on a dictionary page with the following guide words?
+mean - mumps",no | yes,,"Guide words appear on each page of a dictionary. They tell you the first word and last word on the page. The other words on the page come between the guide words in alphabetical order.
+To put words in alphabetical order, put them in order by their first letters. If the first letters are the same, look at the second letters. If the second letters are the same, look at the third letters, and so on.
+If one word is shorter, and there are no more letters to compare, then the shorter word comes first in alphabetical order. For example, be comes before bed.","Put the words in alphabetical order.
+Since miracle is between the guide words mean - mumps, it would be found on that page.",high_confidence_skip
+r000815,r000815,train,language science,reference-skills,Use guide words,grade6,Reference skills,0.09900483272802975,0,skip_structural_absence,,,"Which word would you find on a dictionary page with the following guide words?
+half - history",hockey | hen,,"Guide words appear on each page of a dictionary. They tell you the first word and last word on the page. The other words on the page come between the guide words in alphabetical order.
+To put words in alphabetical order, put them in order by their first letters. If the first letters are the same, look at the second letters. If the second letters are the same, look at the third letters, and so on.
+If one word is shorter, and there are no more letters to compare, then the shorter word comes first in alphabetical order. For example, be comes before bed.","Put the words in alphabetical order.
+Since hen is between the guide words half - history, it would be found on that page.",high_confidence_skip
+r012285,r012285,train,language science,reference-skills,Use guide words,grade7,Reference skills,0.09900515628621846,0,skip_structural_absence,,,"Would you find the word migrate on a dictionary page with the following guide words?
+material - mourn",yes | no,,"Guide words appear on each page of a dictionary. They tell you the first word and last word on the page. The other words on the page come between the guide words in alphabetical order.
+To put words in alphabetical order, put them in order by their first letters. If the first letters are the same, look at the second letters. If the second letters are the same, look at the third letters, and so on.
+If one word is shorter, and there are no more letters to compare, then the shorter word comes first in alphabetical order. For example, be comes before bed.","Put the words in alphabetical order.
+Since migrate is between the guide words material - mourn, it would be found on that page.",high_confidence_skip
+r018181,r018181,test,language science,reference-skills,Use guide words,grade8,Reference skills,0.09901771513040508,0,skip_structural_absence,,,"Would you find the word since on a dictionary page with the following guide words?
+serape - spice",no | yes,,"Guide words appear on each page of a dictionary. They tell you the first word and last word on the page. The other words on the page come between the guide words in alphabetical order.
+To put words in alphabetical order, put them in order by their first letters. If the first letters are the same, look at the second letters. If the second letters are the same, look at the third letters, and so on.
+If one word is shorter, and there are no more letters to compare, then the shorter word comes first in alphabetical order. For example, be comes before bed.","Put the words in alphabetical order.
+Since since is between the guide words serape - spice, it would be found on that page.",high_confidence_skip
+r000488,r000488,train,language science,reference-skills,Use guide words,grade4,Reference skills,0.09904173581135668,0,skip_structural_absence,,,"Would you find the word material on a dictionary page with the following guide words?
+midst - mosquito",yes | no,,"Guide words appear on each page of a dictionary. They tell you the first word and last word on the page. The other words on the page come between the guide words in alphabetical order.
+To put words in alphabetical order, put them in order by their first letters. If the first letters are the same, look at the second letters. If the second letters are the same, look at the third letters, and so on.
+If one word is shorter, and there are no more letters to compare, then the shorter word comes first in alphabetical order. For example, be comes before bed.","Put the words in alphabetical order.
+Since material is not between the guide words midst - mosquito, it would not be found on that page.",high_confidence_skip
+r015842,r015842,validation,natural science,biology,Genetics vocabulary: dominant and recessive,grade8,Genes to traits,0.35096893082439073,1,need_completion_accidental_missing,,,"Based on this information, what is Nabi's phenotype for the body hair trait?",a hairless body | a hairy body,"In a group of cats, some individuals have a hairy body and others have a hairless body. In this group, the gene for the body hair trait has two alleles. The allele for a hairy body (B) is dominant over the allele for a hairless body (b).
+Nabi is a cat from this group. Nabi has the homozygous genotype bb for the body hair gene.",,"Nabi's genotype for the body hair gene is bb. Nabi's genotype of bb has only b alleles. The b allele is for a hairless body. So, Nabi's phenotype for the body hair trait must be a hairless body.
+To check this answer, consider whether Nabi's alleles are dominant or recessive. The allele for a hairy body (B) is dominant over the allele for a hairless body (b). This means B is a dominant allele, and b is a recessive allele.
+Nabi's genotype of bb has only recessive alleles. An organism with only recessive alleles for a gene will have the recessive allele's version of the trait. So, Nabi's phenotype for the body hair trait must be a hairless body.",near_threshold_uncertain
+r000120,r000120,train,natural science,chemistry,Identify reactants and products,grade7,Chemical reactions,0.3485521836882897,0,skip_structural_absence,,,"Complete the sentence.
+In this chemical reaction, carbon dioxide is a ().",product | reactant,"This passage describes a chemical reaction. Read the passage. Then, follow the instructions below.
+Plants make glucose, a sugar they can use for food, through a process called photosynthesis. During photosynthesis, plants use energy from sunlight to make glucose from water and carbon dioxide. In the process of making glucose, plants also create most of the oxygen in the air we breathe.","A chemical change occurs when new substances are formed from existing substances. This process is called a chemical reaction.
+In a chemical reaction, one or more substances change into one or more different substances. During the reaction, the atoms of the original substances are rearranged to form other substances.
+The original substances in a chemical reaction are called reactants. These substances react, or go through a chemical change.
+The substances that are formed in a chemical reaction are called products. These substances are produced by the chemical reaction.
+So, in a chemical reaction, reactants go through a chemical change to form products.","Read the underlined text carefully. Look for information about what happens to carbon dioxide in this chemical reaction.
+Plants make glucose, a sugar they can use for food, through a process called photosynthesis. During photosynthesis, plants use energy from sunlight to make glucose from water and carbon dioxide. In the process of making glucose, plants also create most of the oxygen in the air we breathe.
+The underlined text tells you that when water and carbon dioxide combine, glucose and oxygen are formed. When water and carbon dioxide react, or go through a chemical change, their atoms are rearranged to form glucose and oxygen. Because carbon dioxide reacts in this chemical reaction, carbon dioxide is a reactant.",near_threshold_uncertain
+r001521,r001521,train,natural science,science-and-engineering-practices,Identify questions that can be investigated with a set of materials,grade8,Designing experiments,0.3482398108494687,0,skip_structural_absence,,,"Using only these supplies, which question can Monica investigate with an experiment?",Does a tablet charge faster with a two-foot-long charging cable or a five-foot-long charging cable? | Does a cell phone charge more quickly when it is turned on or when it is turned off? | Does a cell phone charge faster when plugged into a wall outlet or into a computer?,"Monica notices that her cell phone charges more quickly sometimes and more slowly other times. She wonders what factors affect how quickly a phone charges. So, she decides to design an experiment. She has the following supplies available:
+one cell phone
+a two-foot-long charging cable
+a five-foot-long charging cable
+a stopwatch
+a wall outlet","Experiments can be designed to answer specific questions. When designing an experiment, you must identify the supplies that are necessary to answer your question. In order to do this, you need to figure out what will be tested and what will be measured during the experiment.
+Imagine that you are wondering if plants grow to different heights when planted in different types of soil. How might you decide what supplies are necessary to conduct this experiment?
+First, you need to identify the part of the experiment that will be tested, which is the independent variable. This is usually the part of the experiment that is different or changed. In this case, you would like to know how plants grow in different types of soil. So, you must have different types of soil available.
+Next, you need to identify the part of the experiment that will be measured or observed, which is the dependent variable. In this experiment, you would like to know if some plants grow taller than others. So, you must be able to compare the plants' heights. To do this, you can observe which plants are taller by looking at them, or you can measure their exact heights with a meterstick.
+So, if you have different types of soil and can observe or measure the heights of your plants, then you have the supplies you need to investigate your question with an experiment!",,near_threshold_uncertain
+r005249,r005249,train,natural science,science-and-engineering-practices,Identify questions that can be investigated with a set of materials,grade8,Designing experiments,0.3482398108494687,0,skip_structural_absence,,,"Using only these supplies, which question can Molly investigate with an experiment?",Does a cell phone charge faster when plugged into a wall outlet or into a computer? | Does a tablet charge faster with a two-foot-long charging cable or a five-foot-long charging cable? | Does a cell phone charge more quickly when it is turned on or when it is turned off?,"Molly notices that her cell phone charges more quickly sometimes and more slowly other times. She wonders what factors affect how quickly a phone charges. So, she decides to design an experiment. She has the following supplies available:
+one cell phone
+a two-foot-long charging cable
+a five-foot-long charging cable
+a stopwatch
+a wall outlet","Experiments can be designed to answer specific questions. When designing an experiment, you must identify the supplies that are necessary to answer your question. In order to do this, you need to figure out what will be tested and what will be measured during the experiment.
+Imagine that you are wondering if plants grow to different heights when planted in different types of soil. How might you decide what supplies are necessary to conduct this experiment?
+First, you need to identify the part of the experiment that will be tested, which is the independent variable. This is usually the part of the experiment that is different or changed. In this case, you would like to know how plants grow in different types of soil. So, you must have different types of soil available.
+Next, you need to identify the part of the experiment that will be measured or observed, which is the dependent variable. In this experiment, you would like to know if some plants grow taller than others. So, you must be able to compare the plants' heights. To do this, you can observe which plants are taller by looking at them, or you can measure their exact heights with a meterstick.
+So, if you have different types of soil and can observe or measure the heights of your plants, then you have the supplies you need to investigate your question with an experiment!",,near_threshold_uncertain
+r007111,r007111,train,natural science,science-and-engineering-practices,Identify questions that can be investigated with a set of materials,grade8,Designing experiments,0.3482398108494687,0,skip_structural_absence,,,"Using only these supplies, which question can Lily investigate with an experiment?",Does a cell phone charge faster when plugged into a wall outlet or into a computer? | Does a tablet charge faster with a two-foot-long charging cable or a five-foot-long charging cable? | Does a cell phone charge more quickly when it is turned on or when it is turned off?,"Lily notices that her cell phone charges more quickly sometimes and more slowly other times. She wonders what factors affect how quickly a phone charges. So, she decides to design an experiment. She has the following supplies available:
+one cell phone
+a two-foot-long charging cable
+a five-foot-long charging cable
+a stopwatch
+a wall outlet","Experiments can be designed to answer specific questions. When designing an experiment, you must identify the supplies that are necessary to answer your question. In order to do this, you need to figure out what will be tested and what will be measured during the experiment.
+Imagine that you are wondering if plants grow to different heights when planted in different types of soil. How might you decide what supplies are necessary to conduct this experiment?
+First, you need to identify the part of the experiment that will be tested, which is the independent variable. This is usually the part of the experiment that is different or changed. In this case, you would like to know how plants grow in different types of soil. So, you must have different types of soil available.
+Next, you need to identify the part of the experiment that will be measured or observed, which is the dependent variable. In this experiment, you would like to know if some plants grow taller than others. So, you must be able to compare the plants' heights. To do this, you can observe which plants are taller by looking at them, or you can measure their exact heights with a meterstick.
+So, if you have different types of soil and can observe or measure the heights of your plants, then you have the supplies you need to investigate your question with an experiment!",,near_threshold_uncertain
+r009857,r009857,train,natural science,science-and-engineering-practices,Identify questions that can be investigated with a set of materials,grade8,Designing experiments,0.3482398108494687,0,skip_structural_absence,,,"Using only these supplies, which question can Lara investigate with an experiment?",Does a cell phone charge faster when plugged into a wall outlet or into a computer? | Does a cell phone charge more quickly when it is turned on or when it is turned off? | Does a tablet charge faster with a two-foot-long charging cable or a five-foot-long charging cable?,"Lara notices that her cell phone charges more quickly sometimes and more slowly other times. She wonders what factors affect how quickly a phone charges. So, she decides to design an experiment. She has the following supplies available:
+one cell phone
+a two-foot-long charging cable
+a five-foot-long charging cable
+a stopwatch
+a wall outlet","Experiments can be designed to answer specific questions. When designing an experiment, you must identify the supplies that are necessary to answer your question. In order to do this, you need to figure out what will be tested and what will be measured during the experiment.
+Imagine that you are wondering if plants grow to different heights when planted in different types of soil. How might you decide what supplies are necessary to conduct this experiment?
+First, you need to identify the part of the experiment that will be tested, which is the independent variable. This is usually the part of the experiment that is different or changed. In this case, you would like to know how plants grow in different types of soil. So, you must have different types of soil available.
+Next, you need to identify the part of the experiment that will be measured or observed, which is the dependent variable. In this experiment, you would like to know if some plants grow taller than others. So, you must be able to compare the plants' heights. To do this, you can observe which plants are taller by looking at them, or you can measure their exact heights with a meterstick.
+So, if you have different types of soil and can observe or measure the heights of your plants, then you have the supplies you need to investigate your question with an experiment!",,near_threshold_uncertain
+r011265,r011265,train,natural science,science-and-engineering-practices,Identify questions that can be investigated with a set of materials,grade8,Designing experiments,0.3482398108494687,0,skip_structural_absence,,,"Using only these supplies, which question can Britney investigate with an experiment?",Does a cell phone charge faster when plugged into a wall outlet or into a computer? | Does a cell phone charge more quickly when it is turned on or when it is turned off? | Does a tablet charge faster with a two-foot-long charging cable or a five-foot-long charging cable?,"Britney notices that her cell phone charges more quickly sometimes and more slowly other times. She wonders what factors affect how quickly a phone charges. So, she decides to design an experiment. She has the following supplies available:
+one cell phone
+a two-foot-long charging cable
+a five-foot-long charging cable
+a stopwatch
+a wall outlet","Experiments can be designed to answer specific questions. When designing an experiment, you must identify the supplies that are necessary to answer your question. In order to do this, you need to figure out what will be tested and what will be measured during the experiment.
+Imagine that you are wondering if plants grow to different heights when planted in different types of soil. How might you decide what supplies are necessary to conduct this experiment?
+First, you need to identify the part of the experiment that will be tested, which is the independent variable. This is usually the part of the experiment that is different or changed. In this case, you would like to know how plants grow in different types of soil. So, you must have different types of soil available.
+Next, you need to identify the part of the experiment that will be measured or observed, which is the dependent variable. In this experiment, you would like to know if some plants grow taller than others. So, you must be able to compare the plants' heights. To do this, you can observe which plants are taller by looking at them, or you can measure their exact heights with a meterstick.
+So, if you have different types of soil and can observe or measure the heights of your plants, then you have the supplies you need to investigate your question with an experiment!",,near_threshold_uncertain
+r012881,r012881,validation,natural science,science-and-engineering-practices,Identify questions that can be investigated with a set of materials,grade8,Designing experiments,0.3482398108494687,0,skip_structural_absence,,,"Using only these supplies, which question can Haley investigate with an experiment?",Does a cell phone charge more quickly when it is turned on or when it is turned off? | Does a tablet charge faster with a two-foot-long charging cable or a five-foot-long charging cable? | Does a cell phone charge faster when plugged into a wall outlet or into a computer?,"Haley notices that her cell phone charges more quickly sometimes and more slowly other times. She wonders what factors affect how quickly a phone charges. So, she decides to design an experiment. She has the following supplies available:
+one cell phone
+a two-foot-long charging cable
+a five-foot-long charging cable
+a stopwatch
+a wall outlet","Experiments can be designed to answer specific questions. When designing an experiment, you must identify the supplies that are necessary to answer your question. In order to do this, you need to figure out what will be tested and what will be measured during the experiment.
+Imagine that you are wondering if plants grow to different heights when planted in different types of soil. How might you decide what supplies are necessary to conduct this experiment?
+First, you need to identify the part of the experiment that will be tested, which is the independent variable. This is usually the part of the experiment that is different or changed. In this case, you would like to know how plants grow in different types of soil. So, you must have different types of soil available.
+Next, you need to identify the part of the experiment that will be measured or observed, which is the dependent variable. In this experiment, you would like to know if some plants grow taller than others. So, you must be able to compare the plants' heights. To do this, you can observe which plants are taller by looking at them, or you can measure their exact heights with a meterstick.
+So, if you have different types of soil and can observe or measure the heights of your plants, then you have the supplies you need to investigate your question with an experiment!",,near_threshold_uncertain
+r013742,r013742,validation,natural science,science-and-engineering-practices,Identify questions that can be investigated with a set of materials,grade8,Designing experiments,0.3482398108494687,0,skip_structural_absence,,,"Using only these supplies, which question can Emmy investigate with an experiment?",Does a cell phone charge faster when plugged into a wall outlet or into a computer? | Does a cell phone charge more quickly when it is turned on or when it is turned off? | Does a tablet charge faster with a two-foot-long charging cable or a five-foot-long charging cable?,"Emmy notices that her cell phone charges more quickly sometimes and more slowly other times. She wonders what factors affect how quickly a phone charges. So, she decides to design an experiment. She has the following supplies available:
+one cell phone
+a two-foot-long charging cable
+a five-foot-long charging cable
+a stopwatch
+a wall outlet","Experiments can be designed to answer specific questions. When designing an experiment, you must identify the supplies that are necessary to answer your question. In order to do this, you need to figure out what will be tested and what will be measured during the experiment.
+Imagine that you are wondering if plants grow to different heights when planted in different types of soil. How might you decide what supplies are necessary to conduct this experiment?
+First, you need to identify the part of the experiment that will be tested, which is the independent variable. This is usually the part of the experiment that is different or changed. In this case, you would like to know how plants grow in different types of soil. So, you must have different types of soil available.
+Next, you need to identify the part of the experiment that will be measured or observed, which is the dependent variable. In this experiment, you would like to know if some plants grow taller than others. So, you must be able to compare the plants' heights. To do this, you can observe which plants are taller by looking at them, or you can measure their exact heights with a meterstick.
+So, if you have different types of soil and can observe or measure the heights of your plants, then you have the supplies you need to investigate your question with an experiment!",,near_threshold_uncertain
+r013991,r013991,validation,natural science,science-and-engineering-practices,Identify questions that can be investigated with a set of materials,grade8,Designing experiments,0.3482398108494687,0,skip_structural_absence,,,"Using only these supplies, which question can Sharon investigate with an experiment?",Does a cell phone charge faster when plugged into a wall outlet or into a computer? | Does a cell phone charge more quickly when it is turned on or when it is turned off? | Does a tablet charge faster with a two-foot-long charging cable or a five-foot-long charging cable?,"Sharon notices that her cell phone charges more quickly sometimes and more slowly other times. She wonders what factors affect how quickly a phone charges. So, she decides to design an experiment. She has the following supplies available:
+one cell phone
+a two-foot-long charging cable
+a five-foot-long charging cable
+a stopwatch
+a wall outlet","Experiments can be designed to answer specific questions. When designing an experiment, you must identify the supplies that are necessary to answer your question. In order to do this, you need to figure out what will be tested and what will be measured during the experiment.
+Imagine that you are wondering if plants grow to different heights when planted in different types of soil. How might you decide what supplies are necessary to conduct this experiment?
+First, you need to identify the part of the experiment that will be tested, which is the independent variable. This is usually the part of the experiment that is different or changed. In this case, you would like to know how plants grow in different types of soil. So, you must have different types of soil available.
+Next, you need to identify the part of the experiment that will be measured or observed, which is the dependent variable. In this experiment, you would like to know if some plants grow taller than others. So, you must be able to compare the plants' heights. To do this, you can observe which plants are taller by looking at them, or you can measure their exact heights with a meterstick.
+So, if you have different types of soil and can observe or measure the heights of your plants, then you have the supplies you need to investigate your question with an experiment!",,near_threshold_uncertain
+r014714,r014714,validation,natural science,science-and-engineering-practices,Identify questions that can be investigated with a set of materials,grade8,Designing experiments,0.3482398108494687,0,skip_structural_absence,,,"Using only these supplies, which question can Ariel investigate with an experiment?",Does a cell phone charge more quickly when it is turned on or when it is turned off? | Does a tablet charge faster with a two-foot-long charging cable or a five-foot-long charging cable? | Does a cell phone charge faster when plugged into a wall outlet or into a computer?,"Ariel notices that her cell phone charges more quickly sometimes and more slowly other times. She wonders what factors affect how quickly a phone charges. So, she decides to design an experiment. She has the following supplies available:
+one cell phone
+a two-foot-long charging cable
+a five-foot-long charging cable
+a stopwatch
+a wall outlet","Experiments can be designed to answer specific questions. When designing an experiment, you must identify the supplies that are necessary to answer your question. In order to do this, you need to figure out what will be tested and what will be measured during the experiment.
+Imagine that you are wondering if plants grow to different heights when planted in different types of soil. How might you decide what supplies are necessary to conduct this experiment?
+First, you need to identify the part of the experiment that will be tested, which is the independent variable. This is usually the part of the experiment that is different or changed. In this case, you would like to know how plants grow in different types of soil. So, you must have different types of soil available.
+Next, you need to identify the part of the experiment that will be measured or observed, which is the dependent variable. In this experiment, you would like to know if some plants grow taller than others. So, you must be able to compare the plants' heights. To do this, you can observe which plants are taller by looking at them, or you can measure their exact heights with a meterstick.
+So, if you have different types of soil and can observe or measure the heights of your plants, then you have the supplies you need to investigate your question with an experiment!",,near_threshold_uncertain
+r015167,r015167,validation,natural science,biology,"Use evidence to classify mammals, birds, fish, reptiles, and amphibians",grade5,Classification,0.3518174180512683,1,need_completion_accidental_missing,,,Select the one animal that has all of the bird traits listed above.,"Black howler monkeys have loud calls, or howls. The howls can be heard over three miles away! Howler monkeys have fur and feed their offspring milk. | Snowy owls have sharp, curved beaks and live in cold places. They have feathers on their feet to protect them from the cold. Mother owls keep their eggs warm by standing on their shells.","Birds are a group of animals with similar traits. The following traits can be used to identify birds:
+They have feathers.
+They have wings.
+They have a beak.
+They make eggs with shells. Observe the animals and read the descriptions.","Scientists sort animals with similar traits into groups. This is called classification. Classification helps scientists learn about how animals live.
+How do scientists classify animals? First, they make observations about an animal. Scientists observe the animal's traits, including its body parts and behavior. Then, scientists compare the animal's traits to other animals' traits. Scientists classify animals with similar traits into a group.","To decide if an animal is part of a group, look at the traits of the group.
+Birds have the following traits:
+They have feathers.
+They have wings.
+They have a beak.
+They make eggs with shells.
+Compare each animal's traits to the group's traits. Select the animal with traits similar to the group's traits.
+A snowy owl has the following traits:
+It has feathers.
+It has wings.
+It has a beak.
+It makes eggs with shells.
+A snowy owl has the traits of a bird. A snowy owl is a bird.
+A black howler has the following traits:
+It feeds its offspring milk.
+It has fur.
+A black howler does not have all of the traits of a bird. A black howler is a mammal.",near_threshold_uncertain
+r016720,r016720,validation,language science,vocabulary,What am I?,grade1,Comprehension strategies,0.3518611586305311,1,need_completion_accidental_missing,,,"Answer the riddle.
+I have doors and windows.
+People live inside me.
+I may have a yard.
+What am I?",a town | a house,,,"A house has doors and windows.
+People live inside a house.
+A house may have a yard.",near_threshold_uncertain
+r014193,r014193,validation,natural science,physics,"Identify solids, liquids, and gases",grade3,States of matter,0.35202799036623483,1,need_completion_accidental_missing,,,Select the gas.,bat bones | air inside a raft | pair of dice | water in a fishbowl,,"Solid, liquid, and gas are states of matter. Matter is anything that takes up space. Matter can come in different states, or forms.
+When matter is a solid, it has a definite volume and a definite shape. So, a solid has a size and shape of its own.
+Some solids can be easily folded, bent, or broken. A piece of paper is a solid. Also, some solids are very small. A grain of sand is a solid.
+When matter is a liquid, it has a definite volume but not a definite shape. So, a liquid has a size of its own, but it does not have a shape of its own. Think about pouring juice from a bottle into a cup. The juice still takes up the same amount of space, but it takes the shape of the bottle.
+Some liquids do not pour as easily as others. Honey and milk are both liquids. But pouring honey takes more time than pouring milk.
+When matter is a gas, it does not have a definite volume or a definite shape. A gas expands, or gets bigger, until it completely fills a space. A gas can also get smaller if it is squeezed into a smaller space.
+Many gases are invisible. Air is a gas.","A pair of dice is a solid. A solid has a size and shape of its own. When you roll a pair of dice, the dice have a shape of their own. They are still cubes when they stop rolling.
+The air inside a raft is a gas. A gas expands to fill a space. The air in a raft expands to fill all the space inside the raft. If air leaks out, it will expand into the space around the raft.
+A bat bone is a solid. A solid has a size and shape of its own. A bat bone has its own shape inside the bat.
+The water in a fishbowl is a liquid. A liquid takes the shape of any container it is in. If you pour water from a fishbowl into a different container, the water will take the shape of that container. But the water will still take up the same amount of space.",near_threshold_uncertain
+r002937,r002937,train,language science,vocabulary,Select the words that don't belong,grade3,Categories,0.3479082187126049,0,skip_structural_absence,,,Select the place that doesn't belong.,shop | meadow | store | market,,,"Meadow doesn't belong.
+Store, shop, and market all name places that sell things.",near_threshold_uncertain
+r021128,r021128,test,natural science,biology,"Use evidence to classify mammals, birds, fish, reptiles, and amphibians",grade5,Classification,0.3542305806888059,1,need_completion_accidental_missing,,,Select the one animal that has all of the mammal traits listed above.,"Barn owls live on every continent except Antarctica. They have feathers, two wings, and a beak. They hatch from eggs with shells. | Florida manatees have hairs on their bodies that are similar to whiskers. These hairs help the manatees feel the water moving around them. Female manatees feed their offspring milk.","Mammals are a group of animals with similar traits. The following traits can be used to identify mammals:
+They feed their offspring milk.
+They have fur or hair. Observe the animals and read the descriptions.","Scientists sort animals with similar traits into groups. This is called classification. Classification helps scientists learn about how animals live.
+How do scientists classify animals? First, they make observations about an animal. Scientists observe the animal's traits, including its body parts and behavior. Then, scientists compare the animal's traits to other animals' traits. Scientists classify animals with similar traits into a group.","To decide if an animal is part of a group, look at the traits of the group.
+Mammals have the following traits:
+They feed their offspring milk.
+They have fur or hair.
+Compare each animal's traits to the group's traits. Select the animal with traits similar to the group's traits.
+A Florida manatee has the following traits:
+It feeds its offspring milk.
+It has hair.
+A Florida manatee has the traits of a mammal. A Florida manatee is a mammal.
+A barn owl has the following traits:
+It has feathers.
+It has wings.
+It has a beak.
+It makes eggs with shells.
+A barn owl does not have all of the traits of a mammal. A barn owl is a bird.",near_threshold_uncertain
+r006675,r006675,train,natural science,biology,"Use evidence to classify mammals, birds, fish, reptiles, and amphibians",grade5,Classification,0.34407579604178584,0,skip_structural_absence,,,Select the one animal that has all of the mammal traits listed above.,"Peregrine falcons are the fastest animals in the world! They use their wings to fly quickly and hunt prey. Peregrine falcons also have a beak and feathers. They hatch from eggs with speckled or spotted shells. | Western gorillas have black, gray, or brown fur. Adult males are sometimes called silverbacks because they have often have gray fur on their backs. Female western gorillas feed their offspring milk.","Mammals are a group of animals with similar traits. The following traits can be used to identify mammals:
+They feed their offspring milk.
+They have fur or hair. Observe the animals and read the descriptions.","Scientists sort animals with similar traits into groups. This is called classification. Classification helps scientists learn about how animals live.
+How do scientists classify animals? First, they make observations about an animal. Scientists observe the animal's traits, including its body parts and behavior. Then, scientists compare the animal's traits to other animals' traits. Scientists classify animals with similar traits into a group.","To decide if an animal is part of a group, look at the traits of the group.
+Mammals have the following traits:
+They feed their offspring milk.
+They have fur or hair.
+Compare each animal's traits to the group's traits. Select the animal with traits similar to the group's traits.
+A peregrine falcon has the following traits:
+It has feathers.
+It has wings.
+It has a beak.
+It makes eggs with shells.
+A peregrine falcon does not have all of the traits of a mammal. A peregrine falcon is a bird.
+A western gorilla has the following traits:
+It feeds its offspring milk.
+It has fur.
+A western gorilla has the traits of a mammal. A western gorilla is a mammal.",near_threshold_uncertain
+r008756,r008756,train,natural science,biology,"Use evidence to classify mammals, birds, fish, reptiles, and amphibians",grade5,Classification,0.35635565376282197,1,need_completion_accidental_missing,,,Select the one animal that has all of the mammal traits listed above.,"Black howler monkeys have loud calls, or howls. The howls can be heard over three miles away! Howler monkeys have fur and feed their offspring milk. | Smooth newts have moist, smooth skin with black spots. Young smooth newts hatch from eggs without shells. They live in streams or ponds until they are about ten weeks old. Then, they crawl onto land.","Mammals are a group of animals with similar traits. The following traits can be used to identify mammals:
+They feed their offspring milk.
+They have fur or hair. Observe the animals and read the descriptions.","Scientists sort animals with similar traits into groups. This is called classification. Classification helps scientists learn about how animals live.
+How do scientists classify animals? First, they make observations about an animal. Scientists observe the animal's traits, including its body parts and behavior. Then, scientists compare the animal's traits to other animals' traits. Scientists classify animals with similar traits into a group.","To decide if an animal is part of a group, look at the traits of the group.
+Mammals have the following traits:
+They feed their offspring milk.
+They have fur or hair.
+Compare each animal's traits to the group's traits. Select the animal with traits similar to the group's traits.
+A smooth newt has the following traits:
+It spends part of its life in water and part on land.
+It has moist skin.
+It makes eggs with no shells.
+A smooth newt does not have all of the traits of a mammal. A smooth newt is an amphibian.
+A black howler has the following traits:
+It feeds its offspring milk.
+It has fur.
+A black howler has the traits of a mammal. A black howler is a mammal.",near_threshold_uncertain
+r013089,r013089,validation,language science,vocabulary,Which word is not like the others?,grade2,Categories,0.3434310633378523,0,skip_structural_absence,,,Which word is not like the others?,water | juice | glass | milk,,"Some words are alike. They go together in a group.
+Red, blue, and green go together. They are colors.
+Mom, dad, grandma, and grandpa go together. They are people in a family.","Juice, water, and milk go together. They are drinks. Glass is not a drink, so it is not like the other words.",near_threshold_uncertain
+r008485,r008485,train,language science,vocabulary,Select the words that don't belong,grade3,Categories,0.3432075160927724,0,skip_structural_absence,,,Select the activity that doesn't belong.,sweep | scrub | swing | wipe,,,"Swing doesn't belong.
+Sweep, wipe, and scrub all name ways to clean.",near_threshold_uncertain
+r017853,r017853,test,language science,vocabulary,Select the words that don't belong,grade3,Categories,0.3432075160927724,0,skip_structural_absence,,,Select the action that doesn't belong.,chew | chuckle | snicker | giggle,,,"Chew doesn't belong.
+Snicker, giggle, and chuckle all name ways to laugh.",near_threshold_uncertain
+r017969,r017969,test,natural science,physics,"Identify solids, liquids, and gases",grade3,States of matter,0.3432002727188432,0,skip_structural_absence,,,Select the liquid.,chair | baseball | water in a waterfall | air from a hair dryer,,"Solid, liquid, and gas are states of matter. Matter is anything that takes up space. Matter can come in different states, or forms.
+When matter is a solid, it has a definite volume and a definite shape. So, a solid has a size and shape of its own.
+Some solids can be easily folded, bent, or broken. A piece of paper is a solid. Also, some solids are very small. A grain of sand is a solid.
+When matter is a liquid, it has a definite volume but not a definite shape. So, a liquid has a size of its own, but it does not have a shape of its own. Think about pouring juice from a bottle into a cup. The juice still takes up the same amount of space, but it takes the shape of the bottle.
+Some liquids do not pour as easily as others. Honey and milk are both liquids. But pouring honey takes more time than pouring milk.
+When matter is a gas, it does not have a definite volume or a definite shape. A gas expands, or gets bigger, until it completely fills a space. A gas can also get smaller if it is squeezed into a smaller space.
+Many gases are invisible. Air is a gas.","A baseball is a solid. A solid has a size and shape of its own. If you hit a baseball with a bat, the baseball will still have a size and shape of its own.
+The air from a hair dryer is a gas. A gas expands to fill a space. A hair dryer uses a fan to blow warm air out. When the air leaves the hair dryer, the air expands to fill a much large space.
+The water in a waterfall is a liquid. A liquid can change shape. But it still takes up the same amount of space. As water flows down a waterfall, the water changes shape.
+A chair is a solid. A solid has a size and shape of its own. When you sit on a chair, it keeps its shape.",near_threshold_uncertain
+r009391,r009391,train,language science,vocabulary,Select the words that don't belong,grade5,Categories,0.34312869045058125,0,skip_structural_absence,,,Select the action that doesn't belong.,cut | shampoo | style | boil,,,"Boil doesn't belong.
+Shampoo, cut, and style all describe things you do to hair.",near_threshold_uncertain
+r017296,r017296,test,natural science,biology,Human organs and their functions,grade5,Animals,0.3570468349249115,1,need_completion_accidental_missing,,,Which organ takes in oxygen from the air?,skeleton | heart | brain | lungs,,,,near_threshold_uncertain
+r001416,r001416,train,language science,vocabulary,What am I?,grade1,Comprehension strategies,0.3426718701862158,0,skip_structural_absence,,,"Answer the riddle.
+I can be inside or outside.
+I am full of water.
+You can swim in me.
+What am I?",a pool | rain,,,"A pool can be inside or outside.
+A pool is full of water.
+You can swim in a pool.",near_threshold_uncertain
+r008832,r008832,train,language science,vocabulary,Select the words that don't belong,grade3,Categories,0.3579995762277673,1,need_completion_accidental_missing,,,Select the action that doesn't belong.,roast | boil | bake | wash,,,"Wash doesn't belong.
+Bake, roast, and boil all name ways to cook things.",near_threshold_uncertain
+r017278,r017278,test,language science,vocabulary,What am I?,grade1,Comprehension strategies,0.3419196256686377,0,skip_structural_absence,,,"Answer the riddle.
+I am an animal.
+I live with people.
+You have to feed me.
+What am I?",a pet | a plant,,,"A pet is an animal.
+A pet lives with people.
+You have to feed a pet.",near_threshold_uncertain
+r020874,r020874,test,natural science,biology,"Use evidence to classify mammals, birds, fish, reptiles, and amphibians",grade5,Classification,0.3584972560838337,1,need_completion_accidental_missing,,,Select the one animal that has all of the mammal traits listed above.,Harvest mice use their tails and feet to climb on plants and rocks. These mice have fur and feed their offspring milk. | Minnows live underwater and have fins to help them swim. They have scaly skin and lay eggs with no shells. Many fishermen use minnows as bait to catch other fish.,"Mammals are a group of animals with similar traits. The following traits can be used to identify mammals:
+They feed their offspring milk.
+They have fur or hair. Observe the animals and read the descriptions.","Scientists sort animals with similar traits into groups. This is called classification. Classification helps scientists learn about how animals live.
+How do scientists classify animals? First, they make observations about an animal. Scientists observe the animal's traits, including its body parts and behavior. Then, scientists compare the animal's traits to other animals' traits. Scientists classify animals with similar traits into a group.","To decide if an animal is part of a group, look at the traits of the group.
+Mammals have the following traits:
+They feed their offspring milk.
+They have fur or hair.
+Compare each animal's traits to the group's traits. Select the animal with traits similar to the group's traits.
+A minnow has the following traits:
+It has fins, not limbs.
+It makes eggs with no shells.
+A minnow does not have all of the traits of a mammal. A minnow is a fish.
+A harvest mouse has the following traits:
+It feeds its offspring milk.
+It has fur.
+A harvest mouse has the traits of a mammal. A harvest mouse is a mammal.",near_threshold_uncertain
+r002347,r002347,train,language science,vocabulary,Select the words that don't belong,grade3,Categories,0.3589518954036789,1,need_completion_accidental_missing,,,Select the place that doesn't belong.,hive | moon | den | nest,,,"Moon doesn't belong.
+Nest, hive, and den all name places where groups of animals live.",near_threshold_uncertain
+r017126,r017126,test,language science,vocabulary,Select the words that don't belong,grade3,Categories,0.3593672739436308,1,need_completion_accidental_missing,,,Select the action that doesn't belong.,chop | blend | stir | mix,,,"Chop doesn't belong.
+Blend, mix, and stir all describe ways to combine things.",near_threshold_uncertain
+r004909,r004909,train,natural science,biology,Use evidence to classify animals,grade5,Classification,0.34039520980228705,0,skip_structural_absence,,,Select the one animal that has all of the mollusk traits listed above.,"Earthworms live in soil and have no limbs. Their bodies are soft, cylindrical, and made up of many segments. | Banana slugs have a soft body with a flat underside called the foot. Slugs use their muscular foot to move. Banana slugs also have small teeth on their tongue! These file-like teeth help banana slugs eat leaves and dead plants.","Mollusks are a group of animals with similar traits. The following traits can be used to identify mollusks:
+They have a soft body.
+They have a muscular foot or tentacles. Observe the animals and read the descriptions.","Scientists sort animals with similar traits into groups. This is called classification. Classification helps scientists learn about how animals live.
+How do scientists classify animals? First, they make observations about an animal. Scientists observe the animal's traits, including its body parts and behavior. Then, scientists compare the animal's traits to other animals' traits. Scientists classify animals with similar traits into a group.","To decide if an animal is part of a group, look at the traits of the group.
+Mollusks have the following traits:
+They have a soft body.
+They have a muscular foot or tentacles.
+Compare each animal's traits to the group's traits. Select the animal with traits similar to the group's traits.
+A banana slug has the following traits:
+It has a soft body.
+It has a muscular foot.
+A banana slug has the traits of a mollusk. A banana slug is a mollusk.
+An earthworm has the following traits:
+It has a soft, cylindrical body.
+It has no limbs.
+It is made up of segments.
+An earthworm does not have all of the traits of a mollusk. An earthworm is a segmented worm.",near_threshold_uncertain
+r009004,r009004,train,natural science,biology,"Use evidence to classify mammals, birds, fish, reptiles, and amphibians",grade5,Classification,0.35998333478202615,1,need_completion_accidental_missing,,,Select the one animal that has all of the bird traits listed above.,"Common ostriches have a beak and feathers. They also have two wings, but they cannot fly. Ostriches lay the biggest eggs of any bird. The shell of an ostrich egg is so hard that you can stand on the egg without breaking it! | Florida manatees have hairs on their bodies that are similar to whiskers. These hairs help the manatees feel the water moving around them. Female manatees feed their offspring milk.","Birds are a group of animals with similar traits. The following traits can be used to identify birds:
+They have feathers.
+They have wings.
+They have a beak.
+They make eggs with shells. Observe the animals and read the descriptions.","Scientists sort animals with similar traits into groups. This is called classification. Classification helps scientists learn about how animals live.
+How do scientists classify animals? First, they make observations about an animal. Scientists observe the animal's traits, including its body parts and behavior. Then, scientists compare the animal's traits to other animals' traits. Scientists classify animals with similar traits into a group.","To decide if an animal is part of a group, look at the traits of the group.
+Birds have the following traits:
+They have feathers.
+They have wings.
+They have a beak.
+They make eggs with shells.
+Compare each animal's traits to the group's traits. Select the animal with traits similar to the group's traits.
+A Florida manatee has the following traits:
+It feeds its offspring milk.
+It has hair.
+A Florida manatee does not have all of the traits of a bird. A Florida manatee is a mammal.
+A common ostrich has the following traits:
+It has feathers.
+It has wings.
+It has a beak.
+It makes eggs with shells.
+A common ostrich has the traits of a bird. A common ostrich is a bird.",near_threshold_uncertain
+r000695,r000695,train,natural science,biology,Use evidence to classify animals,grade5,Classification,0.360088754686038,1,need_completion_accidental_missing,,,Select the one animal that has all of the monotreme traits listed above.,"Echidnas are covered in fur and spines. Their spines help protect them from predators. When an echidna is scared, it curls up into a ball! Echidnas lay eggs and feed their offspring milk. | Adult tiger salamanders have moist, smooth skin with stripes. They live in burrows underground, but they begin their lives in water. Young tiger salamanders hatch from eggs with no shells underwater.","Monotremes are a group of animals with similar traits. The following traits can be used to identify monotremes:
+They make eggs with shells.
+They have fur or hair. Observe the animals and read the descriptions.","Scientists sort animals with similar traits into groups. This is called classification. Classification helps scientists learn about how animals live.
+How do scientists classify animals? First, they make observations about an animal. Scientists observe the animal's traits, including its body parts and behavior. Then, scientists compare the animal's traits to other animals' traits. Scientists classify animals with similar traits into a group.","To decide if an animal is part of a group, look at the traits of the group.
+Monotremes have the following traits:
+They make eggs with shells.
+They have fur or hair.
+Compare each animal's traits to the group's traits. Select the animal with traits similar to the group's traits.
+An echidna has the following traits:
+It makes eggs with shells.
+It has fur.
+An echidna has the traits of a monotreme. An echidna is a monotreme.
+A tiger salamander has the following traits:
+It spends part of its life in water and part on land.
+It has moist skin.
+It makes eggs with no shells.
+A tiger salamander does not have all of the traits of a monotreme. A tiger salamander is an amphibian.",near_threshold_uncertain
+r020921,r020921,test,natural science,physics,"Identify solids, liquids, and gases",grade3,States of matter,0.33985641167221703,0,skip_structural_absence,,,Select the solid.,hair clip | water in a fishbowl | air inside a raft | helium,,"Solid, liquid, and gas are states of matter. Matter is anything that takes up space. Matter can come in different states, or forms.
+When matter is a solid, it has a definite volume and a definite shape. So, a solid has a size and shape of its own.
+Some solids can be easily folded, bent, or broken. A piece of paper is a solid. Also, some solids are very small. A grain of sand is a solid.
+When matter is a liquid, it has a definite volume but not a definite shape. So, a liquid has a size of its own, but it does not have a shape of its own. Think about pouring juice from a bottle into a cup. The juice still takes up the same amount of space, but it takes the shape of the bottle.
+Some liquids do not pour as easily as others. Honey and milk are both liquids. But pouring honey takes more time than pouring milk.
+When matter is a gas, it does not have a definite volume or a definite shape. A gas expands, or gets bigger, until it completely fills a space. A gas can also get smaller if it is squeezed into a smaller space.
+Many gases are invisible. Air is a gas.","The water in a fishbowl is a liquid. A liquid takes the shape of any container it is in. If you pour water from a fishbowl into a different container, the water will take the shape of that container. But the water will still take up the same amount of space.
+A hair clip is a solid. A solid has a size and shape of its own. You can use a hair clip to keep your hair out of your face because the hair clip keeps its shape.
+The air inside a raft is a gas. A gas expands to fill a space. The air in a raft expands to fill all the space inside the raft. If air leaks out, it will expand into the space around the raft.
+Helium is a gas. A gas expands to fill a space. Helium is lighter than air. So, if you fill a balloon with helium, the balloon will rise. If helium leaks out of the balloon, the helium will expand into the space around the balloon.",near_threshold_uncertain
+r012015,r012015,train,language science,vocabulary,Positive and negative connotation,grade4,Shades of meaning,0.3605474927331975,1,need_completion_accidental_missing,,,Which phrase has a more negative connotation?,use water | waste water,,"Connotation is the feeling or idea that goes along with a word or phrase. Some words are close in meaning but have different connotations.
+For example, think about the words eager and impatient. They both mean wanting something to happen, but they have different connotations.
+Eager has a positive connotation. It is a nice word. An eager person is happy and excited.
+Impatient has a negative connotation. It is not a nice word. An impatient person is often pushy and demanding.","Waste water has a more negative connotation. If you waste water, you use it in a bad way.",near_threshold_uncertain
+r014079,r014079,validation,language science,vocabulary,Select the words that don't belong,grade5,Categories,0.3386853550149587,0,skip_structural_absence,,,Select the place that doesn't belong.,port | harbor | highway | dock,,,"Highway doesn't belong.
+Port, dock, and harbor all name places to park boats.",near_threshold_uncertain
+r016322,r016322,validation,language science,vocabulary,What am I?,grade1,Comprehension strategies,0.33861396369164476,0,skip_structural_absence,,,"Answer the riddle.
+I am an animal.
+I have four legs.
+You can ride me.
+What am I?",a train | a horse,,,"A horse is an animal.
+A horse has four legs.
+You can ride a horse.",near_threshold_uncertain
+r011226,r011226,train,language science,vocabulary,Which word is not like the others?,grade2,Categories,0.3378924948023658,0,skip_structural_absence,,,Which word is not like the others?,juice | cup | water | milk,,"Some words are alike. They go together in a group.
+Red, blue, and green go together. They are colors.
+Mom, dad, grandma, and grandpa go together. They are people in a family.","Milk, water, and juice go together. They are drinks. Cup is not a drink, so it is not like the other words.",near_threshold_uncertain
+r008131,r008131,train,language science,vocabulary,Select the words that don't belong,grade3,Categories,0.336823983376044,0,skip_structural_absence,,,Select the item that doesn't belong.,rope | string | ribbon | glue,,,"Glue doesn't belong.
+String, rope, and ribbon all name items that you can tie things with.",near_threshold_uncertain
+r005121,r005121,train,natural science,physics,"Identify solids, liquids, and gases",grade3,States of matter,0.33626817512342705,0,skip_structural_absence,,,Select the solid.,water in a glass | handsaw | air inside a soccer ball | air inside a balloon,,"Solid, liquid, and gas are states of matter. Matter is anything that takes up space. Matter can come in different states, or forms.
+When matter is a solid, it has a definite volume and a definite shape. So, a solid has a size and shape of its own.
+Some solids can be easily folded, bent, or broken. A piece of paper is a solid. Also, some solids are very small. A grain of sand is a solid.
+When matter is a liquid, it has a definite volume but not a definite shape. So, a liquid has a size of its own, but it does not have a shape of its own. Think about pouring juice from a bottle into a cup. The juice still takes up the same amount of space, but it takes the shape of the bottle.
+Some liquids do not pour as easily as others. Honey and milk are both liquids. But pouring honey takes more time than pouring milk.
+When matter is a gas, it does not have a definite volume or a definite shape. A gas expands, or gets bigger, until it completely fills a space. A gas can also get smaller if it is squeezed into a smaller space.
+Many gases are invisible. Air is a gas.","A handsaw is a solid. A solid has a size and shape of its own. The handle of this handsaw is made of wood, and the blade is made of metal. Both wood and metal are solids.
+The air inside a soccer ball is a gas. A gas expands to fill a space. The air fills all the space inside the soccer ball. If air leaks out, it will expand into the space around the ball.
+The air inside a balloon is a gas. A gas expands to fill a space. The air inside a balloon expands to fill all the space in the balloon. If the balloon pops, the air will expand to fill a much larger space.
+The water in a glass is a liquid. A liquid takes the shape of any container it is in. If you pour water from a glass into a different container, the water will take the shape of that container. But the water will still take up the same amount of space.",near_threshold_uncertain
+r021175,r021175,test,language science,vocabulary,What am I?,grade1,Comprehension strategies,0.33585864964577705,0,skip_structural_absence,,,"Answer the riddle.
+I smell good.
+I can come in many colors.
+I grow in a garden.
+What am I?",a flower | a bird,,,"A flower smells good.
+A flower can come in many colors.
+A flower grows in a garden.",near_threshold_uncertain
+r012773,r012773,validation,natural science,biology,"Use evidence to classify mammals, birds, fish, reptiles, and amphibians",grade4,Classification,0.3657355239184924,1,need_completion_accidental_missing,,,Select the one animal that has all of the bird traits listed above.,"Burmese pythons hatch from eggs with shells. They can grow to over 12 feet long! Their scaly, waterproof skin is brown and black. | Peregrine falcons are the fastest animals in the world! They use their wings to fly quickly and hunt prey. Peregrine falcons also have a beak and feathers. They hatch from eggs with speckled or spotted shells.","Birds are a group of animals with similar traits. The following traits can be used to identify birds:
+They have feathers.
+They have wings.
+They have a beak.
+They make eggs with shells. Observe the animals and read the descriptions.","Scientists sort animals with similar traits into groups. This is called classification. Classification helps scientists learn about how animals live.
+How do scientists classify animals? First, they make observations about an animal. Scientists observe the animal's traits, including its body parts and behavior. Then, scientists compare the animal's traits to other animals' traits. Scientists classify animals with similar traits into a group.","To decide if an animal is part of a group, look at the traits of the group.
+Birds have the following traits:
+They have feathers.
+They have wings.
+They have a beak.
+They make eggs with shells.
+Compare each animal's traits to the group's traits. Select the animal with traits similar to the group's traits.
+A Burmese python has the following traits:
+It has scaly, waterproof skin.
+It makes eggs with shells.
+A Burmese python does not have all of the traits of a bird. A Burmese python is a reptile.
+A peregrine falcon has the following traits:
+It has feathers.
+It has wings.
+It has a beak.
+It makes eggs with shells.
+A peregrine falcon has the traits of a bird. A peregrine falcon is a bird.",near_threshold_uncertain
+r011121,r011121,train,natural science,biology,"Use evidence to classify mammals, birds, fish, reptiles, and amphibians",grade5,Classification,0.3663686177951653,1,need_completion_accidental_missing,,,Select the one animal that has all of the reptile traits listed above.,"Dwarf crocodiles are the smallest crocodiles alive today. They grow to be about five feet long and have scaly, waterproof skin. Dwarf crocodiles live in Central Africa and hatch from eggs with shells. | Western gorillas have black, gray, or brown fur. Adult males are sometimes called silverbacks because they have often have gray fur on their backs. Female western gorillas feed their offspring milk.","Reptiles are a group of animals with similar traits. The following traits can be used to identify reptiles:
+They have scaly, waterproof skin.
+They make eggs with shells. Observe the animals and read the descriptions.","Scientists sort animals with similar traits into groups. This is called classification. Classification helps scientists learn about how animals live.
+How do scientists classify animals? First, they make observations about an animal. Scientists observe the animal's traits, including its body parts and behavior. Then, scientists compare the animal's traits to other animals' traits. Scientists classify animals with similar traits into a group.","To decide if an animal is part of a group, look at the traits of the group.
+Reptiles have the following traits:
+They have scaly, waterproof skin.
+They make eggs with shells.
+Compare each animal's traits to the group's traits. Select the animal with traits similar to the group's traits.
+A dwarf crocodile has the following traits:
+It has scaly, waterproof skin.
+It makes eggs with shells.
+A dwarf crocodile has the traits of a reptile. A dwarf crocodile is a reptile.
+A western gorilla has the following traits:
+It feeds its offspring milk.
+It has fur.
+A western gorilla does not have all of the traits of a reptile. A western gorilla is a mammal.",near_threshold_uncertain
+r018907,r018907,test,natural science,physics,"Identify solids, liquids, and gases",grade3,States of matter,0.3331005856975,0,skip_structural_absence,,,Select the solid.,grape juice | water from a faucet | air from a hair dryer | screwdriver,,"Solid, liquid, and gas are states of matter. Matter is anything that takes up space. Matter can come in different states, or forms.
+When matter is a solid, it has a definite volume and a definite shape. So, a solid has a size and shape of its own.
+Some solids can be easily folded, bent, or broken. A piece of paper is a solid. Also, some solids are very small. A grain of sand is a solid.
+When matter is a liquid, it has a definite volume but not a definite shape. So, a liquid has a size of its own, but it does not have a shape of its own. Think about pouring juice from a bottle into a cup. The juice still takes up the same amount of space, but it takes the shape of the bottle.
+Some liquids do not pour as easily as others. Honey and milk are both liquids. But pouring honey takes more time than pouring milk.
+When matter is a gas, it does not have a definite volume or a definite shape. A gas expands, or gets bigger, until it completely fills a space. A gas can also get smaller if it is squeezed into a smaller space.
+Many gases are invisible. Air is a gas.","The air from a hair dryer is a gas. A gas expands to fill a space. A hair dryer uses a fan to blow warm air out. When the air leaves the hair dryer, the air expands to fill a much large space.
+The water from a faucet is a liquid. A liquid takes the shape of any container it is in. If you put water from a faucet into a container, the water will take the shape of that container. But the water will still take up the same amount of space.
+A screwdriver is a solid. A solid has a size and shape of its own. This screwdriver has a metal blade and a plastic handle. Both metal and plastic are solids.
+Grape juice is a liquid. A liquid takes the shape of any container it is in. If you pour grape juice into a different container, the grape juice will take the shape of that container. But the grape juice will still take up the same amount of space.",near_threshold_uncertain
+r009054,r009054,train,natural science,physics,"Identify solids, liquids, and gases",grade3,States of matter,0.3330693592412239,0,skip_structural_absence,,,Select the liquid.,thread | milk | air inside a tire | tortoise shell,,"Solid, liquid, and gas are states of matter. Matter is anything that takes up space. Matter can come in different states, or forms.
+When matter is a solid, it has a definite volume and a definite shape. So, a solid has a size and shape of its own.
+Some solids can be easily folded, bent, or broken. A piece of paper is a solid. Also, some solids are very small. A grain of sand is a solid.
+When matter is a liquid, it has a definite volume but not a definite shape. So, a liquid has a size of its own, but it does not have a shape of its own. Think about pouring juice from a bottle into a cup. The juice still takes up the same amount of space, but it takes the shape of the bottle.
+Some liquids do not pour as easily as others. Honey and milk are both liquids. But pouring honey takes more time than pouring milk.
+When matter is a gas, it does not have a definite volume or a definite shape. A gas expands, or gets bigger, until it completely fills a space. A gas can also get smaller if it is squeezed into a smaller space.
+Many gases are invisible. Air is a gas.","The air inside a tire is a gas. A gas expands to fill a space. The air in a tire expands to fill all the space inside the tire. If air leaks out, it will expand into the space around the tire.
+Thread is a solid that can be bent or tangled. But it still has a size and shape of its own.
+A tortoise shell is a solid. A solid has a size and shape of its own. A tortoise shell is made of a solid called keratin, just like your fingernails!
+Milk is a liquid. A liquid takes the shape of any container it is in. If you pour milk into a different container, the milk will take the shape of that container. But the milk will still take up the same amount of space.",near_threshold_uncertain
+r006337,r006337,train,natural science,biology,"Use evidence to classify mammals, birds, fish, reptiles, and amphibians",grade5,Classification,0.3322963422457554,0,skip_structural_absence,,,Select the one animal that has all of the mammal traits listed above.,"Canadian lynx have furry, padded feet that help them walk on snow. Canadian lynx feed their offspring milk. | Common snapping turtles hatch from eggs with shells. They have powerful beaks. When a snapping turtle is threatened by a predator, it snaps its beak! Snapping turtles have scaly, waterproof skin.","Mammals are a group of animals with similar traits. The following traits can be used to identify mammals:
+They feed their offspring milk.
+They have fur or hair. Observe the animals and read the descriptions.","Scientists sort animals with similar traits into groups. This is called classification. Classification helps scientists learn about how animals live.
+How do scientists classify animals? First, they make observations about an animal. Scientists observe the animal's traits, including its body parts and behavior. Then, scientists compare the animal's traits to other animals' traits. Scientists classify animals with similar traits into a group.","To decide if an animal is part of a group, look at the traits of the group.
+Mammals have the following traits:
+They feed their offspring milk.
+They have fur or hair.
+Compare each animal's traits to the group's traits. Select the animal with traits similar to the group's traits.
+A common snapping turtle has the following traits:
+It has scaly, waterproof skin.
+It makes eggs with shells.
+A common snapping turtle does not have all of the traits of a mammal. A common snapping turtle is a reptile.
+A Canadian lynx has the following traits:
+It feeds its offspring milk.
+It has fur.
+A Canadian lynx has the traits of a mammal. A Canadian lynx is a mammal.",near_threshold_uncertain
+r000336,r000336,train,natural science,science-and-engineering-practices,Identify questions that can be investigated with a set of materials,grade7,Designing experiments,0.3322938098429339,0,skip_structural_absence,,,"Using only these supplies, which question can Bryan investigate with an experiment?",Which of the three types of tomato seeds sprouts the fastest? | Does a certain kind of tomato plant grow taller when planted in a clay pot or in a plastic pot? | Which type of soil will cause a certain kind of tomato plant to grow the most fruit?,"Bryan and his classmates are growing tomato plants in the school garden. He wonders what factors affect how tomato plants grow. So, he decides to design an experiment. He has the following supplies available:
+three different types of tomato seeds
+one bag of potting soil
+five identical clay pots
+water","Experiments can be designed to answer specific questions. When designing an experiment, you must identify the supplies that are necessary to answer your question. In order to do this, you need to figure out what will be tested and what will be measured during the experiment.
+Imagine that you are wondering if plants grow to different heights when planted in different types of soil. How might you decide what supplies are necessary to conduct this experiment?
+First, you need to identify the part of the experiment that will be tested, which is the independent variable. This is usually the part of the experiment that is different or changed. In this case, you would like to know how plants grow in different types of soil. So, you must have different types of soil available.
+Next, you need to identify the part of the experiment that will be measured or observed, which is the dependent variable. In this experiment, you would like to know if some plants grow taller than others. So, you must be able to compare the plants' heights. To do this, you can observe which plants are taller by looking at them, or you can measure their exact heights with a meterstick.
+So, if you have different types of soil and can observe or measure the heights of your plants, then you have the supplies you need to investigate your question with an experiment!",,near_threshold_uncertain
+r000784,r000784,train,natural science,science-and-engineering-practices,Identify questions that can be investigated with a set of materials,grade6,Designing experiments,0.3322938098429339,0,skip_structural_absence,,,"Using only these supplies, which question can Austen investigate with an experiment?",Which of the three types of tomato seeds sprouts the fastest? | Does a certain kind of tomato plant grow taller when planted in a clay pot or in a plastic pot? | Which type of soil will cause a certain kind of tomato plant to grow the most fruit?,"Austen and his classmates are growing tomato plants in the school garden. He wonders what factors affect how tomato plants grow. So, he decides to design an experiment. He has the following supplies available:
+three different types of tomato seeds
+one bag of potting soil
+five identical clay pots
+water","Experiments can be designed to answer specific questions. When designing an experiment, you must identify the supplies that are necessary to answer your question. In order to do this, you need to figure out what will be tested and what will be measured during the experiment.
+Imagine that you are wondering if plants grow to different heights when planted in different types of soil. How might you decide what supplies are necessary to conduct this experiment?
+First, you need to identify the part of the experiment that will be tested, which is the independent variable. This is usually the part of the experiment that is different or changed. In this case, you would like to know how plants grow in different types of soil. So, you must have different types of soil available.
+Next, you need to identify the part of the experiment that will be measured or observed, which is the dependent variable. In this experiment, you would like to know if some plants grow taller than others. So, you must be able to compare the plants' heights. To do this, you can observe which plants are taller by looking at them, or you can measure their exact heights with a meterstick.
+So, if you have different types of soil and can observe or measure the heights of your plants, then you have the supplies you need to investigate your question with an experiment!",,near_threshold_uncertain
+r001063,r001063,train,natural science,science-and-engineering-practices,Identify questions that can be investigated with a set of materials,grade6,Designing experiments,0.3322938098429339,0,skip_structural_absence,,,"Using only these supplies, which question can Brian investigate with an experiment?",Does a certain kind of tomato plant grow taller when planted in a clay pot or in a plastic pot? | Which type of soil will cause a certain kind of tomato plant to grow the most fruit? | Which of the three types of tomato seeds sprouts the fastest?,"Brian and his classmates are growing tomato plants in the school garden. He wonders what factors affect how tomato plants grow. So, he decides to design an experiment. He has the following supplies available:
+three different types of tomato seeds
+one bag of potting soil
+five identical clay pots
+water","Experiments can be designed to answer specific questions. When designing an experiment, you must identify the supplies that are necessary to answer your question. In order to do this, you need to figure out what will be tested and what will be measured during the experiment.
+Imagine that you are wondering if plants grow to different heights when planted in different types of soil. How might you decide what supplies are necessary to conduct this experiment?
+First, you need to identify the part of the experiment that will be tested, which is the independent variable. This is usually the part of the experiment that is different or changed. In this case, you would like to know how plants grow in different types of soil. So, you must have different types of soil available.
+Next, you need to identify the part of the experiment that will be measured or observed, which is the dependent variable. In this experiment, you would like to know if some plants grow taller than others. So, you must be able to compare the plants' heights. To do this, you can observe which plants are taller by looking at them, or you can measure their exact heights with a meterstick.
+So, if you have different types of soil and can observe or measure the heights of your plants, then you have the supplies you need to investigate your question with an experiment!",,near_threshold_uncertain
+r004818,r004818,train,natural science,science-and-engineering-practices,Identify questions that can be investigated with a set of materials,grade7,Designing experiments,0.3322938098429339,0,skip_structural_absence,,,"Using only these supplies, which question can Jayden investigate with an experiment?",Which of the three types of tomato seeds sprouts the fastest? | Which type of soil will cause a certain kind of tomato plant to grow the most fruit? | Does a certain kind of tomato plant grow taller when planted in a clay pot or in a plastic pot?,"Jayden and his classmates are growing tomato plants in the school garden. He wonders what factors affect how tomato plants grow. So, he decides to design an experiment. He has the following supplies available:
+three different types of tomato seeds
+one bag of potting soil
+five identical clay pots
+water","Experiments can be designed to answer specific questions. When designing an experiment, you must identify the supplies that are necessary to answer your question. In order to do this, you need to figure out what will be tested and what will be measured during the experiment.
+Imagine that you are wondering if plants grow to different heights when planted in different types of soil. How might you decide what supplies are necessary to conduct this experiment?
+First, you need to identify the part of the experiment that will be tested, which is the independent variable. This is usually the part of the experiment that is different or changed. In this case, you would like to know how plants grow in different types of soil. So, you must have different types of soil available.
+Next, you need to identify the part of the experiment that will be measured or observed, which is the dependent variable. In this experiment, you would like to know if some plants grow taller than others. So, you must be able to compare the plants' heights. To do this, you can observe which plants are taller by looking at them, or you can measure their exact heights with a meterstick.
+So, if you have different types of soil and can observe or measure the heights of your plants, then you have the supplies you need to investigate your question with an experiment!",,near_threshold_uncertain

@@ -1,0 +1,10 @@
+scenario,holdout_field,split,n,positive,negative,positive_rate,group_count,unseen_group_count,examples
+original_split,sample_id,train,190,53,137,0.2789473684210526,190,0,
+original_split,sample_id,validation,74,22,52,0.2972972972972973,74,74,
+original_split,sample_id,test,58,17,41,0.29310344827586204,58,58,
+topic_holdout,topic,train,192,90,102,0.46875,5,0,
+topic_holdout,topic,validation,66,1,65,0.015151515151515152,9,9,"chemistry, civics, physics, punctuation, reading-comprehension"
+topic_holdout,topic,test,64,1,63,0.015625,6,6,"earth-science, economics, figurative-language, phonological-awareness, world-history"
+skill_holdout,skill,train,194,56,138,0.28865979381443296,65,0,
+skill_holdout,skill,validation,64,19,45,0.296875,30,30,"Abraham Lincoln, Benjamin Franklin, Body systems: perception and motion, Cesar Chavez, Choose customary units of distance, mass, and volume"
+skill_holdout,skill,test,64,17,47,0.265625,41,41,"Antebellum Period: abolitionist and proslavery perspectives, Banks, Bill Gates, Body systems: digestion, Changes to Earth's surface: earthquakes"

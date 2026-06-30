@@ -1,6 +1,8 @@
 paths:
   input_csv: data/scienceqa/annotation/missing_type_annotation_candidates.csv
+  resources_csv: data/scienceqa/processed/resources.csv
   report_dir: reports/exp0_2_selective_completion_gate
+  full_prediction_csv: reports/exp0_2_selective_completion_gate/full_missing_predictions.csv
 
 target:
   negative_label: structural_absence
@@ -31,3 +33,14 @@ model:
     start: 0.05
     stop: 0.95
     step: 0.05
+
+evaluation:
+  group_holdout_fields:
+    - topic
+    - skill
+  validation_fraction: 0.20
+  test_fraction: 0.20
+  group_split_trials: 3000
+
+prediction:
+  model: best_group_test

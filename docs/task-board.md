@@ -11,13 +11,15 @@
 - [x] 将 91 条需要图的原 `ambiguous` 样本重标为 `accidental_missing`。
 - [ ] 论文使用前，抽查一部分正类 `accidental_missing` 和负类 `structural_absence` 样本。
 - [x] 实现 Exp0.2 选择性补全门控：预测 `structural_absence` vs `accidental_missing`。
-- [ ] 为 Exp0.2 增加按 topic 或 skill 留出的分组压力测试。
+- [x] 为 Exp0.2 增加按 topic 或 skill 留出的分组压力测试。
+- [x] 将 Exp0.2 门控应用到全部 ScienceQA 缺图样本，生成伪标签排序清单。
+- [ ] 抽查 `full_missing_predictions.csv` 中高置信 `need_completion_accidental_missing` 与高置信 `skip_structural_absence` 样本。
 - [ ] 选择一个规范论文大纲文件，并把旧大纲中不再适用的内容标为 preliminary。
 - [ ] 基于 Exp0 和 Exp0.1 准备下一次两周组会总结。
 
 ## 下一步
 
-- [ ] 分组验证通过后，将 Exp0.2 门控应用到全部 ScienceQA 缺图样本。
+- [ ] 围绕 topic 级别正类过度集中问题，补充抽样标注 biology 以外的潜在 `accidental_missing` 样本。
 - [ ] 将文献综述扩展到 30-40 篇论文。
 - [ ] 构建最小教育知识图谱：concept、resource、belongs_to、same_skill、prerequisite、related。
 - [ ] 定义 RC1 基线：CLIP、CLIP + adapter、ordinary contrastive、random hard negative、same-subject hard negative、concept-aware hard negative。

@@ -10,7 +10,7 @@
 | --- | --- | --- | --- | --- | --- | --- |
 | Exp0 | ScienceQA 数据集诊断 | RC2 | 已完成 | [configs/exp0_scienceqa.yaml](../configs/exp0_scienceqa.yaml) | [reports/exp0_dataset_diagnosis](../reports/exp0_dataset_diagnosis) | [RESULT_INTERPRETATION.md](../reports/exp0_dataset_diagnosis/RESULT_INTERPRETATION.md) |
 | Exp0.1 | 缺失类型标注结果 | RC2 | 标签分析已完成 | [configs/exp0_1_missing_type_annotation.yaml](../configs/exp0_1_missing_type_annotation.yaml) | [data/scienceqa/annotation](../data/scienceqa/annotation), [reports/exp0_1_missing_type_annotation](../reports/exp0_1_missing_type_annotation) | [human_label_analysis.md](../reports/exp0_1_missing_type_annotation/human_label_analysis.md) |
-| Exp0.2 | 选择性补全门控基线 | RC2 | 第一版基线已完成 | [configs/exp0_2_selective_completion_gate.yaml](../configs/exp0_2_selective_completion_gate.yaml) | [reports/exp0_2_selective_completion_gate](../reports/exp0_2_selective_completion_gate) | [run_summary.md](../reports/exp0_2_selective_completion_gate/run_summary.md) |
+| Exp0.2 | 选择性补全门控基线 | RC2 | 分组压力测试与全量预测已完成 | [configs/exp0_2_selective_completion_gate.yaml](../configs/exp0_2_selective_completion_gate.yaml) | [reports/exp0_2_selective_completion_gate](../reports/exp0_2_selective_completion_gate) | [run_summary.md](../reports/exp0_2_selective_completion_gate/run_summary.md) |
 | Exp1 | 概念感知检索 | RC1 | 计划中 | 待定 | 待定 | 待定 |
 | Exp2 | MNAR 感知选择性补全 | RC2 | 计划中 | 待定 | 待定 | 待定 |
 | Exp3 | 证据约束解释生成 | RC3 | 计划中 | 待定 | 待定 | 待定 |
@@ -44,11 +44,16 @@ Exp0 工作性结论：
 
 ## Exp0.2 当前结论
 
-第一版选择性补全门控基线在原始测试集划分上表现完美。
+第一版选择性补全门控基线在原始测试集划分上表现完美；新增分组压力测试后，结论需要更谨慎：
+
+- 原始样本划分：最佳模型测试集正类 F1 = 1.0000。
+- `skill_holdout`：文本模型测试集正类 F1 = 0.8000，Balanced accuracy = 0.8692。
+- `topic_holdout`：测试集只有 1 条正类，不能作为稳定泛化结论；它暴露出当前正类标注过度集中在 biology topic。
+- 全量 10,876 条缺图样本已生成门控伪标签，其中 529 条预测为 `need_completion_accidental_missing`，10,347 条预测为 `skip_structural_absence`。
 
 工作性结论：
 
-> 二分类 RC2 门控是可行的，但由于 topic/skill 重叠可能导致记忆效应，该结果还不能作为最终论文证据。在把门控应用到全部缺图样本前，需要加入 topic/skill 分组压力测试。
+> 二分类 RC2 门控是可行的，且在未见 skill 的评测上有一定泛化信号；但 topic 级别正类样本太少，后续需要补充标注 biology 以外的疑似 `accidental_missing` 样本，并抽查全量预测中的高置信正负类。
 
 ## 必需的运行记录模板
 
