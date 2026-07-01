@@ -1,0 +1,56 @@
+paths:
+  report_dir: reports/exp1_5_clean_rc1_benchmark
+  input_samples:
+    - data/educational_mm/schema_samples/scienceqa_schema_sample.csv
+    - data/educational_mm/schema_samples/tqa_ck12_schema_sample.csv
+    - data/educational_mm/schema_samples/ai2d_schema_sample.csv
+  ai2d_image_manifest: reports/exp1_3_visual_evidence_retrieval/ai2d_image_manifest.csv
+  ai2d_wrong_image_eval: reports/exp1_3_visual_evidence_retrieval/wrong_image_eval.csv
+
+split:
+  train: 0.70
+  dev: 0.15
+  test: 0.15
+  random_seed: 42
+
+text_benchmark:
+  datasets:
+    - scienceqa
+    - tqa_ck12
+  query_variant: question_choices_topic_skill
+  evidence_variant: no_solution
+  min_evidence_chars: 5
+  fixed_negatives_per_strategy: 1
+  strategies:
+    - random
+    - same_subject
+    - same_topic
+    - same_skill
+  top_k:
+    - 1
+    - 5
+    - 10
+
+visual_benchmark:
+  dataset: ai2d
+  fixed_negatives_per_strategy: 1
+  strategies:
+    - random_wrong_image
+    - lexical_wrong_image
+    - same_topic_wrong_image
+    - same_skill_wrong_image
+  top_k:
+    - 1
+    - 5
+    - 10
+
+models:
+  tfidf:
+    ngram_range:
+      - 1
+      - 2
+    min_df: 1
+    max_features: 20000
+  bm25:
+    k1: 1.5
+    b: 0.75

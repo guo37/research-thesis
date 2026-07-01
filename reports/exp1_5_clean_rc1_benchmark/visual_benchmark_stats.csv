@@ -1,0 +1,2 @@
+dataset,cached_images,unique_diagram_hashes,duplicate_groups,images_in_duplicate_groups,fixed_negatives_per_strategy,strategies
+ai2d,200,86,53,167,1,random_wrong_image|lexical_wrong_image|same_topic_wrong_image|same_skill_wrong_image

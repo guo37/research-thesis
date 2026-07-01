@@ -23,7 +23,7 @@
 | 工作流 | 状态 | 下一步 |
 | --- | --- | --- |
 | 统一数据 schema | ScienceQA / TQA / AI2D 样例已完成 | 作为后续实验统一输入 |
-| RC1 证据对齐检索 | baseline、hard negative、AI2D 图像检索和 Exp1.4 审计已完成 | 先切换 no-solution / diagram-level clean 评测，再训练 evidence alignment scorer |
+| RC1 证据对齐检索 | baseline、hard negative、AI2D 图像检索、Exp1.4 审计和 Exp1.5 clean benchmark 已完成 | 训练 evidence alignment scorer，并扩展 clean benchmark 样本规模 |
 | RC2 模态必要性判断 | ScienceQA pilot 已完成 | 等 RC1 clean scorer 稳定后升级为 text/image/wrong-image 鲁棒推理实验 |
 | RC3 证据约束解释 | 计划中 | 在 RC1/RC2 输入稳定后构建 100 条解释评测集 |
 | 文献综述 | 进行中 | 围绕教育图文问答、证据检索、模态鲁棒性、忠实解释扩展 |

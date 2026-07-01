@@ -1,0 +1,3 @@
+dataset,raw_rows,eval_rows,eligible_queries,eligible_pools,unique_evidence,evidence_variant,query_variant,fixed_negatives_per_strategy,strategies
+scienceqa,200,169,169,544,128,no_solution,question_choices_topic_skill,1,random|same_subject|same_topic|same_skill
+tqa_ck12,200,200,176,611,9,no_solution,question_choices_topic_skill,1,random|same_subject|same_topic|same_skill

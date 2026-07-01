@@ -135,6 +135,7 @@
 - AI2D wrong-image 候选表。
 - AI2D 本地图像缓存与 CLIP / SigLIP 图像证据检索 baseline。
 - RC1 结果审计与消融，确认当前仍属于 baseline / evaluation audit。
+- RC1 clean benchmark：no-solution 文本证据、固定负样本数、diagram-level 图像 pair 和跨 split 去重检查。
 
 尚未完成：
 
@@ -146,7 +147,6 @@
 
 优先级：
 
-1. 将 RC1 主实验切换为 no-solution evidence 和 diagram-level 图像评测。
-2. 构造固定负样本数的 RC1 训练集和评测集。
-3. 训练 evidence alignment scorer。
-4. 再用 wrong-image 和 drop-image 构造 RC2 主实验。
+1. 基于 Exp1.5 训练 evidence alignment scorer。
+2. 将 clean benchmark 扩展到更大的 ScienceQA / AI2D 样本，避免 200 条样例导致测试集过小。
+3. 再用 wrong-image 和 drop-image 构造 RC2 主实验。

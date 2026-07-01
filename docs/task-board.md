@@ -17,6 +17,8 @@
 - [x] 为 AI2D 构造 wrong-image 候选表。
 - [x] 为 AI2D 增加 CLIP / SigLIP 图像/diagram 证据检索 baseline。
 - [x] 完成 RC1 结果审计与消融。
+- [x] 完成 Exp1.5：no-solution 文本证据、固定负样本、diagram-level 图像候选的 clean RC1 benchmark。
+- [ ] 训练 RC1 evidence alignment scorer，并和 TF-IDF / BM25 / CLIP / SigLIP 在 clean benchmark 上对比。
 - [ ] 在 clean RC1 scorer 稳定后，设计 RC2 的 text-only / text+image / wrong-image / drop-image 实验。
 - [ ] 定义 RC3 的 100 条证据约束解释评测集 schema。
 
@@ -26,8 +28,8 @@
 - [x] 补齐 AI2D 本地图像缓存。
 - [x] 在 AI2D wrong-image 候选表上实现 CLIP / SigLIP 图文证据检索 baseline。
 - [x] 抽查 CLIP / SigLIP wrong-image 混淆样例并完成 diagram 去重审计。
-- [ ] 将 RC1 主实验切换为 no-solution evidence。
-- [ ] 构造固定负样本数的 RC1 训练集和评测集。
+- [x] 将 RC1 主实验切换为 no-solution evidence。
+- [x] 构造固定负样本数的 RC1 训练集和评测集。
 - [ ] 训练 evidence alignment scorer。
 - [ ] 记录 TQA 官方完整包接入方案，用于后续补齐原始 diagram 文件。
 - [ ] 扩展到 Sentence-BERT 文本检索 baseline。
@@ -36,6 +38,7 @@
 ## 后续
 
 - [x] 增加 RC1 hard negative 实验脚本和配置。
+- [x] 增加 clean RC1 benchmark 构造脚本和配置。
 - [ ] 增加 RC1 evidence alignment scorer 训练脚本和配置。
 - [ ] 增加 RC2 模态必要性判断和鲁棒推理实验脚本。
 - [ ] 增加 RC3 证据约束解释生成脚本和评测报告。

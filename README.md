@@ -14,6 +14,7 @@
 - Exp1.2：实现 RC1 hard negative 评测，并生成 AI2D wrong-image 候选表。
 - Exp1.3：缓存 AI2D 图像并实现 CLIP / SigLIP 图像证据检索 baseline。
 - Exp1.4：审计 RC1 泄漏、候选池和重复图像问题，确认后续需要训练 evidence alignment scorer。
+- Exp1.5：构造 no-solution、固定负样本、diagram-level 去重的 clean RC1 benchmark。
 
 开始新的研究工作前，先查看 [docs/research-dashboard.md](docs/research-dashboard.md) 和 [docs/current-research-plan.md](docs/current-research-plan.md)。
 

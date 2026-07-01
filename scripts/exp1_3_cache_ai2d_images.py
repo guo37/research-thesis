@@ -174,8 +174,8 @@ def write_summary(cfg: Config, manifest: pd.DataFrame) -> None:
         "",
         "## 输出",
         "",
-        f"- manifest：`{cfg.image_manifest}`",
-        f"- image cache：`{cfg.image_cache_dir}`",
+        f"- manifest：`{cfg.image_manifest.as_posix()}`",
+        f"- image cache：`{cfg.image_cache_dir.as_posix()}`",
         "",
     ]
     if not cached.empty:
@@ -238,7 +238,7 @@ def main() -> None:
                 "sample_id": row.sample_id,
                 "image_ref": row.image_ref,
                 "hf_index": index,
-                "local_image_path": str(output_path),
+                "local_image_path": output_path.as_posix(),
                 "status": status,
                 "width": width,
                 "height": height,

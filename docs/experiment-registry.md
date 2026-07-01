@@ -16,6 +16,7 @@
 | Exp1.2 | hard negative 与 wrong-image 候选构造 | RC1 | hard negative 评测与 wrong-image 候选已完成 | [configs/exp1_2_hard_negative_retrieval.yaml](../configs/exp1_2_hard_negative_retrieval.yaml) | [reports/exp1_2_hard_negative_retrieval](../reports/exp1_2_hard_negative_retrieval) | [run_summary.md](../reports/exp1_2_hard_negative_retrieval/run_summary.md) |
 | Exp1.3 | AI2D 图像证据检索 baseline | RC1 | CLIP / SigLIP baseline 已完成 | [configs/exp1_3_visual_evidence_retrieval.yaml](../configs/exp1_3_visual_evidence_retrieval.yaml) | [reports/exp1_3_visual_evidence_retrieval](../reports/exp1_3_visual_evidence_retrieval) | [run_summary.md](../reports/exp1_3_visual_evidence_retrieval/run_summary.md) |
 | Exp1.4 | RC1 结果审计与消融 | RC1 | 已完成，要求先修评测再训练 scorer | [configs/exp1_4_rc1_audit.yaml](../configs/exp1_4_rc1_audit.yaml) | [reports/exp1_4_rc1_audit](../reports/exp1_4_rc1_audit) | [run_summary.md](../reports/exp1_4_rc1_audit/run_summary.md) |
+| Exp1.5 | Clean RC1 benchmark 构造 | RC1 | 已完成，可进入 scorer 训练 | [configs/exp1_5_clean_rc1_benchmark.yaml](../configs/exp1_5_clean_rc1_benchmark.yaml) | [reports/exp1_5_clean_rc1_benchmark](../reports/exp1_5_clean_rc1_benchmark) | [run_summary.md](../reports/exp1_5_clean_rc1_benchmark/run_summary.md) |
 | Exp2 | 模态必要性判断与鲁棒推理 | RC2 | ScienceQA pilot 已完成，主实验计划中 | 待定 | 待定 | 待定 |
 | Exp3 | 证据约束的可解释教育推理 | RC3 | 计划中 | 待定 | 待定 | 待定 |
 
@@ -136,6 +137,22 @@ Exp0 工作性结论：
 工作性结论：
 
 > RC1 下一步应先建立干净评测定义：no-solution 文本证据、固定负样本数、diagram-level 图像评测和过滤 same-diagram wrong image。之后再训练 evidence alignment scorer，而不是直接进入 RC2。
+
+## Exp1.5 当前结论
+
+已将 Exp1.4 的审计结论落成 clean RC1 benchmark。
+
+当前产物：
+
+- 文本 pair 表：2,310 行，使用 `no_solution` evidence 和固定负样本数。
+- 图像 pair 表：1,286 行，AI2D 负例已过滤 same-diagram pair。
+- split 规则：文本候选 evidence 不跨 split，图像候选 diagram hash 不跨 split。
+- 当前小样本文本 benchmark 在严格同 split 候选下偏容易，测试集 TF-IDF / BM25 多数为满分；这不能作为方法提升结论。
+- AI2D clean test 中，SigLIP combined Recall@1 = 0.5000，CLIP combined Recall@1 = 0.9167，但测试 query 数仍较少。
+
+工作性结论：
+
+> Exp1.5 解决了“评测定义干净”和“训练/评测表可复用”的问题。下一步可以训练轻量 evidence alignment scorer，但论文主结果应扩展到更大的 ScienceQA / AI2D 样本后再定稿。
 
 ## 必需的运行记录模板
 
